@@ -1,0 +1,86 @@
+name: Render private player audio
+on:
+  push:
+    paths: ['.github/workflows/render-player-audio.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    name: Chapter worker ${{ matrix.index }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 75
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11]
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RENDER_INDEX: ${{ matrix.index }}
+      RENDER_TOTAL: '12'
+      AUDIO_WORK: /tmp/private-audio
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install offline rendering dependencies
+        run: python -m pip install --disable-pip-version-check cryptography numpy scipy soundfile onnxruntime
+      - name: Receive encrypted reading recipe
+        run: python audio-engine/receive.py
+      - name: Read completed player source
+        run: |
+          git fetch origin main
+          git checkout --detach origin/main
+      - name: Install public voice model
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/private-audio/tools/models /tmp/private-audio/speech
+          curl --fail --location --retry 3 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
+          echo 'a50cb45f355b7af1f6d758c1b360717877ba0a398cc8cbe6d2a7a3a26e225992  /tmp/private-audio/piper.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/private-audio/piper.tar.gz -C /tmp/private-audio/tools
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
+          echo '4e9fc85ab9009385319fc6bae7f55577f8a2d7ee77fd9159a5500eb6531f41e6  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx' | sha256sum -c -
+      - name: Render and encrypt this worker's chapters
+        run: |
+          python audio-engine/unpack.py
+          python audio-engine/build_chapters.py
+      - name: Upload encrypted chapters only
+        uses: actions/upload-artifact@v4
+        with:
+          name: encrypted-chapters-${{ matrix.index }}
+          path: /tmp/private-audio/publish/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 1
+      - name: Remove private working files
+        if: always()
+        run: rm -rf /tmp/private-audio
+  publish:
+    name: Assemble player branch
+    needs: render
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: encrypted-chapters-*
+          merge-multiple: true
+          path: player/audio
+      - name: Verify chapter inventory
+        run: python audio-engine/assemble_catalog.py
+      - name: Commit encrypted audio and catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b audio-ready-${{ github.run_id }}
+          git add -f player/audio player/catalog.json
+          git commit -m 'Publish all encrypted chapter recordings and verified catalog'
+          git push origin HEAD:audio-ready-${{ github.run_id }}
+          echo "Prepared branch audio-ready-${{ github.run_id }}"
