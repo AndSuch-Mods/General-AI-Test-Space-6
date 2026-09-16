@@ -34,7 +34,7 @@
     if(pieceCache){const hit=await pieceCache.match(pieceURL);if(hit){raw=new Uint8Array(await hit.arrayBuffer());if(raw.length!==part.bytes||hex(await crypto.subtle.digest('SHA-256',raw))!==part.sha256){await pieceCache.delete(pieceURL);raw=null;}}}
     if(!raw){
      const response=await fetch(pieceURL,{signal});if(!response.ok)throw new Error(`Audio piece could not be loaded (${response.status}). Retry to resume.`);
-     const length=Number(response.headers.get('content-length'));if(length>4000000)throw new Error('Audio piece exceeds its size limit.');
+     // HTTP compression can make Content-Length exceed the decoded piece size. The bounded reader and SHA-256 below validate the actual bytes.
      if(response.body?.getReader){const reader=response.body.getReader();raw=new Uint8Array(part.bytes);let used=0;try{for(;;){const {done,value}=await reader.read();if(done)break;if(used+value.length>part.bytes){await reader.cancel();throw new Error('Audio piece is larger than expected.');}raw.set(value,used);used+=value.length;if(progress)progress(offset+used,t.bytes);}if(used!==part.bytes)throw new Error('Incomplete audio piece. Retry to resume.');}finally{reader.releaseLock();}}
      else raw=new Uint8Array(await response.arrayBuffer());
      if(raw.length!==part.bytes||hex(await crypto.subtle.digest('SHA-256',raw))!==part.sha256)throw new Error('Audio piece failed its integrity check. Retry to resume.');
