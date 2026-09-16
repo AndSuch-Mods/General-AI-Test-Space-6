@@ -1,0 +1,33 @@
+name: Build offline audio tools
+on:
+  push:
+    paths:
+      - '.github/workflows/bootstrap-audio.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bundle:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Download open-source tools and model
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p bundle/models
+          curl --fail --location --retry 3 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o bundle/piper_linux_x86_64.tar.gz
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o bundle/models/en_GB-vctk-medium.onnx
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o bundle/models/en_GB-vctk-medium.onnx.json
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/MODEL_CARD?download=true' -o bundle/models/MODEL_CARD
+          printf '%s\n' 'Piper: https://github.com/rhasspy/piper (MIT).' 'VCTK voice model: https://huggingface.co/rhasspy/piper-voices/tree/main/en/en_GB/vctk/medium ; dataset CC BY 4.0.' 'Only public tools are bundled. No source book, private text, or generated audiobook is included.' > bundle/SOURCES.txt
+          cd bundle
+          sha256sum piper_linux_x86_64.tar.gz models/en_GB-vctk-medium.onnx models/en_GB-vctk-medium.onnx.json > SHA256SUMS.txt
+      - name: Export offline toolchain
+        uses: actions/upload-artifact@v4
+        with:
+          name: offline-audio-tools
+          path: bundle/
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
