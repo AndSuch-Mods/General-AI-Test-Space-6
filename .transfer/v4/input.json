@@ -1,0 +1,9 @@
+{
+  "version": 4,
+  "cipher_bytes": 332336,
+  "cipher_sha256": "46d6949778f25c734de07f13bf468e18341326d881fe88bbe33dc9df76fc8015",
+  "plain_sha256": "657e16b33a3a5f1764f40322a1883b56b522053c758b2edd212ccf87b433da8a",
+  "aad": "Taliesin:v3:recipe:all",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "groups": [[".transfer/v3/all", 41, 3072, 3072], [".transfer/v4/tail", 34, 6144, 3632]]
+}
