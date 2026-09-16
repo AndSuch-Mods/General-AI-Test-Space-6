@@ -1,0 +1,42 @@
+name: Verify source identity
+on:
+  push:
+    paths: ['.github/workflows/verify-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Verify original-edition source
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request, urllib.parse, re, hashlib, json
+          base='https://ebooks.rahnuma.org/literature/English/'
+          req=urllib.request.Request(base,headers={'User-Agent':'Mozilla/5.0'})
+          try:
+            html=urllib.request.urlopen(req,timeout=40).read().decode('utf-8','replace')
+          except Exception as e:
+            print(type(e).__name__,str(e));raise
+          links=re.findall(r'href\s*=\s*[\"\']([^\"\']+)',html,re.I)
+          candidates=[urllib.parse.urljoin(base,p) for p in links if 'lawhead' in p.lower() or 'taliesin' in p.lower()]
+          print('Matching source listing links:',len(candidates))
+          for url in candidates[:15]:
+            print(url)
+            if url.endswith('/'):
+              h=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode('utf-8','replace')
+              for p in re.findall(r'href\s*=\s*[\"\']([^\"\']+)',h,re.I):
+                if 'taliesin' in p.lower() and '.pdf' in p.lower():
+                  candidates.append(urllib.parse.urljoin(url,p))
+          found=False
+          for url in candidates:
+            if 'taliesin' not in url.lower() or '.pdf' not in url.lower():continue
+            data=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=40).read()
+            sha=hashlib.sha256(data).hexdigest()
+            print(json.dumps({'url':url,'bytes':len(data),'sha256':sha,'matches_upload':sha=='707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5'}))
+            found|=sha=='707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5'
+          if not found:raise SystemExit('No identical source verified. Do not substitute a different edition.')
+          PY
