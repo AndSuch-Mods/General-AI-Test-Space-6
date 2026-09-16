@@ -1,0 +1,29 @@
+name: Check chapter player release
+on:
+  push:
+    paths: ['.github/workflows/test-player-release.yml', 'audio-engine/v2/qa_release.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install media and browsers
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --quiet playwright cryptography
+          python -m playwright install --with-deps chromium webkit
+      - name: Verify playback and chapter navigation
+        run: python audio-engine/v2/qa_release.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: player-release-tests
+          path: qa-results/
+          retention-days: 2
