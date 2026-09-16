@@ -1,0 +1,40 @@
+name: Check staged encrypted input
+on:
+  push:
+    paths: ['.github/workflows/check-staged-input.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Export ciphertext chunks only
+        run: |
+          python - <<'PY'
+          import urllib.request,json,base64,hashlib,os,pathlib
+          out=pathlib.Path('checked');out.mkdir()
+          shas=['f25f728548b9cfa7ad7498aab848b126cc3ee1d6','c3b7c10ca3c6ab39bb3338bcf6c7aa3f62d56b27','cc87304247e2073aeff5c497a6aac7b9fb0eb952','d094532cc0c2202e96cde7d13001a1031b65c464','2a0dc1734d7862f4beb35816dd5851c5015faac3','ba334bfc5138d3e36189993d03c3013d406b9f2c','ff64f01277a8e65d088539292dd191d328a39c1e','cf0abf46dc43a75c5ee175820e07a59b42922b85','d01ed15670a16a9230a5e99e069ee4bf297f2f51']
+          report=[]
+          for i,sha in enumerate(shas):
+            url='https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/git/blobs/'+sha
+            req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','User-Agent':'ciphertext-verification'})
+            try:
+              with urllib.request.urlopen(req,timeout=30) as response:data=json.load(response)
+              raw=base64.b64decode(data['content']);actual=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+              assert actual==sha
+              (out/f'chunk-{i:02}.bin').write_bytes(raw)
+              report.append({'index':i,'sha':sha,'bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest()})
+            except Exception as e:
+              report.append({'index':i,'sha':sha,'error':str(e)})
+          (out/'report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: checked-encrypted-input
+          path: checked/
+          retention-days: 2
