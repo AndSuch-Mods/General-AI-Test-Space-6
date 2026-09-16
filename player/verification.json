@@ -1,0 +1,8 @@
+{
+  "complete": false,
+  "published_tracks": 2,
+  "expected_tracks": 49,
+  "max_transport_chunk_bytes": 4000000,
+  "all_published_chapters_decoded": true,
+  "all_reassemblies_byte_exact": true
+}

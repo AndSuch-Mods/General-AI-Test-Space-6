@@ -1,1 +1,97 @@
-{"version":2,"title":"Taliesin","author":"Stephen Lawhead","ready":false,"tracks":[],"note":"The complete recording has not been published yet."}
+{
+  "version": 2,
+  "title": "Taliesin",
+  "author": "Stephen Lawhead",
+  "ready": true,
+  "complete": false,
+  "expected_tracks": 49,
+  "published_tracks": 2,
+  "total_duration": 1853.23102,
+  "total_bytes": 22239544,
+  "encoding_note": "96 kbps stereo MP3 encoded from native 22,050 Hz chapter masters. Encrypted transport pieces are reassembled byte-for-byte before playback.",
+  "tracks": [
+    {
+      "id": "b0-c00",
+      "order": 0,
+      "book": 0,
+      "chapter": 0,
+      "part": "Opening",
+      "title": "Title and opening verse",
+      "duration": 46.680816,
+      "src": "audio-v2/b0-c00-d9191e18ff2771ea/joined.bin",
+      "bytes": 560556,
+      "sha256": "d9191e18ff2771eaca7854cbd4bdff8e024c8ec4eea8400bcd78fc75001bb893",
+      "chunks": [
+        {
+          "src": "audio-v2/b0-c00-d9191e18ff2771ea/0000.bin",
+          "bytes": 560556,
+          "sha256": "d9191e18ff2771eaca7854cbd4bdff8e024c8ec4eea8400bcd78fc75001bb893"
+        }
+      ],
+      "segments": 15,
+      "sample_rate": 22050,
+      "bit_rate": 96000,
+      "channels": 2,
+      "verified": true,
+      "mp3_sha256": "2262b5c9f3b638d3302f42b3e112af2175200164298ae5877d414f27fbffe578",
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "sound_events": 0,
+      "ambience_intervals": 0
+    },
+    {
+      "id": "b1-c01",
+      "order": 1,
+      "book": 1,
+      "chapter": 1,
+      "part": "A Gift of Jade",
+      "title": "Chapter 1",
+      "duration": 1806.550204,
+      "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/joined.bin",
+      "bytes": 21678988,
+      "sha256": "c4aa3ee13ff7842ab022492e89c8928817045cf0aeb300dc58e1154bd9373118",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/0000.bin",
+          "bytes": 4000000,
+          "sha256": "5be16fa352e764e029ea323c767a3e62400829979c232b9a3b5a5e0e457191c8"
+        },
+        {
+          "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/0001.bin",
+          "bytes": 4000000,
+          "sha256": "7b3cf348aee3828b474c725327b287502f47cb25807519300adf007da81208da"
+        },
+        {
+          "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/0002.bin",
+          "bytes": 4000000,
+          "sha256": "d529b939d8da80749ea29db0b315394c2b9bd252795c42a01fa2337492cca4f3"
+        },
+        {
+          "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/0003.bin",
+          "bytes": 4000000,
+          "sha256": "ef196407aca33737a7de66f8c8b22c288fdc196aa623bbc75afeac1d225b4ba5"
+        },
+        {
+          "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/0004.bin",
+          "bytes": 4000000,
+          "sha256": "e337c86c76e2beca474fb7ec6bb2cf305332462078dcaa67ef57d18072d73a75"
+        },
+        {
+          "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/0005.bin",
+          "bytes": 1678988,
+          "sha256": "951227dd928e7d33d8595f548e79d4200730429ab0e1846de266b6327f55da5b"
+        }
+      ],
+      "segments": 330,
+      "sample_rate": 22050,
+      "bit_rate": 96000,
+      "channels": 2,
+      "verified": true,
+      "mp3_sha256": "9696b5a0d7f01808b07257cb1e30a1ad6d40b646ff9370df0cb40138685e595a",
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "sound_events": 4,
+      "ambience_intervals": 1
+    }
+  ]
+}
