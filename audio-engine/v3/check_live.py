@@ -1,6 +1,6 @@
-"""Verify the published ciphertext and actual chapter audio in real browsers."""
+"""Verify published ciphertext and actual recordings; retain failures without keys."""
 from pathlib import Path
-import base64, hashlib, json, os, time, urllib.request
+import base64, hashlib, json, os, time, urllib.request, traceback
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[2]
@@ -10,9 +10,18 @@ url=f'https://{owner.lower()}.github.io/{repo}/player/'
 key=Path('/tmp/private-audio/browser-key.bin').read_bytes()
 code=base64.urlsafe_b64encode(key).decode().rstrip('=')
 expected=json.loads((ROOT/'player/catalog.json').read_text())
+checks=[];results=[];failed=False
+
+def write_report():
+    report={'url':url,'published_tracks':len(checks),'expected_tracks':49,
+            'complete':expected.get('complete',False),'remote_files':checks,'browsers':results}
+    (OUT/'live-results.json').write_text(json.dumps(report,indent=2))
+    return report
+
 def get(path):
     req=urllib.request.Request(url+path,headers={'User-Agent':'chapter-publication-check','Cache-Control':'no-cache'})
     with urllib.request.urlopen(req,timeout=45) as response:return response.read()
+
 def sha(data):return hashlib.sha256(data).hexdigest()
 end=time.monotonic()+240
 while True:
@@ -22,7 +31,6 @@ while True:
     except Exception:pass
     if time.monotonic()>end:raise RuntimeError('Pages has not published this chapter catalog')
     time.sleep(8)
-checks=[]
 for track in catalog['tracks']:
     pieces=[]
     for part in track['chunks']:
@@ -34,6 +42,7 @@ for track in catalog['tracks']:
     mp3=AESGCM(key).decrypt(data[:12],data[12:],('Taliesin:v2:'+track['id']).encode())
     assert sha(mp3)==track['mp3_sha256'], 'Published MP3 differs from verified master'
     checks.append({'id':track['id'],'parts':len(pieces),'bytes':len(data),'duration':track['duration'],'remote_byte_exact':True})
+    write_report()
 
 def wait(page,expr,seconds=90):
     end=time.monotonic()+seconds
@@ -41,57 +50,102 @@ def wait(page,expr,seconds=90):
         if page.evaluate('() => Boolean('+expr+')'):return
         page.wait_for_timeout(100)
     raise RuntimeError('Browser check timed out: '+expr)
+
 def ready(page):wait(page,'!document.getElementById("play").disabled')
 def pos(page):return page.eval_on_selector('#audio','a => a.currentTime')
-results=[]
+
 with sync_playwright() as p:
     for name in ('chromium','webkit'):
         browser=getattr(p,name).launch(headless=True)
         context=browser.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True)
-        page=context.new_page();errors=[]
+        page=context.new_page();errors=[];phase='open'
+        result={'browser':name,'passed':False}
         page.on('pageerror',lambda e:errors.append(str(e)))
         try:
             page.goto(url,wait_until='domcontentloaded')
+            page.evaluate('''() => {
+              window.mediaEvents=[];
+              const a=document.getElementById('audio');
+              for(const type of ['loadstart','loadedmetadata','canplay','play','playing','pause','seeking','seeked','ended','error','stalled','waiting'])
+                a.addEventListener(type,()=>{window.mediaEvents.push({event:type,t:a.currentTime,duration:a.duration,paused:a.paused,ready:a.readyState,at:Date.now()});if(window.mediaEvents.length>80)window.mediaEvents.shift();});
+            }''')
+            phase='unlock'
             page.locator('#unlockCode').fill(code)
             page.locator('#unlockForm').evaluate('form => form.requestSubmit()')
             ready(page)
             page.locator('#unlockCode').evaluate("input => input.value=''")
+            phase='play opening'
             page.locator('#play').click()
             wait(page,'!document.getElementById("audio").paused && document.getElementById("audio").currentTime>0.25')
+            result['actual_recording_played']=True
+            phase='tap seek'
             start=pos(page);page.locator('#forward').tap();page.wait_for_timeout(150)
             advanced=pos(page);assert advanced-start>9,'Tap forward failed'
             page.locator('#rewind').tap();page.wait_for_timeout(150);assert pos(page)<advanced-8
+            phase='hold seek'
             box=page.locator('#forward').bounding_box();start=pos(page)
-            page.mouse.move(box['x']+box['width']/2,box['y']+box['height']/2);page.mouse.down();page.wait_for_timeout(900);page.mouse.up()
+            page.mouse.move(box['x']+box['width']/2,box['y']+box['height']/2)
+            page.mouse.down();page.wait_for_timeout(1200);page.mouse.up()
             assert pos(page)-start>20,'Hold forward failed'
-            page.locator('#play').click();paused=pos(page);page.wait_for_timeout(300);assert abs(pos(page)-paused)<.5
+            result['tap_and_hold_seek']=True
+            phase='pause'
+            page.locator('#play').click();paused=pos(page);page.wait_for_timeout(300)
+            assert abs(pos(page)-paused)<.5,'Pause failed'
+            result['pause']=True
+            phase='automatic chapter transition'
             if len(catalog['tracks'])>1:
-                page.eval_on_selector('#audio','a=>{a.currentTime=a.duration-0.4;a.play();}')
+                page.eval_on_selector('#audio','a=>{a.currentTime=a.duration-0.4;}')
+                page.locator('#play').click()
                 wait(page,'document.getElementById("chapterTitle").textContent === "Chapter 1"')
-                ready(page);wait(page,'!document.getElementById("audio").paused && document.getElementById("audio").currentTime>0.25')
+                ready(page)
+                wait(page,'!document.getElementById("audio").paused && document.getElementById("audio").currentTime>0.25')
+                result['auto_advance']=True
+            phase='saved position'
             page.eval_on_selector('#audio','a=>{a.pause();a.currentTime=33;a.dispatchEvent(new Event("timeupdate"));a.dispatchEvent(new Event("pause"));}')
             page.reload();ready(page);assert 32<pos(page)<34,'Resume failed'
-            page.locator('#chaptersButton').click();assert page.locator('#chapterList button').count()==len(catalog['tracks'])
+            result['resume']=True
+            phase='chapter selection'
+            page.locator('#chaptersButton').click()
+            assert page.locator('#chapterList button').count()==len(catalog['tracks'])
             page.locator('#chapterList button').last.click();ready(page)
             assert abs(page.eval_on_selector('#audio','a=>a.duration')-catalog['tracks'][-1]['duration'])<.2
             assert page.eval_on_selector('#audio','a=>a.playbackRate')==1
             assert page.evaluate('document.documentElement.scrollWidth')<=390
+            result.update(chapter_selection=True,normal_speed=True,mobile_overflow=False)
             page.screenshot(path=str(OUT/(name+'-live-player.png')),full_page=True)
-            page.locator('#saveCurrent').click();wait(page,'document.getElementById("saveCurrent").textContent.includes("Saved offline")')
+            phase='offline save'
+            page.locator('#saveCurrent').click()
+            wait(page,'document.getElementById("saveCurrent").textContent.includes("Saved offline")')
             page.evaluate('navigator.serviceWorker.ready')
-            result={'browser':name,'actual_recording_played':True,'tap_and_hold_seek':True,'resume':True,'chapter_selection':True,
-                    'auto_advance':len(catalog['tracks'])>1,'offline_cache_saved':True,'normal_speed':True,'mobile_overflow':False}
+            result['offline_cache_saved']=True
+            phase='offline reload'
             context.set_offline(True)
             try:
-                page.reload();ready(page);page.locator('#play').click();wait(page,'!document.getElementById("audio").paused')
+                page.reload();ready(page);page.locator('#play').click()
+                wait(page,'!document.getElementById("audio").paused')
                 result['offline_reload']='passed'
             except Exception as error:
                 if name!='webkit' or 'WebKit encountered an internal error' not in str(error):raise
                 result['offline_reload']='unverified: Linux WebKit offline navigation internal error'
             finally:context.set_offline(False)
             assert not errors, 'Browser JavaScript errors'
-            results.append(result)
+            result['passed']=True
+        except Exception as error:
+            failed=True
+            result.update(failed_phase=phase,error=str(error).replace(code,'[private key]'),page_errors=errors)
+            try:
+                state=page.evaluate('''() => ({
+                  title:document.getElementById('chapterTitle')?.textContent,
+                  status:document.getElementById('status')?.textContent,
+                  audio:(a=>a?{time:a.currentTime,duration:a.duration,paused:a.paused,ended:a.ended,seeking:a.seeking,readyState:a.readyState,networkState:a.networkState,error:a.error?.message}:null)(document.getElementById('audio')),
+                  events:window.mediaEvents||[]
+                })''')
+                result['state']=state
+                page.screenshot(path=str(OUT/(name+'-failure.png')),full_page=True,mask=[page.locator('#unlockCode')])
+            except Exception:pass
         finally:
+            results.append(result);write_report()
+            print(json.dumps(result,indent=2),flush=True)
             browser.close()
-report={'url':url,'published_tracks':len(checks),'expected_tracks':49,'complete':catalog.get('complete',False),'remote_files':checks,'browsers':results}
-(OUT/'live-results.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))
+print(json.dumps(write_report(),indent=2))
+if failed:raise SystemExit('Actual-recording browser verification failed; see live-results.json')
