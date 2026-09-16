@@ -1,0 +1,48 @@
+name: Verify published chapter playback
+on:
+  push:
+    paths: ['.github/workflows/verify-live-chapters.yml', 'audio-engine/v3/check_live.py']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: live-chapter-verification
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install verification dependencies
+        run: |
+          python -m pip install --quiet cryptography playwright
+          python -m playwright install --with-deps chromium webkit
+      - name: Receive private listening key through an ephemeral envelope
+        run: |
+          python - <<'PY'
+          import importlib.util,pathlib
+          spec=importlib.util.spec_from_file_location('transfer','audio-engine/v3/chapter_transfer.py')
+          module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          module.WORK.mkdir(exist_ok=True,mode=0o700)
+          key=module.receive_key()
+          if len(key)!=32:raise ValueError('Invalid listening key length')
+          target=pathlib.Path('/tmp/private-audio/browser-key.bin')
+          target.write_bytes(key);target.chmod(0o600)
+          PY
+      - name: Test actual hosted recordings and player controls
+        run: python audio-engine/v3/check_live.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-chapter-playback-results
+          path: qa-results/
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Remove private key
+        if: always()
+        run: rm -rf /tmp/private-audio
