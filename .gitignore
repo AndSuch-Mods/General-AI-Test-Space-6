@@ -1,0 +1,33 @@
+# Private source material and generated recordings
+private/
+work/
+output/
+speech/
+models/
+toolchain/
+foley/
+mix/
+*.pdf
+*.epub
+*.mp3
+*.m4b
+*.m4a
+*.wav
+*.flac
+*.onnx
+*.bin
+script.json
+book.json
+book.txt
+reviewed_cast.json
+sound_plan.json
+*.review.tsv
+# Credentials and local environment
+.env
+.env.*
+*.key
+*.pem
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
