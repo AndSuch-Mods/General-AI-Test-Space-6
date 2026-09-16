@@ -46,3 +46,4 @@ jobs:
       - name: Remove private key
         if: always()
         run: rm -rf /tmp/private-audio
+# Verification revision 2: decoded-byte transport validation.
