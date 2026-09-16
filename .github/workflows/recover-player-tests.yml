@@ -1,0 +1,39 @@
+name: Verify and recover chapter player
+on:
+  push:
+    paths: ['.github/workflows/recover-player-tests.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Export public source only
+        run: |
+          mkdir -p exported
+          tar -czf exported/player-source.tar.gz player audio-engine/v2 .github/workflows/render-hq-player.yml
+          sha256sum exported/player-source.tar.gz > exported/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recovered-player-source
+          path: exported/
+          retention-days: 2
+      - name: Install media and browser test tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --quiet playwright cryptography
+          python -m playwright install --with-deps chromium webkit
+      - name: Run actual browser tests
+        run: python audio-engine/v2/qa.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recovered-player-tests
+          path: qa-results/
+          retention-days: 2
