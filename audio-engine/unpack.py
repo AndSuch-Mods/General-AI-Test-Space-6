@@ -1,16 +1,9 @@
-"""Unpack public engine code, then authenticate the private render recipe."""
+"""Authenticate the encrypted reading recipe and public engine bundle."""
 from __future__ import annotations
 import base64,hashlib,io,json,lzma,os,time,urllib.request,urllib.error,zipfile
 from pathlib import Path
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 root=Path(__file__).resolve().parent
-bundle=base64.b64decode((root/'engine-bundle.b64').read_text(),validate=False)
-if hashlib.sha256(bundle).hexdigest()!=(root/'engine-bundle.sha256').read_text().strip():
- raise RuntimeError('Public engine bundle checksum mismatch')
-with zipfile.ZipFile(io.BytesIO(bundle)) as z:
- for name in z.namelist():
-  if Path(name).name!=name or not name.endswith('.py'):raise ValueError('Unsafe engine member')
- z.extractall(root/'runtime')
 work=Path(os.environ.get('AUDIO_WORK','/tmp/private-audio'))
 p=work/'recipe.json';value=json.loads(p.read_text())
 if 'transfer' in value:
@@ -32,8 +25,20 @@ if 'transfer' in value:
   if hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()!=sha:raise ValueError('Damaged input chunk')
   chunks.append(raw)
  cipher=b''.join(chunks);del chunks
+ for pos,remove,replacement in sorted(manifest.get('repairs',[]),reverse=True):
+  cipher=cipher[:pos]+base64.b64decode(replacement)+cipher[pos+remove:]
  if hashlib.sha256(cipher).hexdigest()!=transfer['cipher_sha256']:raise ValueError('Encrypted input checksum mismatch')
- plain=lzma.decompress(AESGCM(base64.b64decode(transfer['key'])).decrypt(base64.b64decode(transfer['nonce']),cipher,('full-recipe:'+run).encode()))
+ plain=lzma.decompress(AESGCM(base64.b64decode(transfer['key'])).decrypt(base64.b64decode(transfer['nonce']),cipher,transfer.get('aad','full-recipe:'+run).encode()))
  if hashlib.sha256(plain).hexdigest()!=transfer['plain_sha256']:raise ValueError('Recipe checksum mismatch')
  p.write_bytes(plain);os.chmod(p,0o600)
  print('Complete encrypted input received and authenticated.',flush=True)
+bundle_text=(root/'engine-bundle.b64').read_bytes()
+if 'transfer' in value:
+ for pos,remove,replacement in sorted(manifest.get('engine_repairs',[]),reverse=True):
+  bundle_text=bundle_text[:pos]+base64.b64decode(replacement)+bundle_text[pos+remove:]
+bundle=base64.b64decode(bundle_text)
+if hashlib.sha256(bundle).hexdigest()!=(root/'engine-bundle.sha256').read_text().strip():raise RuntimeError('Public engine bundle checksum mismatch')
+with zipfile.ZipFile(io.BytesIO(bundle)) as z:
+ for name in z.namelist():
+  if Path(name).name!=name or not name.endswith('.py'):raise ValueError('Unsafe engine member')
+ z.extractall(root/'runtime')

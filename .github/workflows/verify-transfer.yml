@@ -1,0 +1,38 @@
+name: Verify encrypted transfer
+on:
+  push:
+    paths: ['.github/workflows/verify-transfer.yml', '.transfer-inventory/*.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect public code and sealed transport bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import base64,json,os,urllib.request,hashlib,shutil
+          from pathlib import Path
+          out=Path('/tmp/transfer-check');out.mkdir()
+          shutil.copy('audio-engine/engine-bundle.b64',out/'engine-bundle.b64')
+          for inventory in Path('.transfer-inventory').glob('*.json'):
+            value=json.loads(inventory.read_text());chunks=[]
+            for sha in value['blobs']:
+              req=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/git/blobs/'+sha,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(req,timeout=30) as r:blob=json.load(r)
+              chunks.append(base64.b64decode(blob['content']))
+            cipher=b''.join(chunks);(out/(inventory.stem+'.cipher')).write_bytes(cipher)
+            print('Encrypted transfer bytes',len(cipher),'sha256',hashlib.sha256(cipher).hexdigest())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: encrypted-transfer-check
+          path: /tmp/transfer-check/
+          compression-level: 0
+          retention-days: 1
+          if-no-files-found: error
