@@ -1,0 +1,124 @@
+name: Resume verified audiobook chapters
+on:
+  push:
+    paths: ['.github/workflows/resume-audiobook-v4.yml']
+  workflow_dispatch:
+concurrency:
+  group: taliesin-chapter-production-v4
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install --quiet cryptography
+      - name: Verify all encrypted input bytes
+        run: python audio-engine/v4/runner.py verify-input
+  render:
+    needs: verify
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11]
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RENDER_INDEX: ${{ matrix.index }}
+      RENDER_TOTAL: '12'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install speech and mixing dependencies
+        run: python -m pip install --quiet cryptography numpy scipy soundfile onnxruntime
+      - name: Prepare checksum-pinned speech engine
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/private-audio/tools/models
+          curl --fail --location --retry 4 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
+          echo 'a50cb45f355b7af1f6d758c1b360717877ba0a398cc8cbe6d2a7a3a26e225992  /tmp/private-audio/piper.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/private-audio/piper.tar.gz -C /tmp/private-audio/tools
+          curl --fail --location --retry 4 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
+          echo '4e9fc85ab9009385319fc6bae7f55577f8a2d7ee77fd9159a5500eb6531f41e6  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx' | sha256sum -c -
+          curl --fail --location --retry 4 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'audio-engine/v4')
+          import runner
+          runner.base.WORK.mkdir(exist_ok=True)
+          runtime=runner.base.engine()
+          if runner.os.environ['RENDER_INDEX']=='0':
+              print('Public runtime source inspection:')
+              print((runtime/'render_one_thread.py').read_text())
+          PY
+      - name: Receive sealed key and render assigned chapters
+        run: python audio-engine/v4/runner.py render
+      - name: Preserve every completed encrypted chapter
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chapter-v4-${{ matrix.index }}
+          path: /tmp/cipher-export/
+          if-no-files-found: warn
+          compression-level: 0
+          retention-days: 7
+      - name: Remove private inputs and unencrypted working audio
+        if: always()
+        run: rm -rf /tmp/private-audio
+  publish:
+    needs: [verify, render]
+    if: ${{ always() && needs.verify.result == 'success' && !cancelled() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: chapter-v4-*
+          path: player/audio-v2
+          merge-multiple: true
+      - run: python -m pip install --quiet cryptography
+      - name: Authenticate completed chapters and check reading coverage
+        run: python audio-engine/v4/runner.py publish
+      - name: Save verified chapters without replacing existing recordings
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f player/audio-v2
+          git add player/catalog.json player/verification.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish authenticated completed audiobook chapters'
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" = 5 ]; then exit 1; fi
+              sleep 5
+            done
+          fi
+          gh api --method POST repos/${{ github.repository }}/pages/builds
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chapter-publication-verification
+          path: player/verification.json
+          retention-days: 7
+      - name: Remove publication key
+        if: always()
+        run: rm -rf /tmp/private-audio
