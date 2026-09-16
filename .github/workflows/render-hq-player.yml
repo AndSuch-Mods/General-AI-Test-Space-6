@@ -1,0 +1,143 @@
+name: Publish full-quality private iPhone player
+on:
+  push:
+    paths: ['.github/workflows/render-hq-player.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+  pages: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Stop the superseded incomplete render
+        run: gh api --method POST repos/${{ github.repository }}/actions/runs/35100013156/cancel || true
+      - name: Verify and unpack public player source
+        run: |
+          python - <<'PY'
+          import base64,hashlib,io,zipfile,pathlib
+          data=base64.b64decode(''.join(p.read_text() for p in sorted(pathlib.Path('.tooling').glob('player-v2.*.b64'))))
+          assert hashlib.sha256(data).hexdigest()==pathlib.Path('.tooling/player-v2.sha256').read_text().strip(), 'Public source checksum mismatch'
+          with zipfile.ZipFile(io.BytesIO(data)) as z:
+            for name in z.namelist():
+              p=pathlib.PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts
+              assert name.startswith(('player/','audio-engine/v2/'))
+            assert z.testzip() is None
+            z.extractall('.')
+          PY
+          python -m pip install --quiet cairosvg
+          python - <<'PY'
+          import cairosvg
+          for n in (192,512):
+            cairosvg.svg2png(url='player/icon.svg',write_to=f'player/icon-{n}.png',output_width=n,output_height=n)
+          PY
+          node --check player/player.js
+          node --check player/sw.js
+          python -m compileall -q audio-engine/v2
+          touch .nojekyll
+      - name: Save readable public source
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add player audio-engine/v2 .nojekyll
+          git commit -m 'Build iPhone listening app with chapter controls and local decryption'
+          git push origin HEAD:main
+  qa:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: python -m pip install --quiet playwright cryptography
+      - run: python -m playwright install --with-deps chromium webkit
+      - run: python audio-engine/v2/qa.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: player-ui-test-results
+          path: qa-results/
+          retention-days: 2
+  render:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        index: [0,1,2,3,4,5,6,7,8,9,10,11]
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RENDER_INDEX: ${{ matrix.index }}
+      RENDER_TOTAL: '12'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install render dependencies
+        run: python -m pip install --quiet cryptography numpy scipy soundfile onnxruntime
+      - name: Receive encrypted manuscript
+        run: python audio-engine/v2/receive.py
+      - name: Verify public speech engine and model
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/private-audio/tools/models
+          curl --fail --location --retry 3 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
+          echo 'a50cb45f355b7af1f6d758c1b360717877ba0a398cc8cbe6d2a7a3a26e225992  /tmp/private-audio/piper.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/private-audio/piper.tar.gz -C /tmp/private-audio/tools
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
+          echo '4e9fc85ab9009385319fc6bae7f55577f8a2d7ee77fd9159a5500eb6531f41e6  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx' | sha256sum -c -
+      - name: Render and verify full-quality chapters
+        run: python audio-engine/v2/build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: taliesin-v2-encrypted-${{ matrix.index }}
+          path: /tmp/private-audio/publish/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 2
+      - name: Remove private inputs and unencrypted working audio
+        if: always()
+        run: rm -rf /tmp/private-audio
+  publish:
+    needs: [render, qa]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: taliesin-v2-encrypted-*
+          path: player/audio-v2
+          merge-multiple: true
+      - name: Verify every chapter before publication
+        run: python audio-engine/v2/catalog.py
+      - name: Commit the complete encrypted audiobook
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f player/audio-v2
+          git add player/catalog.json player/verification.json
+          git commit -m 'Publish complete verified 96 kbps audiobook for private iPhone playback'
+          git push origin HEAD:main
+      - name: Rebuild GitHub Pages
+        run: gh api --method POST repos/${{ github.repository }}/pages/builds
