@@ -1,0 +1,54 @@
+name: Correct audio chunk transport validation
+on:
+  push:
+    paths: ['.github/workflows/fix-chunk-header.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+jobs:
+  patch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Check transport headers without exposing private data
+        run: |
+          python - <<'PY'
+          import json,os,urllib.request
+          c=json.load(open('player/catalog.json'))
+          t=next(t for t in c['tracks'] if t['id']=='b1-c01')
+          owner,repo=os.environ['GITHUB_REPOSITORY'].split('/')
+          url=f'https://{owner.lower()}.github.io/{repo}/player/'+t['chunks'][0]['src']
+          req=urllib.request.Request(url,headers={'Accept-Encoding':'gzip, br','User-Agent':'transport-header-check'})
+          with urllib.request.urlopen(req,timeout=30) as r:
+            print(json.dumps({'expected_decoded_bytes':t['chunks'][0]['bytes'],'content_length':r.headers.get('Content-Length'),'content_encoding':r.headers.get('Content-Encoding'),'content_type':r.headers.get('Content-Type')}))
+          PY
+      - name: Keep strict decoded-byte checks and remove the transfer-size assumption
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('player/player.js');s=p.read_text()
+          old="     const length=Number(response.headers.get('content-length'));if(length>4000000)throw new Error('Audio piece exceeds its size limit.');"
+          new="     // HTTP compression can make Content-Length exceed the decoded piece size. The bounded reader and SHA-256 below validate the actual bytes."
+          if old not in s:raise SystemExit('Expected transport check was not found; refusing to patch blindly')
+          s=s.replace(old,new);p.write_text(s)
+          p=Path('player/sw.js');p.write_text(p.read_text().replace('taliesin-shell-v3.0.0','taliesin-shell-v3.0.1'))
+          p=Path('audio-engine/v3/upgrade_player.py');s=p.read_text();s=s.replace(old,new);p.write_text(s)
+          PY
+          node --check player/player.js
+          node --check player/sw.js
+          python -m py_compile audio-engine/v3/upgrade_player.py
+      - name: Publish player correction
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add player/player.js player/sw.js audio-engine/v3/upgrade_player.py
+          git commit -m 'Accept compressed transport while enforcing exact decoded audio piece sizes'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          gh api --method POST repos/${{ github.repository }}/pages/builds
