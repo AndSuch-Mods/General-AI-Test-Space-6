@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 concurrency:
   group: taliesin-chapter-production-v4
-  cancel-in-progress: false
+  cancel-in-progress: true
 permissions:
   contents: write
   pages: write
@@ -40,6 +40,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install and check the audio encoder before synthesis
+        run: |
+          set -euo pipefail
+          sudo apt-get -o Acquire::Retries=3 update -qq
+          sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=3 install -y -qq ffmpeg
+          command -v ffmpeg
+          command -v ffprobe
+          ffmpeg -version
+          ffmpeg -v error -f lavfi -i anullsrc=r=22050:cl=stereo -t 0.1 -c:a libmp3lame -b:a 96k -f mp3 /tmp/encoder-check.mp3
+          ffmpeg -v error -i /tmp/encoder-check.mp3 -f null -
+          rm /tmp/encoder-check.mp3
       - name: Install speech and mixing dependencies
         run: python -m pip install --quiet cryptography numpy scipy soundfile onnxruntime
       - name: Prepare checksum-pinned speech engine
@@ -54,14 +65,9 @@ jobs:
           curl --fail --location --retry 4 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json
           python - <<'PY'
           import sys
-          from pathlib import Path
           sys.path.insert(0, 'audio-engine/v4')
           import runner
-          runner.base.WORK.mkdir(exist_ok=True)
-          runtime=runner.base.engine()
-          if runner.os.environ['RENDER_INDEX']=='0':
-              print('Public runtime source inspection:')
-              print((runtime/'render_one_thread.py').read_text())
+          runner.base.engine()
           PY
       - name: Receive sealed key and render assigned chapters
         run: python audio-engine/v4/runner.py render
@@ -93,6 +99,14 @@ jobs:
           pattern: chapter-v4-*
           path: player/audio-v2
           merge-multiple: true
+      - name: Check that this run produced chapters
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          if not list(Path('player/audio-v2').glob('worker-*.json')):
+              if len(list(Path('player/audio-v2/records').glob('*.json'))) <= 2:
+                  raise SystemExit('No new chapters were rendered; publication stopped before requesting a key')
+          PY
       - run: python -m pip install --quiet cryptography
       - name: Authenticate completed chapters and check reading coverage
         run: python audio-engine/v4/runner.py publish
