@@ -1,0 +1,16 @@
+name: Stop obsolete audio workers
+on:
+  push:
+    paths: ['.github/workflows/stop-waiting-audio.yml']
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+jobs:
+  stop:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - run: gh api --method POST repos/${{ github.repository }}/actions/runs/35108318857/cancel || true
