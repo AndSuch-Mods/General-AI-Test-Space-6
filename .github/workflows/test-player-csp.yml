@@ -1,0 +1,29 @@
+name: Test private chapter player
+on:
+  push:
+    paths: ['.github/workflows/test-player-csp.yml', 'audio-engine/v2/qa_csp.py']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install test dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install --quiet playwright cryptography
+          python -m playwright install --with-deps chromium webkit
+      - name: Test controls, chapters, resume and offline playback
+        run: python audio-engine/v2/qa_csp.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: player-csp-test-results
+          path: qa-results/
+          retention-days: 2
