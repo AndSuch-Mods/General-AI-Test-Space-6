@@ -1,11 +1,11 @@
 {
   "version": "layered-1.0.0",
-  "stage": "mixing",
+  "stage": "chapter_verified",
   "current_track": "b3-c16",
-  "completed_tracks": 46,
+  "completed_tracks": 47,
   "expected_tracks": 49,
   "preserved_tracks": 10,
-  "new_tracks": 36,
+  "new_tracks": 37,
   "completed": [
     "b0-c00",
     "b1-c01",
@@ -52,7 +52,8 @@
     "b3-c12",
     "b3-c13",
     "b3-c14",
-    "b3-c15"
+    "b3-c15",
+    "b3-c16"
   ],
   "parallel_chapters": 1,
   "voice_batch_size": 48,

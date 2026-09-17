@@ -1,0 +1,62 @@
+{
+  "id": "b3-c16",
+  "order": 46,
+  "book": 3,
+  "chapter": 16,
+  "part": "The Merlin",
+  "title": "Chapter 16",
+  "origin": "layered-1.0.0",
+  "duration": 1951.582041,
+  "bytes": 23419371,
+  "sha256": "e2300066191bcd6aad42b73bea20c564b922fa5b239e5ea2d616c7f6e8381361",
+  "mp3_sha256": "7f75db8b37d588814fd0708e55aea51a943504036bf4079b42fcbf66f33169ba",
+  "chunks": [
+    {
+      "src": "recordings/audio/b3-c16-e2300066191bcd6a/0000.bin",
+      "bytes": 4000000,
+      "sha256": "0b760af1f7ff5c1e1c4062b5bd973a46c3fe8afd8c2d9e7152e175c0488d4174"
+    },
+    {
+      "src": "recordings/audio/b3-c16-e2300066191bcd6a/0001.bin",
+      "bytes": 4000000,
+      "sha256": "cbd45c2cf0c8278a923543e3638e8f5c0ace11684f74b6129eabdf056f67206f"
+    },
+    {
+      "src": "recordings/audio/b3-c16-e2300066191bcd6a/0002.bin",
+      "bytes": 4000000,
+      "sha256": "6468b892f88837402a51f049301448eb0779b239fe003c0ed990370f67697481"
+    },
+    {
+      "src": "recordings/audio/b3-c16-e2300066191bcd6a/0003.bin",
+      "bytes": 4000000,
+      "sha256": "82bb199e21f742877fd87236a1376cc5cec5b5b8bbde23a95a4f09407ee185ad"
+    },
+    {
+      "src": "recordings/audio/b3-c16-e2300066191bcd6a/0004.bin",
+      "bytes": 4000000,
+      "sha256": "00b29a82bb41df8599b29ca2ac8afc8e8affa20bb1688f21cf02caf05257e76b"
+    },
+    {
+      "src": "recordings/audio/b3-c16-e2300066191bcd6a/0005.bin",
+      "bytes": 3419371,
+      "sha256": "e2d26392416d406af41e5841ebdaa3eb796899aba590994b177f33ad7d38d132"
+    }
+  ],
+  "segments": 367,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 5,
+  "ambience_intervals": 1,
+  "master_peak": 0.6379321217536926,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c16/mix.json",
+  "render_run_id": "35190743139"
+}
