@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "label": "b1-c15/mix",
+  "fingerprint": "67c24f3f3ff0ccc3c797ec3af81c3bd6110729d1966b2fa41107d9b87699a87c",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 29887391,
+  "sha256": "2059cc5f76adbd1e2ca2dafe6a4abbc1e14c28033e8cdba03b68c5cd8ebc2537",
+  "plain_sha256": "88e5a4789d962c2373fe8be6c74e144d97872a3db07151e04c6d872954a2414f",
+  "aad": "Taliesin:layer:v1:b1-c15/mix",
+  "files": [
+    {
+      "name": "part-01-chapter-15.flac",
+      "bytes": 30195210,
+      "sha256": "02bfe438ddf8ac9cb01e85e826e0729df1b67995fbc3c2276f7d1ef9b0682930"
+    },
+    {
+      "name": "part-01-chapter-15.json",
+      "bytes": 116400,
+      "sha256": "598f6f115ce22cafb00ad7d3ecce7bf82d1aa3876bf9739c8553f887b4a96539"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b1-c15-mix-2059cc5f76adbd1e2ca2-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b1-c15-mix-2059cc5f76adbd1e2ca2-0000.bin",
+      "bytes": 8000000,
+      "sha256": "e81a0a49a76630c6583d4afe21e31ca102ee1640cb1a0ec9293089279a0b3c35"
+    },
+    {
+      "name": "b1-c15-mix-2059cc5f76adbd1e2ca2-0001.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b1-c15-mix-2059cc5f76adbd1e2ca2-0001.bin",
+      "bytes": 8000000,
+      "sha256": "1b2f0b66e3a363e386cebd9cad2bfb9223b657d5678a59cb0c9daab2257335d3"
+    },
+    {
+      "name": "b1-c15-mix-2059cc5f76adbd1e2ca2-0002.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b1-c15-mix-2059cc5f76adbd1e2ca2-0002.bin",
+      "bytes": 8000000,
+      "sha256": "43f7f3f8dce1794a5804cc08966f50673ba24fc675bfbfece1af3d58e1b66a5d"
+    },
+    {
+      "name": "b1-c15-mix-2059cc5f76adbd1e2ca2-0003.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b1-c15-mix-2059cc5f76adbd1e2ca2-0003.bin",
+      "bytes": 5887391,
+      "sha256": "361a282ec72703edca47ae13368caefa2dec4addd5657a2a3d0d99c62eabb418"
+    }
+  ],
+  "remote_readback_pass": true
+}
