@@ -1,0 +1,39 @@
+name: Audit recording recovery assets
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/audit-recovery-assets.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: recordings-only
+          persist-credentials: false
+      - name: Inventory prior artifacts and preserve current input without exposing private content
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/recovery-audit
+          gh api --paginate repos/${{ github.repository }}/actions/artifacts --jq '.artifacts[] | {id,name,size_in_bytes,expired,created_at,digest,run_id:.workflow_run.id}' > /tmp/recovery-audit/artifact-inventory.jsonl
+          tar -czf /tmp/recovery-audit/current-input.tar.gz .recording-input audio-engine/recordings-only player/catalog.json player/audio-v2/records
+          sha256sum /tmp/recovery-audit/current-input.tar.gz
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          items=[json.loads(line) for line in Path('/tmp/recovery-audit/artifact-inventory.jsonl').read_text().splitlines()]
+          print(json.dumps({'unexpired_artifacts':[r for r in items if not r['expired']],'artifact_count':len(items)},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recording-recovery-audit
+          path: /tmp/recovery-audit/
+          compression-level: 0
+          retention-days: 30
