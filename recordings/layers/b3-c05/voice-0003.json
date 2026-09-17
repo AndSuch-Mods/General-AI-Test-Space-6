@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "label": "b3-c05/voice-0003",
+  "fingerprint": "d24a8fb8bf5ee8a826f1c02efb5676f84ec5f84c4368f6f1786f087808206cd0",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 311793,
+  "sha256": "76d59e77d42e9e5927bc8ecf4c51a59c96f9fa2741d530cac8dcaf1ea445a36b",
+  "plain_sha256": "4ca8ab3c472943b335a5dfb623d1ad100db44c927907c477e583369d7040c150",
+  "aad": "Taliesin:layer:v1:b3-c05/voice-0003",
+  "files": [
+    {
+      "name": "368875501183a156181b5e52.wav",
+      "bytes": 67956,
+      "sha256": "ec5978eb520012f0e755de5f4803a9fbdaf675e4ce106e323243cbad06a5acd6"
+    },
+    {
+      "name": "f823f128481324cd9fba1618.wav",
+      "bytes": 308924,
+      "sha256": "1ff17445d37284ac67a720393919a1c06f11f81af39c1826a3c1619c572d62b5"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b3-c05-voice-0003-76d59e77d42e9e5927bc-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c05-voice-0003-76d59e77d42e9e5927bc-0000.bin",
+      "bytes": 311793,
+      "sha256": "76d59e77d42e9e5927bc8ecf4c51a59c96f9fa2741d530cac8dcaf1ea445a36b"
+    }
+  ],
+  "remote_readback_pass": true
+}
