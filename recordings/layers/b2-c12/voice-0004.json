@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "label": "b2-c12/voice-0004",
+  "fingerprint": "925445e433872250b15e6083e93d22e5926ab7f13af045378649034d65625c85",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 3905973,
+  "sha256": "5bb4507ed3894dcfda478afae173cc1ec72c4ac0b1db9d9d834261b447fa5eab",
+  "plain_sha256": "95e4b2e34fd3fa05ecd227fe95845ffac4dc01e2ec5f81533053bc403ad6e3c8",
+  "aad": "Taliesin:layer:v1:b2-c12/voice-0004",
+  "files": [
+    {
+      "name": "ebd0405917ee27b56ddac2a9.wav",
+      "bytes": 44916,
+      "sha256": "aebd755c97ec07d45837d6501cda33d06930175fbdd27df40b58bd3d3bec3e88"
+    },
+    {
+      "name": "a7686b188f5cd070f0b5d122.wav",
+      "bytes": 85364,
+      "sha256": "f2a35c06bcbbcba608e16276d33214bc25d8165bafe243785092810ecb0acf48"
+    },
+    {
+      "name": "312ee3ef0e93fd929c436073.wav",
+      "bytes": 154300,
+      "sha256": "5a5816c275a7ddce231f6c8b1b1a62e4f83c4c7d32f07fc8eb8abf397814ba3d"
+    },
+    {
+      "name": "237874747624ce1d769be173.wav",
+      "bytes": 146292,
+      "sha256": "1d302e462ff7868314f847169f4a1f6fdc7eb6d0c9be05c2fd09f44a0c753d3c"
+    },
+    {
+      "name": "4273dda6d716652a0144241e.wav",
+      "bytes": 175292,
+      "sha256": "d7dccc7a8c4f5f53e79e4e0e302e965a89a97587eb9739e0f82f01e294ec98d2"
+    },
+    {
+      "name": "6f007ffbb63fe64508fd0269.wav",
+      "bytes": 281972,
+      "sha256": "4657df3c387fd7f77f30a994f14caceafedf9819bf8e0346d79bb7ec4d448780"
+    },
+    {
+      "name": "933f0f67f539e4924e32adef.wav",
+      "bytes": 109940,
+      "sha256": "89697091ec5afc5d4a5a213ee7025c095965949e4eac8fc254251683faea5641"
+    },
+    {
+      "name": "43c82a5a84f82072809713b5.wav",
+      "bytes": 59764,
+      "sha256": "22c85fba27f3111f70b4c09a8cf1960949bc6f85695e13843b74bfee5457a667"
+    },
+    {
+      "name": "1bed73cdc205bae9d8f55be3.wav",
+      "bytes": 161652,
+      "sha256": "0db9e964fe0be01b52b2e5d4a5b9193118e870c558758653dbbc2ee43337f4fc"
+    },
+    {
+      "name": "60110e5363d9380c445f20b6.wav",
+      "bytes": 154300,
+      "sha256": "a651975917a9b72680e1ff32ae5482f1240baba727b08815db74d82aff61ea0f"
+    },
+    {
+      "name": "dd38450834bdcbba22fd4d38.wav",
+      "bytes": 207220,
+      "sha256": "a4b5f10b561a5a0304e1d81123903f18804472b3509c32b98a45301007156e23"
+    },
+    {
+      "name": "120059ed42191d23c3cd2ab8.wav",
+      "bytes": 130420,
+      "sha256": "2cb527ebdf7ece7ff3b9c8b6c1e9cd90c435dbbf2f85e3cc1c9c2daa49ebe701"
+    },
+    {
+      "name": "e56299ae26fa88cccd31632c.wav",
+      "bytes": 67444,
+      "sha256": "a882236fc2da257932a31003cb6491c1d84bf6c9ac71c44a9d6ab62ac230503a"
+    },
+    {
+      "name": "138667e672c5f69076f4dbf0.wav",
+      "bytes": 135540,
+      "sha256": "d4e2b7c00849fe0c23d1f6f7ef5c137a93c93a72c65ba457e7777eb9467c2250"
+    },
+    {
+      "name": "8bbeb76f654d498073584142.wav",
+      "bytes": 155324,
+      "sha256": "3ad7c0cd20c3cfde9cd1cbf849aa73530d3ec76637a11439ee9c5fb8b2a10eaf"
+    },
+    {
+      "name": "3a677344572e9d983360efd7.wav",
+      "bytes": 94068,
+      "sha256": "828697e769d5118862f8c9c98678e8c486cbad799b5bfd9eb19097f1e031340b"
+    },
+    {
+      "name": "f82a1f78feb1ede3612f2145.wav",
+      "bytes": 1420172,
+      "sha256": "34c8cfcc008e666a966b423d7ffa1e3f0b70263029985840f18079403cf91ca1"
+    },
+    {
+      "name": "e54cd611f7b721c05d63c46f.wav",
+      "bytes": 636236,
+      "sha256": "b831e35d9c800296ed4365371ea2c4bd6763b8384e1c2de45e282cb04e59528a"
+    },
+    {
+      "name": "f35852cae36718df21f2ca89.wav",
+      "bytes": 451956,
+      "sha256": "c3db19bc5c7b138b03b986037d3c219db896921af10786ed20980a55ee5b26d0"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b2-c12-voice-0004-5bb4507ed3894dcfda47-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c12-voice-0004-5bb4507ed3894dcfda47-0000.bin",
+      "bytes": 3905973,
+      "sha256": "5bb4507ed3894dcfda478afae173cc1ec72c4ac0b1db9d9d834261b447fa5eab"
+    }
+  ],
+  "remote_readback_pass": true
+}
