@@ -1,0 +1,29 @@
+name: Snapshot recording workspace
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/snapshot-recording-workspace.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Package existing engine and metadata only
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/audio-snapshot
+          tar -czf /tmp/audio-snapshot/recording-workspace.tar.gz audio-engine .transfer player/catalog.json player/verification.json player/audio-v2/records player/checkpoints player/player.js player/sw.js player/vault*.json
+          cd /tmp/audio-snapshot
+          sha256sum recording-workspace.tar.gz > SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: recording-workspace-snapshot
+          path: /tmp/audio-snapshot/
+          compression-level: 0
+          retention-days: 30
