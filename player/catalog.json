@@ -5,9 +5,9 @@
   "ready": true,
   "complete": false,
   "expected_tracks": 49,
-  "published_tracks": 8,
-  "total_duration": 9679.412245,
-  "total_bytes": 116156035,
+  "published_tracks": 9,
+  "total_duration": 11782.269388,
+  "total_bytes": 141390707,
   "encoding_note": "96 kbps stereo MP3 encoded from native 22,050 Hz chapter masters. Encrypted transport pieces are reassembled byte-for-byte before playback.",
   "tracks": [
     {
@@ -390,6 +390,69 @@
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "eff33c94c8610cbb7ae736da90610e262e307709fd1a72c9ad60a9c361c3499e",
       "speech_segments_verified": 277
+    },
+    {
+      "id": "b1-c08",
+      "order": 8,
+      "book": 1,
+      "chapter": 8,
+      "part": "A Gift of Jade",
+      "title": "Chapter 8",
+      "duration": 2102.857143,
+      "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/joined.bin",
+      "bytes": 25234672,
+      "sha256": "ac8c4a7b578b5ad68a9d90355547cfbc73168b17ad765c0f18792e69382139da",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0000.bin",
+          "bytes": 4000000,
+          "sha256": "84ecc3ab28243a918e282a092b579a035e1ff7b5e98ed7d8d677cc67a52101bb"
+        },
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0001.bin",
+          "bytes": 4000000,
+          "sha256": "50732e7da0bc8e85203dd383e6a4594b6b40ace15bacfe6e91889736fa7be3de"
+        },
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0002.bin",
+          "bytes": 4000000,
+          "sha256": "419bd2a158cebb07fd27b349ac5142bf6449374f2379d01ced81b54aa363f430"
+        },
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0003.bin",
+          "bytes": 4000000,
+          "sha256": "f28163d10fa35b9152d6a5228a7f7b863f43ee8d22cfdc88969b17875fb88146"
+        },
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0004.bin",
+          "bytes": 4000000,
+          "sha256": "3c3cce2c82d901effe283d7caf0be3608b8a0db902191eacb87a4e4496aae93d"
+        },
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0005.bin",
+          "bytes": 4000000,
+          "sha256": "233a479beca82fe73aa3a905b79d68e133e1b5d1d30767fa037691a70607cdd6"
+        },
+        {
+          "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/0006.bin",
+          "bytes": 1234672,
+          "sha256": "724c51afba7775280662b2b33d156dd230447d5594a112183e2fdae29c1b1a2e"
+        }
+      ],
+      "segments": 265,
+      "sample_rate": 22050,
+      "bit_rate": 96000,
+      "channels": 2,
+      "verified": true,
+      "mp3_sha256": "df90ba44e26c05eebd15327fe5a26ed8df606f13358645388572e37c5490d87e",
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "sound_events": 3,
+      "ambience_intervals": 0,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "recipe_sha256": "d2d3271fec110fcacd4f8cea324d92136fec41671d4bd50e2ccea99c737a7c59",
+      "speech_segments_verified": 265
     }
   ]
 }
