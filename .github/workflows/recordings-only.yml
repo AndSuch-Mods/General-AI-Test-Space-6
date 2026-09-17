@@ -28,9 +28,9 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --quiet cryptography
-          python -m py_compile audio-engine/recordings-only/render.py
-          python audio-engine/recordings-only/render.py plan
-          python audio-engine/recordings-only/render.py key
+          python -m py_compile audio-engine/recordings-only/render.py audio-engine/recordings-only/finish.py
+          python audio-engine/recordings-only/finish.py plan
+          python audio-engine/recordings-only/finish.py key
       - name: Install the same checksum-pinned offline speech engine
         run: |
           set -euo pipefail
@@ -47,9 +47,9 @@ jobs:
           echo '7f85e6391ed0f7f46e4abd19345929a16be931a0c9945086f96692dce2087fa8  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json' | sha256sum -c -
           ffmpeg -v error -f lavfi -i anullsrc=r=22050:cl=stereo -t 0.1 -c:a libmp3lame -b:a 96k /tmp/private-audio/encoder-check.mp3
           ffmpeg -v error -xerror -i /tmp/private-audio/encoder-check.mp3 -f null -
-      - name: Render, verify, and save one chapter before opening the next
-        run: python audio-engine/recordings-only/render.py render
-      - name: Preserve encrypted lossless chapter masters
+      - name: Render, verify, and permanently save one chapter before opening the next
+        run: python audio-engine/recordings-only/finish.py render
+      - name: Preserve any encrypted native masters not yet saved to the release
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -67,6 +67,7 @@ jobs:
             recordings/complete.json
             recordings/progress.json
             recordings/records/
+            recordings/masters/
           if-no-files-found: ignore
           retention-days: 30
       - name: Remove private input, keys, and unencrypted working audio
