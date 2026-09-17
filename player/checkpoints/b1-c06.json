@@ -1,0 +1,13 @@
+{
+  "version": 5,
+  "track": "b1-c06",
+  "key_id": "sequential-v6",
+  "cipher_sha256": "349a8033ac1c236c9403b7fda0753aa9275fa4447c4070b9c8ffd9291f23e770",
+  "mp3_sha256": "90f6e6a3ba513f1dc9b8fbd55a8f07fbb8fd47c11e02e1f8088493babcc9da09",
+  "segments": 144,
+  "duration": 821.342041,
+  "full_decode_pass": true,
+  "remote_readback_pass": true,
+  "reassembly_byte_exact": true,
+  "run_id": "35168506445"
+}
