@@ -1,0 +1,8 @@
+{
+  "key_id": "private-archive-v1",
+  "recovery_archive": "Taliesin_private_production_files.zip",
+  "recovery_salt_hex": "bcd4cb7d65e3439e8797b662fd6fbb02778859117f4e4599349f80a50ed4a0b1",
+  "recovery_info": "Taliesin private archive audio key v1",
+  "algorithm": "HKDF-SHA256 over the exact PRIVATE archive bytes; output length 32. The archive checksum is not a substitute for the archive bytes.",
+  "private_material": "The source archive and derived key must never be committed, logged, or included in public artifacts."
+}
