@@ -1,0 +1,13 @@
+{
+  "version": 5,
+  "track": "b1-c08",
+  "key_id": "private-archive-v1",
+  "cipher_sha256": "ac8c4a7b578b5ad68a9d90355547cfbc73168b17ad765c0f18792e69382139da",
+  "mp3_sha256": "df90ba44e26c05eebd15327fe5a26ed8df606f13358645388572e37c5490d87e",
+  "segments": 265,
+  "duration": 2102.857143,
+  "full_decode_pass": true,
+  "remote_readback_pass": true,
+  "reassembly_byte_exact": true,
+  "run_id": "35171060304"
+}
