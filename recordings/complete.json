@@ -61,5 +61,12 @@
   "voice_batch_size": 48,
   "attempt_limit": 3,
   "player_deployed": false,
-  "run_id": "35190743139"
+  "run_id": "35190743139",
+  "numbered_chapters": 48,
+  "opening_tracks": 1,
+  "reading_segments": 11105,
+  "duration_seconds": 62338.455508,
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "full_collection_complete": true,
+  "native_masters_saved": 39
 }
