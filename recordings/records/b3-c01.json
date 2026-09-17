@@ -1,0 +1,57 @@
+{
+  "id": "b3-c01",
+  "order": 31,
+  "book": 3,
+  "chapter": 1,
+  "part": "The Merlin",
+  "title": "Chapter 1",
+  "origin": "layered-1.0.0",
+  "duration": 1453.453061,
+  "bytes": 17441823,
+  "sha256": "0fd53ea512eeffe316f7781f04a2d66881cfea31543aca2add7d8e37c1f441cc",
+  "mp3_sha256": "f93aa9778d4c6794967ee1472246a9bdb1ed44657b9d6e6f2afe6186c8ecf711",
+  "chunks": [
+    {
+      "src": "recordings/audio/b3-c01-0fd53ea512eeffe3/0000.bin",
+      "bytes": 4000000,
+      "sha256": "7b935556ddf2a5d403e9df22b026eed7df3ae248edca2ed45bbef59bceec33f3"
+    },
+    {
+      "src": "recordings/audio/b3-c01-0fd53ea512eeffe3/0001.bin",
+      "bytes": 4000000,
+      "sha256": "e1bf5a4bf06e53fb213b0ed2e67689ddf83b04c3415e6756cc04d7a77fb8384f"
+    },
+    {
+      "src": "recordings/audio/b3-c01-0fd53ea512eeffe3/0002.bin",
+      "bytes": 4000000,
+      "sha256": "933c496cf6c5f3ff8536126d56265cdf2eda9c5591c4a1d2c3289e6f040f4654"
+    },
+    {
+      "src": "recordings/audio/b3-c01-0fd53ea512eeffe3/0003.bin",
+      "bytes": 4000000,
+      "sha256": "84747b5e44ced77ab0d9b955bcc77660c0d342823fa7b3de6a0ca322071c5e9c"
+    },
+    {
+      "src": "recordings/audio/b3-c01-0fd53ea512eeffe3/0004.bin",
+      "bytes": 1441823,
+      "sha256": "16d2523420c2535b97a6f228eca9c47e3dd4a7235e083b272a8b4a86be6cd3ab"
+    }
+  ],
+  "segments": 211,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 2,
+  "ambience_intervals": 1,
+  "master_peak": 0.6266688108444214,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c01/mix.json",
+  "render_run_id": "35190743139"
+}
