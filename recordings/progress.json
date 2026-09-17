@@ -1,6 +1,6 @@
 {
   "version": "layered-1.0.0",
-  "stage": "voice_batch",
+  "stage": "mixing",
   "current_track": "b3-c13",
   "completed_tracks": 43,
   "expected_tracks": 49,
@@ -55,7 +55,5 @@
   "voice_batch_size": 48,
   "attempt_limit": 3,
   "player_deployed": false,
-  "run_id": "35190743139",
-  "batch": 4,
-  "batches": 4
+  "run_id": "35190743139"
 }
