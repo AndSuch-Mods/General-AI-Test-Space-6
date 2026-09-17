@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "label": "b1-c13/voice-0005",
+  "fingerprint": "76f78f0c67111f18f0165e7ba263477ef18d86d0f92e6fb6effde8791085ae53",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 117591,
+  "sha256": "8e0832372c094f722423bf7c48661748ae781619b664c7d693f0357724008ec1",
+  "plain_sha256": "1e340f46d0fa22c54aafca0818b119be7aab46e1e6e10311450dab94f093c517",
+  "aad": "Taliesin:layer:v1:b1-c13/voice-0005",
+  "files": [
+    {
+      "name": "fbd0909b6c874c58bef79b7f.wav",
+      "bytes": 135540,
+      "sha256": "61675a06b9943dd76d0d9e14ddbac2d8afd37a9e2beba69da5fda0c7d310b63b"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b1-c13-voice-0005-8e0832372c094f722423-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b1-c13-voice-0005-8e0832372c094f722423-0000.bin",
+      "bytes": 117591,
+      "sha256": "8e0832372c094f722423bf7c48661748ae781619b664c7d693f0357724008ec1"
+    }
+  ],
+  "remote_readback_pass": true
+}
