@@ -1,1 +1,1 @@
-{"request_id":"finish-verified-recordings-20260917-01","source_sha256":"707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5","parallel_chapters":1,"verify_before_next":true,"preserve_existing_player":true,"store_native_masters":true}
+{"request_id":"layered-resume-20260917-0638-01","source_sha256":"707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5","parallel_chapters":1,"verify_before_next":true,"preserve_existing_player":true,"store_native_masters":true,"voice_batch_size":48,"retry_attempts":3,"publish_after_all_recordings":true}
