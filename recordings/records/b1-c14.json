@@ -1,0 +1,52 @@
+{
+  "id": "b1-c14",
+  "order": 14,
+  "book": 1,
+  "chapter": 14,
+  "part": "A Gift of Jade",
+  "title": "Chapter 14",
+  "origin": "layered-1.0.0",
+  "duration": 1264.875102,
+  "bytes": 15178887,
+  "sha256": "6b275c1a1ad8acfe04e766aca12c820f682de519ad2c8c32189dac53f2667bc8",
+  "mp3_sha256": "6c46ec3b7b24ea421eb87dd5844550f9362a92eaa7cc414c20acd52101ac9e2b",
+  "chunks": [
+    {
+      "src": "recordings/audio/b1-c14-6b275c1a1ad8acfe/0000.bin",
+      "bytes": 4000000,
+      "sha256": "090a0b2149660ce8e78ddf1de9b238d60c878d7fc158b6a52d0a75c2ecd9441b"
+    },
+    {
+      "src": "recordings/audio/b1-c14-6b275c1a1ad8acfe/0001.bin",
+      "bytes": 4000000,
+      "sha256": "4d0a8e85ecb0490b24fc71fd05cef28cdc1a0a83cd3c5ae9a48125f2fdd42cff"
+    },
+    {
+      "src": "recordings/audio/b1-c14-6b275c1a1ad8acfe/0002.bin",
+      "bytes": 4000000,
+      "sha256": "3fa93b3236a024a765ec12abad4af6ced6cbd94c32f311322f519a4c5e0ef996"
+    },
+    {
+      "src": "recordings/audio/b1-c14-6b275c1a1ad8acfe/0003.bin",
+      "bytes": 3178887,
+      "sha256": "22c0409dfa3340968d3223fa48567bbdc616b43b75746d063d2548868bd9fd59"
+    }
+  ],
+  "segments": 270,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 4,
+  "ambience_intervals": 1,
+  "master_peak": 0.6434789896011353,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b1-c14/mix.json",
+  "render_run_id": "35190743139"
+}
