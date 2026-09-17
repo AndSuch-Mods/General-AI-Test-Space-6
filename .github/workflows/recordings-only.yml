@@ -9,6 +9,8 @@ concurrency:
   cancel-in-progress: false
 permissions:
   contents: write
+  actions: read
+  pages: write
 jobs:
   recordings:
     runs-on: ubuntu-24.04
@@ -24,51 +26,57 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Authenticate the complete prepared reading
+      - name: Install dependencies and verify the complete prepared reading
         run: |
           set -euo pipefail
-          python -m pip install --quiet cryptography
-          python -m py_compile audio-engine/recordings-only/render.py audio-engine/recordings-only/finish.py
+          python -m pip install --quiet --retries 2 cryptography numpy scipy soundfile onnxruntime
+          python -m py_compile audio-engine/recordings-only/layer_store.py audio-engine/recordings-only/layered.py
           python audio-engine/recordings-only/finish.py plan
-          python audio-engine/recordings-only/finish.py key
+      - name: Authenticate the recording key without publishing it
+        env:
+          TALIESIN_ARCHIVE_KEY_B64: ${{ secrets.TALIESIN_ARCHIVE_KEY_B64 }}
+        run: python audio-engine/recordings-only/layered.py key
       - name: Install the same checksum-pinned offline speech engine
         run: |
           set -euo pipefail
-          sudo apt-get -o Acquire::Retries=3 update -qq
-          sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=3 install -y -qq ffmpeg
-          python -m pip install --quiet numpy scipy soundfile onnxruntime
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get -o Acquire::Retries=2 update -qq
+            sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=2 install -y -qq ffmpeg
+          fi
           mkdir -p /tmp/private-audio/tools/models
-          curl --fail --location --retry 3 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
+          curl --fail --location --retry 2 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
           echo 'a50cb45f355b7af1f6d758c1b360717877ba0a398cc8cbe6d2a7a3a26e225992  /tmp/private-audio/piper.tar.gz' | sha256sum -c -
           tar -xzf /tmp/private-audio/piper.tar.gz -C /tmp/private-audio/tools
-          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
+          curl --fail --location --retry 2 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
           echo '4e9fc85ab9009385319fc6bae7f55577f8a2d7ee77fd9159a5500eb6531f41e6  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx' | sha256sum -c -
-          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json
+          curl --fail --location --retry 2 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json
           echo '7f85e6391ed0f7f46e4abd19345929a16be931a0c9945086f96692dce2087fa8  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json' | sha256sum -c -
-          ffmpeg -v error -f lavfi -i anullsrc=r=22050:cl=stereo -t 0.1 -c:a libmp3lame -b:a 96k /tmp/private-audio/encoder-check.mp3
-          ffmpeg -v error -xerror -i /tmp/private-audio/encoder-check.mp3 -f null -
-      - name: Render, verify, and permanently save one chapter before opening the next
-        run: python audio-engine/recordings-only/finish.py render
-      - name: Preserve any encrypted native masters not yet saved to the release
+      - name: Test blank tempo handling, encrypted recovery, and retry limits
+        run: python audio-engine/recordings-only/test_layered.py
+      - name: Resume saved layers and verify each chapter before advancing
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if python audio-engine/recordings-only/layered.py run; then
+              exit 0
+            fi
+            if [ "$attempt" = 3 ]; then exit 1; fi
+            echo "Reopening production from its saved layers after attempt $attempt"
+            sleep "$((attempt * 5))"
+          done
+      - name: Publish only after the entire recording collection is saved
+        run: |
+          if [ -f recordings/complete.json ] && [ -f audio-engine/recordings-only/publish_layered.py ]; then
+            python audio-engine/recordings-only/publish_layered.py
+          fi
+      - name: Preserve pending encrypted recordings and checkpoint manifests
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: encrypted-native-chapter-masters
-          path: /tmp/encrypted-native-masters/
+          name: layered-encrypted-recovery
+          path: recordings/
           if-no-files-found: ignore
           compression-level: 0
-          retention-days: 30
-      - name: Preserve recording verification reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: recordings-only-verification
-          path: |
-            recordings/complete.json
-            recordings/progress.json
-            recordings/records/
-            recordings/masters/
-          if-no-files-found: ignore
           retention-days: 30
       - name: Remove private input, keys, and unencrypted working audio
         if: always()
