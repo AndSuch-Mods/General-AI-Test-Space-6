@@ -1,0 +1,10 @@
+{
+  "version": 6,
+  "track": "b1-c08",
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "segments": 265,
+  "cipher_bytes": 15924,
+  "cipher_sha256": "75bb02a758e7796a00c90efcbe4a5e738e1b1eb6ea2e6689c78626904926fe6c",
+  "plain_sha256": "d2d3271fec110fcacd4f8cea324d92136fec41671d4bd50e2ccea99c737a7c59"
+}
