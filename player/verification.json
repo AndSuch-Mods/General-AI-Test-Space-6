@@ -1,6 +1,6 @@
 {
   "complete": false,
-  "published_tracks": 9,
+  "published_tracks": 10,
   "expected_tracks": 49,
   "max_transport_chunk_bytes": 4000000,
   "all_published_chapters_decoded": true,
