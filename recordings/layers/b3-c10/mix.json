@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "label": "b3-c10/mix",
+  "fingerprint": "1e056e4f8d383b339be45f9ab4df4cb83a5d09a5c334145bb0ae3be07882ac33",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 35471964,
+  "sha256": "cf9531c4cc8ea8e08f3ea2b2c05958b7d6faf724915d17870afbb67b76a48307",
+  "plain_sha256": "b4352998d4c259cb92ff0dfb5ee7f6fba79405d447c848629896b9fa2b0216ed",
+  "aad": "Taliesin:layer:v1:b3-c10/mix",
+  "files": [
+    {
+      "name": "part-03-chapter-10.flac",
+      "bytes": 35518263,
+      "sha256": "f9db1c9e2d15e32240c0f230c98803386074d442d7387252c74396b637ec4afa"
+    },
+    {
+      "name": "part-03-chapter-10.json",
+      "bytes": 66846,
+      "sha256": "00f841ae8c99a78042d4dbf60d529ddba196a4138d5c120a837f3cace1271ea5"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b3-c10-mix-cf9531c4cc8ea8e08f3e-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c10-mix-cf9531c4cc8ea8e08f3e-0000.bin",
+      "bytes": 8000000,
+      "sha256": "5d8d133e18a6e7c1021d129400e441d1e9827700152169c3fae89e834bf651f5"
+    },
+    {
+      "name": "b3-c10-mix-cf9531c4cc8ea8e08f3e-0001.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c10-mix-cf9531c4cc8ea8e08f3e-0001.bin",
+      "bytes": 8000000,
+      "sha256": "6297ed5db9ac648a55b42adf3eeba791cf2e01e3ab5cc9a67ff8908b38b9ad20"
+    },
+    {
+      "name": "b3-c10-mix-cf9531c4cc8ea8e08f3e-0002.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c10-mix-cf9531c4cc8ea8e08f3e-0002.bin",
+      "bytes": 8000000,
+      "sha256": "8b6e63aebea5b84efd65aab7addff90d7fa600eafb6f9ba4d63a4af25a7d5790"
+    },
+    {
+      "name": "b3-c10-mix-cf9531c4cc8ea8e08f3e-0003.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c10-mix-cf9531c4cc8ea8e08f3e-0003.bin",
+      "bytes": 8000000,
+      "sha256": "3b22910b8abe23487a8bdae9ba0c747a08da5143d40122b0de5cad7912686575"
+    },
+    {
+      "name": "b3-c10-mix-cf9531c4cc8ea8e08f3e-0004.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c10-mix-cf9531c4cc8ea8e08f3e-0004.bin",
+      "bytes": 3471964,
+      "sha256": "0e32532c6373903c228be58925fac80972252f9d36a6153cafc96bc03bcaab14"
+    }
+  ],
+  "remote_readback_pass": true
+}
