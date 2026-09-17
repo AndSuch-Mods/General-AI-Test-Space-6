@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "label": "b2-c10/voice-0006",
+  "fingerprint": "141dfee63a0d24452f5e8a6676bec14f8abfadc1acce6cb26e085d9434d2a886",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 664800,
+  "sha256": "e5a16699fcc28eb3ba1b3f57d27d383bdeb9164ee74b1da8fe1df4fc4d3eb463",
+  "plain_sha256": "82a7e816e763542fa1480ff11c45e0d2b4091380d2c68e9e5d1c4a9360051d69",
+  "aad": "Taliesin:layer:v1:b2-c10/voice-0006",
+  "files": [
+    {
+      "name": "14d00dc01872bb677f4725fb.wav",
+      "bytes": 64884,
+      "sha256": "38f917dfa26486b9e201377344c33dcef617f4d7d310c313b8494c54d6e90104"
+    },
+    {
+      "name": "4f428cf93339e829c09cb0d2.wav",
+      "bytes": 67444,
+      "sha256": "0324daac7b6293e8f37fbc2df301f10439adc94d2fc28d426389e97715d353ea"
+    },
+    {
+      "name": "f55209bf024e106bb038648f.wav",
+      "bytes": 243716,
+      "sha256": "a99fb90f5bcdf714efd7896f6d925fa3828d91d859c52d0220ec8c1b3a825220"
+    },
+    {
+      "name": "159f490ecc19becc4cb30733.wav",
+      "bytes": 50036,
+      "sha256": "bfbef13e2a7d1bb362bf97048ca0210054583d5700ca05826694602274f386f6"
+    },
+    {
+      "name": "4540338a7f973bdc66ee1111.wav",
+      "bytes": 176316,
+      "sha256": "ffb16a5dd66e40a8423ee40773ef6e7b97b76ec896baa8119487ccebc59b2e07"
+    },
+    {
+      "name": "37de66383e961c5b6c93b255.wav",
+      "bytes": 105332,
+      "sha256": "48180f8d2bb76c577159dbd245fafbc87e6bab8a2cfeba7c4c05f8af7f0a4bae"
+    },
+    {
+      "name": "b4d0fa74fc2290ff37f9b8c9.wav",
+      "bytes": 112500,
+      "sha256": "4fde6059e03b7f67992999d64e0470610aba19a02a4b2fc4db984a9f1d484a9f"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b2-c10-voice-0006-e5a16699fcc28eb3ba1b-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c10-voice-0006-e5a16699fcc28eb3ba1b-0000.bin",
+      "bytes": 664800,
+      "sha256": "e5a16699fcc28eb3ba1b3f57d27d383bdeb9164ee74b1da8fe1df4fc4d3eb463"
+    }
+  ],
+  "remote_readback_pass": true
+}
