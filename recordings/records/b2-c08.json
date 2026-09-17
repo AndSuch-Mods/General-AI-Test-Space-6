@@ -1,0 +1,47 @@
+{
+  "id": "b2-c08",
+  "order": 24,
+  "book": 2,
+  "chapter": 8,
+  "part": "The Sun Bull",
+  "title": "Chapter 8",
+  "origin": "layered-1.0.0",
+  "duration": 906.736327,
+  "bytes": 10881222,
+  "sha256": "618c677217530959e6cd589c095ae86d47702213016191a235761882848bb873",
+  "mp3_sha256": "a2171f57d1020aba4871fe6005ee4fa74cd12c4e28a0022a0655d0f59be9769e",
+  "chunks": [
+    {
+      "src": "recordings/audio/b2-c08-618c677217530959/0000.bin",
+      "bytes": 4000000,
+      "sha256": "adcb65a75cd81dcc48713e85899c893d5c1fd51ef8e748d02b6e3beeb4177e13"
+    },
+    {
+      "src": "recordings/audio/b2-c08-618c677217530959/0001.bin",
+      "bytes": 4000000,
+      "sha256": "7b0ed3de2ea842298bf3bb86fcab785bc120091ce1baba24f84a24e64462efd5"
+    },
+    {
+      "src": "recordings/audio/b2-c08-618c677217530959/0002.bin",
+      "bytes": 2881222,
+      "sha256": "2df48338d73219834e04215131d34db79ce7ec58602bbf0e7e697d0013ea692a"
+    }
+  ],
+  "segments": 124,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 0,
+  "ambience_intervals": 0,
+  "master_peak": 0.6434789896011353,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b2-c08/mix.json",
+  "render_run_id": "35190743139"
+}
