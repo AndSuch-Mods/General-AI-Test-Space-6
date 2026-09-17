@@ -1,0 +1,57 @@
+{
+  "id": "b3-c17",
+  "order": 47,
+  "book": 3,
+  "chapter": 17,
+  "part": "The Merlin",
+  "title": "Chapter 17",
+  "origin": "layered-1.0.0",
+  "duration": 1355.31102,
+  "bytes": 16264118,
+  "sha256": "389f4016e6a75fc857617f669c7b9e8554eed298b81fe41f118436ec58af44ff",
+  "mp3_sha256": "c4253a9920bc8f5ddd01ec253438f02b08cccff751f72e956cf4999c307bf79a",
+  "chunks": [
+    {
+      "src": "recordings/audio/b3-c17-389f4016e6a75fc8/0000.bin",
+      "bytes": 4000000,
+      "sha256": "c9c88dcd78a29c7f6654da0d13d571b80e3f979f5b74f7d46ab5733fc0222c7b"
+    },
+    {
+      "src": "recordings/audio/b3-c17-389f4016e6a75fc8/0001.bin",
+      "bytes": 4000000,
+      "sha256": "c29a99d0bdbd7076ebd9e40abdb96fb126770ff6ce1688d838d67a2d3b698225"
+    },
+    {
+      "src": "recordings/audio/b3-c17-389f4016e6a75fc8/0002.bin",
+      "bytes": 4000000,
+      "sha256": "e7865c6886dfd4cb019fac93b14f4fed9deb1818de03a9993216ecad82e5d4ca"
+    },
+    {
+      "src": "recordings/audio/b3-c17-389f4016e6a75fc8/0003.bin",
+      "bytes": 4000000,
+      "sha256": "177cc58e47370f81d22a4770a4a391463bb27e44621b410b753dab1a9293ccb6"
+    },
+    {
+      "src": "recordings/audio/b3-c17-389f4016e6a75fc8/0004.bin",
+      "bytes": 264118,
+      "sha256": "9584e6f68e82f7cf40d8898baa9d84ac67611cfa2b13ec799d8e346104c29655"
+    }
+  ],
+  "segments": 247,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 3,
+  "ambience_intervals": 2,
+  "master_peak": 0.6415030360221863,
+  "duration_anomaly_count": 1,
+  "native_master_layer": "recordings/layers/b3-c17/mix.json",
+  "render_run_id": "35190743139"
+}
