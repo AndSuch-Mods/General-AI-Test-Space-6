@@ -1,0 +1,53 @@
+{
+  "id": "b1-c03",
+  "order": 3,
+  "book": 1,
+  "chapter": 3,
+  "part": "A Gift of Jade",
+  "title": "Chapter 3",
+  "duration": 1442.76898,
+  "src": "audio-v2/b1-c03-94feb4fb870e1b2a/joined.bin",
+  "bytes": 17313614,
+  "sha256": "94feb4fb870e1b2a2e0866282d72cf45a23c3ea6081468b5548dbc854d5ae1ee",
+  "chunks": [
+    {
+      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/0000.bin",
+      "bytes": 4000000,
+      "sha256": "35a8b0a2d41086f0220f7680c8a2515248a36b4f2ed788ec41d4031d8aced2db"
+    },
+    {
+      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/0001.bin",
+      "bytes": 4000000,
+      "sha256": "008c56d838844be394925d977b37c77527e64667a8fc5f1c72637dcf4d9d833e"
+    },
+    {
+      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/0002.bin",
+      "bytes": 4000000,
+      "sha256": "f29a0673ccfd650e9060f05a745eb1d5fb01551df696fdb0561acbec06bd4a16"
+    },
+    {
+      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/0003.bin",
+      "bytes": 4000000,
+      "sha256": "2970761f954cb21f54b0e05945ab8819dfa1e748810c41482e541fb4c57f50ff"
+    },
+    {
+      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/0004.bin",
+      "bytes": 1313614,
+      "sha256": "7e9586136b3dd9a9c23c8cd9875370f1c9d6b7857112aef510c921a4e9dc29e4"
+    }
+  ],
+  "segments": 256,
+  "sample_rate": 22050,
+  "bit_rate": 96000,
+  "channels": 2,
+  "verified": true,
+  "mp3_sha256": "797343c49cdaeb924a8d8344a50b577e563ee68893268aa026f1d5d6504b90cf",
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "sound_events": 9,
+  "ambience_intervals": 0,
+  "key_id": "sequential-v5",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "recipe_sha256": "e7a134377018dda489cfa531c1dc4d9fa4698d5a2052154039dce198911b2561",
+  "speech_segments_verified": 256
+}

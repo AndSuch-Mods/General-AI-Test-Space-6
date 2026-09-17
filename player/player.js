@@ -83,7 +83,7 @@
    try{const response=await fetch(file);if(!response.ok)continue;const vault=await response.json(),proof=b64(vault.proof);const text=await crypto.subtle.decrypt({name:'AES-GCM',iv:proof.slice(0,12),additionalData:encode(AAD+'unlock')},key,proof.slice(12));if(new TextDecoder().decode(text)==='Taliesin private player'){matched=id;break;}}catch{}
   }
   if(!matched)throw new Error('That code does not match the available recordings. Keep both private links if you use the earlier and new chapters.');
-  state.keys[matched]=key;state.key=key;
+  state.keys[matched]=key;state.key=key;history.replaceState(null,'',location.pathname+location.search);
   try{await setting('keys-v5',state.keys);if(matched==='legacy')await setting('key',key);}catch{toast('Unlocked for this session. Keep your private link.');}
   $('unlockPanel').hidden=true;$('unlockCode').value='';chooseUnlocked(preferred);controlState();renderList();if(state.tracks.length)await load(state.index,false);
  }
