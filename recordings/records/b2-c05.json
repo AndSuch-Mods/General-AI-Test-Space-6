@@ -1,0 +1,57 @@
+{
+  "id": "b2-c05",
+  "order": 21,
+  "book": 2,
+  "chapter": 5,
+  "part": "The Sun Bull",
+  "title": "Chapter 5",
+  "origin": "layered-1.0.0",
+  "duration": 1465.730612,
+  "bytes": 17589153,
+  "sha256": "18103b0072cd00265aefd71d856c20dc039170d06b8a15d0b06cd00aca13a4de",
+  "mp3_sha256": "b36e8fbaaa7e0e1dc90d2c6eab33ce9931952f9473d80a9831b3759eb4b10428",
+  "chunks": [
+    {
+      "src": "recordings/audio/b2-c05-18103b0072cd0026/0000.bin",
+      "bytes": 4000000,
+      "sha256": "90afe49ccca95c2a37b3e621f69b4e0b37ab16d60cd66af187c260986837902e"
+    },
+    {
+      "src": "recordings/audio/b2-c05-18103b0072cd0026/0001.bin",
+      "bytes": 4000000,
+      "sha256": "65c206b755bdd06b9664709ac6ea76767cd1893f9eb2f288b40e59432fe35db0"
+    },
+    {
+      "src": "recordings/audio/b2-c05-18103b0072cd0026/0002.bin",
+      "bytes": 4000000,
+      "sha256": "ae5b15c646cd70688530727e104c418d678177646c424dda67ef00d049737a69"
+    },
+    {
+      "src": "recordings/audio/b2-c05-18103b0072cd0026/0003.bin",
+      "bytes": 4000000,
+      "sha256": "81f6397c636bbed8933b3389730e1120b3ab6d7b2dab827269d525411cedd700"
+    },
+    {
+      "src": "recordings/audio/b2-c05-18103b0072cd0026/0004.bin",
+      "bytes": 1589153,
+      "sha256": "ea0abb45c933c4d1912ea4a83f5eb5dc3809a662d1b2e454069cfae61678b0f5"
+    }
+  ],
+  "segments": 269,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 2,
+  "ambience_intervals": 0,
+  "master_peak": 0.6434789896011353,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b2-c05/mix.json",
+  "render_run_id": "35190743139"
+}
