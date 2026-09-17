@@ -1,0 +1,34 @@
+{
+  "id": "b0-c00",
+  "order": 0,
+  "book": 0,
+  "chapter": 0,
+  "part": "Opening",
+  "title": "Title and opening verse",
+  "duration": 46.680816,
+  "bytes": 560556,
+  "sha256": "d9191e18ff2771eaca7854cbd4bdff8e024c8ec4eea8400bcd78fc75001bb893",
+  "chunks": [
+    {
+      "src": "recordings/audio/b0-c00-d9191e18ff2771ea/0000.bin",
+      "bytes": 560556,
+      "sha256": "d9191e18ff2771eaca7854cbd4bdff8e024c8ec4eea8400bcd78fc75001bb893"
+    }
+  ],
+  "segments": 15,
+  "sample_rate": 22050,
+  "bit_rate": 96000,
+  "channels": 2,
+  "verified": true,
+  "mp3_sha256": "2262b5c9f3b638d3302f42b3e112af2175200164298ae5877d414f27fbffe578",
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "sound_events": 0,
+  "ambience_intervals": 0,
+  "origin": "preserved_player",
+  "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+  "cipher_readback_pass": true,
+  "source_segment_count_matches": true,
+  "decode_verification_origin": "existing published record",
+  "native_master_status": "not required to preserve existing MP3"
+}

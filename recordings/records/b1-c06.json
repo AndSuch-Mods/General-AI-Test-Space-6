@@ -1,0 +1,48 @@
+{
+  "id": "b1-c06",
+  "order": 6,
+  "book": 1,
+  "chapter": 6,
+  "part": "A Gift of Jade",
+  "title": "Chapter 6",
+  "duration": 821.342041,
+  "bytes": 9856491,
+  "sha256": "349a8033ac1c236c9403b7fda0753aa9275fa4447c4070b9c8ffd9291f23e770",
+  "chunks": [
+    {
+      "src": "recordings/audio/b1-c06-349a8033ac1c236c/0000.bin",
+      "bytes": 4000000,
+      "sha256": "a1d6ab2aeb4ec34c6daf8478d7c193d558cf05ca1c06b083a4e122b85974639f"
+    },
+    {
+      "src": "recordings/audio/b1-c06-349a8033ac1c236c/0001.bin",
+      "bytes": 4000000,
+      "sha256": "095f41c1b53c6156750fc9915e5924bffc4fbfbab30269989082ccdfec972d07"
+    },
+    {
+      "src": "recordings/audio/b1-c06-349a8033ac1c236c/0002.bin",
+      "bytes": 1856491,
+      "sha256": "28c4d643997794aef9a7683fa162c0a9e7fdfb22337b3ca101fedfe09a8819ab"
+    }
+  ],
+  "segments": 144,
+  "sample_rate": 22050,
+  "bit_rate": 96000,
+  "channels": 2,
+  "verified": true,
+  "mp3_sha256": "90f6e6a3ba513f1dc9b8fbd55a8f07fbb8fd47c11e02e1f8088493babcc9da09",
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "sound_events": 4,
+  "ambience_intervals": 0,
+  "key_id": "sequential-v6",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "recipe_sha256": "147b486955e973965e85b9972b0908314921486e98c643a6db906a57a506c46e",
+  "speech_segments_verified": 144,
+  "origin": "preserved_player",
+  "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+  "cipher_readback_pass": true,
+  "source_segment_count_matches": true,
+  "decode_verification_origin": "existing published record",
+  "native_master_status": "not required to preserve existing MP3"
+}

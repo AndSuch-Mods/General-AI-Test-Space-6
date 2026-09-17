@@ -1,0 +1,63 @@
+{
+  "id": "b1-c07",
+  "order": 7,
+  "book": 1,
+  "chapter": 7,
+  "part": "A Gift of Jade",
+  "title": "Chapter 7",
+  "duration": 1829.955918,
+  "bytes": 21959857,
+  "sha256": "2e13ea4f8762b957b1bfbc4036daaed9e14c0da5d35529c5a872f3a0c1263300",
+  "chunks": [
+    {
+      "src": "recordings/audio/b1-c07-2e13ea4f8762b957/0000.bin",
+      "bytes": 4000000,
+      "sha256": "cd49afdc5e6bc1b35db61799cb5ac3accefc5211c538cf35c97ffb8358caad09"
+    },
+    {
+      "src": "recordings/audio/b1-c07-2e13ea4f8762b957/0001.bin",
+      "bytes": 4000000,
+      "sha256": "19d2b7143f1dd1a06f86b3a5706b39dc410927fb82bf1a45603ec73625df1200"
+    },
+    {
+      "src": "recordings/audio/b1-c07-2e13ea4f8762b957/0002.bin",
+      "bytes": 4000000,
+      "sha256": "f557bce10369be38e97ca222f15e674beaa1842566a653e6cb709ac2a7f442bc"
+    },
+    {
+      "src": "recordings/audio/b1-c07-2e13ea4f8762b957/0003.bin",
+      "bytes": 4000000,
+      "sha256": "406ea02f9fc1cc82fb8650f777325ee31120d74fda045b8ae9574abc46d3d2a6"
+    },
+    {
+      "src": "recordings/audio/b1-c07-2e13ea4f8762b957/0004.bin",
+      "bytes": 4000000,
+      "sha256": "f286ed039a0abf2ec622ea99babb4dc712b458b0e040b94984ff44651480505d"
+    },
+    {
+      "src": "recordings/audio/b1-c07-2e13ea4f8762b957/0005.bin",
+      "bytes": 1959857,
+      "sha256": "d167e63d4175d3e2831025006da21354c9fd9a7aa205ed9c4a52080000ff9c27"
+    }
+  ],
+  "segments": 277,
+  "sample_rate": 22050,
+  "bit_rate": 96000,
+  "channels": 2,
+  "verified": true,
+  "mp3_sha256": "8388f3c71ad2591c0593112e022e02809e91573f1216ab0a8836a95974b1efd2",
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "sound_events": 12,
+  "ambience_intervals": 1,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "recipe_sha256": "eff33c94c8610cbb7ae736da90610e262e307709fd1a72c9ad60a9c361c3499e",
+  "speech_segments_verified": 277,
+  "origin": "preserved_player",
+  "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+  "cipher_readback_pass": true,
+  "source_segment_count_matches": true,
+  "decode_verification_origin": "rechecked in this run",
+  "native_master_status": "not required to preserve existing MP3"
+}

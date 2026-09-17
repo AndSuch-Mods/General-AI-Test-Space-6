@@ -1,0 +1,26 @@
+{
+  "version": "layered-1.0.0",
+  "stage": "earlier_recordings_preserved",
+  "current_track": null,
+  "completed_tracks": 10,
+  "expected_tracks": 49,
+  "preserved_tracks": 10,
+  "new_tracks": 0,
+  "completed": [
+    "b0-c00",
+    "b1-c01",
+    "b1-c02",
+    "b1-c03",
+    "b1-c04",
+    "b1-c05",
+    "b1-c06",
+    "b1-c07",
+    "b1-c08",
+    "b1-c09"
+  ],
+  "parallel_chapters": 1,
+  "voice_batch_size": 48,
+  "attempt_limit": 3,
+  "player_deployed": false,
+  "run_id": "35190743139"
+}
