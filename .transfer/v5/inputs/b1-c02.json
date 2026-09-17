@@ -1,0 +1,10 @@
+{
+  "version": 5,
+  "track": "b1-c02",
+  "key_id": "sequential-v5",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "segments": 252,
+  "cipher_bytes": 12368,
+  "cipher_sha256": "c5e39d86632fd59147cd18e00ded52e5a1e5bbb483b89d123832c75b75466355",
+  "plain_sha256": "78e7c8b5dcedefe6c7fd366916901d95fba801df7cfbfd400cc278ab6d3de320"
+}
