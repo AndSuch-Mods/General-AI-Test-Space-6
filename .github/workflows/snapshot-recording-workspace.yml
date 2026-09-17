@@ -14,16 +14,36 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Package existing engine and metadata only
+      - name: Validate and package existing recordings
         run: |
           set -euo pipefail
           mkdir -p /tmp/audio-snapshot
-          tar -czf /tmp/audio-snapshot/recording-workspace.tar.gz audio-engine .transfer player/catalog.json player/verification.json player/audio-v2/records player/checkpoints player/player.js player/sw.js player/vault*.json
+          python - <<'PY'
+          import json,hashlib,zipfile
+          from pathlib import Path
+          root=Path('player')
+          catalog=json.loads((root/'catalog.json').read_text())
+          paths=set()
+          for track in catalog['tracks']:
+              pieces=[]
+              for part in track['chunks']:
+                  path=root/part['src'];data=path.read_bytes()
+                  assert len(data)==part['bytes'] and hashlib.sha256(data).hexdigest()==part['sha256']
+                  pieces.append(data);paths.add(path)
+              assert hashlib.sha256(b''.join(pieces)).hexdigest()==track['sha256']
+              paths.add(root/'audio-v2/records'/(track['id']+'.json'))
+          paths.update(root.glob('vault*.json'))
+          paths.update((root/'checkpoints').glob('*.json'))
+          paths.add(root/'catalog.json')
+          with zipfile.ZipFile('/tmp/audio-snapshot/existing-verified-recordings.zip','w',compression=zipfile.ZIP_STORED) as z:
+              for path in sorted(paths):z.write(path,str(path))
+          print(json.dumps({'tracks':len(catalog['tracks']),'all_chunks_verified':True}))
+          PY
           cd /tmp/audio-snapshot
-          sha256sum recording-workspace.tar.gz > SHA256SUMS.txt
+          sha256sum existing-verified-recordings.zip > SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: recording-workspace-snapshot
+          name: existing-verified-recordings
           path: /tmp/audio-snapshot/
           compression-level: 0
           retention-days: 30
