@@ -1,7 +1,7 @@
 'use strict';
-const SHELL='taliesin-shell-v3.0.1';
+const SHELL='taliesin-shell-v5.0.0';
 const ROOT=new URL('./',self.location.href).href;
-const ASSETS=['./','index.html','styles.css','player.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','vault.json','catalog.json'];
+const ASSETS=['./','index.html','styles.css','player.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','vault.json','vault-v5.json','catalog.json'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(SHELL).then(c=>c.addAll(ASSETS.map(p=>new URL(p,ROOT).href))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('taliesin-shell-')&&k!==SHELL).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{
