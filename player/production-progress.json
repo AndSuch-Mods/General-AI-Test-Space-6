@@ -1,11 +1,12 @@
 {
-  "stage": "rendering_one_chapter",
+  "stage": "chapter_complete",
   "track": "b1-c09",
   "run_id": "35171060304",
   "parallel_chapters": 1,
   "completed_in_run": [
-    "b1-c08"
+    "b1-c08",
+    "b1-c09"
   ],
-  "published_tracks": 9,
+  "published_tracks": 10,
   "expected_tracks": 49
 }
