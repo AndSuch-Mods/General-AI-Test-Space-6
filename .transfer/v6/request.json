@@ -1,6 +1,7 @@
 {
   "version": 6,
   "track": "b1-c07",
+  "key_id": "private-archive-v1",
   "max_chapters": 1,
-  "request_id": "chapter-07-recoverable-01"
+  "request_id": "chapter-07-archive-01"
 }
