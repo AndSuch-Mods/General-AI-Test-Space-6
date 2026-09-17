@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "label": "b2-c10/mix",
+  "fingerprint": "c5d60f97c14e34d491ac910156b88c335907c0a9451b8fe946146c48d3e85b29",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 26951223,
+  "sha256": "7890c5672a99cf059b281d949877136b15327a0139011d6d2432b4ad8abf5eb7",
+  "plain_sha256": "9838aed645862bfcd16af2db8a24bdde1f437d8b91493df570e73ff199413ba6",
+  "aad": "Taliesin:layer:v1:b2-c10/mix",
+  "files": [
+    {
+      "name": "part-02-chapter-10.flac",
+      "bytes": 27212309,
+      "sha256": "703f6e501b4ec8c7f34643e237098545ef1cf04e6f691c425b4ee2acb4ede27c"
+    },
+    {
+      "name": "part-02-chapter-10.json",
+      "bytes": 118826,
+      "sha256": "c3b35be214982cc10cd2b24b732e36437efbc2a874a608ad0ddec79ac8fcfb6a"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b2-c10-mix-7890c5672a99cf059b28-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c10-mix-7890c5672a99cf059b28-0000.bin",
+      "bytes": 8000000,
+      "sha256": "00f1105ccefe7dd8efc62bcb8cf107ff7adb50f2475ec547b9766122cfd9ccf3"
+    },
+    {
+      "name": "b2-c10-mix-7890c5672a99cf059b28-0001.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c10-mix-7890c5672a99cf059b28-0001.bin",
+      "bytes": 8000000,
+      "sha256": "f3dda283bc1bf359d2b09775bdb38d0f7a7efd26e3f88185b4bf4317124f1081"
+    },
+    {
+      "name": "b2-c10-mix-7890c5672a99cf059b28-0002.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c10-mix-7890c5672a99cf059b28-0002.bin",
+      "bytes": 8000000,
+      "sha256": "d175709487e85f646df94860bf8643be459fa3c3246c1dbacac395ea536c2c8a"
+    },
+    {
+      "name": "b2-c10-mix-7890c5672a99cf059b28-0003.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c10-mix-7890c5672a99cf059b28-0003.bin",
+      "bytes": 2951223,
+      "sha256": "e67f5581efdce53452403e80e3f818eb629e8822666e9f992015455b18767af8"
+    }
+  ],
+  "remote_readback_pass": true
+}
