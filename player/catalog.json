@@ -5,9 +5,9 @@
   "ready": true,
   "complete": false,
   "expected_tracks": 49,
-  "published_tracks": 5,
-  "total_duration": 5846.282449,
-  "total_bytes": 70157319,
+  "published_tracks": 6,
+  "total_duration": 7028.114286,
+  "total_bytes": 84339687,
   "encoding_note": "96 kbps stereo MP3 encoded from native 22,050 Hz chapter masters. Encrypted transport pieces are reassembled byte-for-byte before playback.",
   "tracks": [
     {
@@ -241,6 +241,54 @@
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "c54adef77fa7646207d64d4a5e4d77a63c5a9e512423a2579df3e2b5718731e2",
       "speech_segments_verified": 178
+    },
+    {
+      "id": "b1-c05",
+      "order": 5,
+      "book": 1,
+      "chapter": 5,
+      "part": "A Gift of Jade",
+      "title": "Chapter 5",
+      "duration": 1181.831837,
+      "src": "audio-v2/b1-c05-1f3e80812833c8b0/joined.bin",
+      "bytes": 14182368,
+      "sha256": "1f3e80812833c8b0eea6e2003687126e9551d325151a98a94479c593790a62d2",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c05-1f3e80812833c8b0/0000.bin",
+          "bytes": 4000000,
+          "sha256": "590c81660d508ef7d108e8b75b8398fc5f4a9e261d8c48abee1083fc0f459ea7"
+        },
+        {
+          "src": "audio-v2/b1-c05-1f3e80812833c8b0/0001.bin",
+          "bytes": 4000000,
+          "sha256": "9e53c5d4432e4235933af8555c29975361510234e1d688193635c0ec62848e29"
+        },
+        {
+          "src": "audio-v2/b1-c05-1f3e80812833c8b0/0002.bin",
+          "bytes": 4000000,
+          "sha256": "21c8d21c983f3934c19b8c8faddcfa7156b876fb56df907fd05f6c22275d5584"
+        },
+        {
+          "src": "audio-v2/b1-c05-1f3e80812833c8b0/0003.bin",
+          "bytes": 2182368,
+          "sha256": "907b6845689a35f3aa6dcf11c7047b4bc215bdd6e314995a83febe6b31640a61"
+        }
+      ],
+      "segments": 128,
+      "sample_rate": 22050,
+      "bit_rate": 96000,
+      "channels": 2,
+      "verified": true,
+      "mp3_sha256": "f6a67a3ff49d14cf2ca50dc5bda9a740d910229c1a65ad51201dbef27e5e4a8e",
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "sound_events": 4,
+      "ambience_intervals": 1,
+      "key_id": "sequential-v6",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "recipe_sha256": "36f62d3e645d0ab11106fdb2f7f8a0e095ee9f0d8ef5c49c00730fa855071272",
+      "speech_segments_verified": 128
     }
   ]
 }
