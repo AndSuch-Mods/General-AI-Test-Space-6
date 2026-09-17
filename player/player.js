@@ -79,7 +79,7 @@
   if(code.includes('#')){const params=new URLSearchParams(code.slice(code.indexOf('#')+1));preferred=params.get('t')||preferred;code=params.get('k')||code;}
   if(!/^[A-Za-z0-9_-]{43}$/.test(code))throw new Error('Paste the complete 43-character unlock code or private link.');
   const key=await crypto.subtle.importKey('raw',b64(code),'AES-GCM',false,['decrypt']);let matched=null;
-  for(const [id,file]of [['legacy','vault.json'],['sequential-v5','vault-v5.json'],['sequential-v6','vault-v6.json']]){
+  for(const [id,file]of [['legacy','vault.json'],['sequential-v5','vault-v5.json'],['sequential-v6','vault-v6.json'],['private-archive-v1','vault-archive.json']]){
    try{const response=await fetch(file);if(!response.ok)continue;const vault=await response.json(),proof=b64(vault.proof);const text=await crypto.subtle.decrypt({name:'AES-GCM',iv:proof.slice(0,12),additionalData:encode(AAD+'unlock')},key,proof.slice(12));if(new TextDecoder().decode(text)==='Taliesin private player'){matched=id;break;}}catch{}
   }
   if(!matched)throw new Error('That code does not match the available recordings. Keep both private links if you use the earlier and new chapters.');
