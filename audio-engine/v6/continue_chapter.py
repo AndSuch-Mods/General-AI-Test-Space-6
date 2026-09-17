@@ -1,19 +1,19 @@
-"""Continue one verified chapter at a time; never replace an existing recording.
-
-Version 6 keeps its own private key, backed up outside the public repository.
-The existing version-5 rendering and MP3 verification engine is reused.
-"""
+"""Render one requested chapter, preserving completed audio and prior keys."""
 from pathlib import Path
 import base64
 import importlib.util
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[2]
-KEY_ID = 'sequential-v6'
+REQUEST = ROOT / '.transfer/v6/request.json'
+KEY_ID = json.loads(REQUEST.read_text()).get('key_id', 'sequential-v6')
+if KEY_ID not in ('sequential-v6', 'private-archive-v1'):
+    raise ValueError('Unknown production key identity')
 spec = importlib.util.spec_from_file_location('chapter_v5', ROOT / 'audio-engine/v5/one_chapter.py')
 engine = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(engine)
@@ -38,7 +38,7 @@ def next_track(existing):
 
 
 def request():
-    item = engine.read_json(ROOT / '.transfer/v6/request.json')
+    item = engine.read_json(REQUEST)
     tid = item.get('track')
     if item.get('version') != 6 or tid not in engine.ORDER or item.get('max_chapters') != 1:
         raise ValueError('Exactly one chapter must be requested')
@@ -62,12 +62,14 @@ def patch_player():
     subprocess.run([sys.executable, str(ROOT / 'audio-engine/v5/patch_player.py')], check=True)
     path = ROOT / 'player/player.js'
     text = path.read_text()
-    old = "[['legacy','vault.json'],['sequential-v5','vault-v5.json']]"
-    new = "[['legacy','vault.json'],['sequential-v5','vault-v5.json'],['sequential-v6','vault-v6.json']]"
-    if new not in text:
-        if text.count(old) != 1:
+    versions = ["[['legacy','vault.json'],['sequential-v5','vault-v5.json']]",
+                "[['legacy','vault.json'],['sequential-v5','vault-v5.json'],['sequential-v6','vault-v6.json']]"]
+    registry = "[['legacy','vault.json'],['sequential-v5','vault-v5.json'],['sequential-v6','vault-v6.json'],['private-archive-v1','vault-archive.json']]"
+    if registry not in text:
+        matches = [old for old in versions if text.count(old) == 1]
+        if len(matches) != 1:
             raise ValueError('Player key registry changed; refusing a blind patch')
-        text = text.replace(old, new)
+        text = text.replace(matches[0], registry)
     text = text.replace('if(!t||!state.key||state.next?.id===t.id||state.prefetching===t.id)return;',
                         'if(!t||!keyFor(t)||state.next?.id===t.id||state.prefetching===t.id)return;')
     text = text.replace('keyFor(track())&&track()&&state.current&&!state.loading',
@@ -77,15 +79,14 @@ def patch_player():
     path.write_text(text)
     sw = ROOT / 'player/sw.js'
     text = sw.read_text()
-    if "'vault-v6.json'" not in text:
-        old = "'vault-v5.json','catalog.json'"
-        if text.count(old) != 1:
-            raise ValueError('Service-worker asset list changed')
-        text = text.replace(old, "'vault-v5.json','vault-v6.json','catalog.json'")
-    import re
-    text = re.sub(r"const SHELL='taliesin-shell-[^']+';", "const SHELL='taliesin-shell-v6.0.0';", text)
+    for asset in ('vault-v6.json', 'vault-archive.json'):
+        if repr(asset) not in text:
+            if text.count("'catalog.json'") != 1:
+                raise ValueError('Service-worker asset list changed')
+            text = text.replace("'catalog.json'", repr(asset) + ",'catalog.json'")
+    text = re.sub(r"const SHELL='taliesin-shell-[^']+';", "const SHELL='taliesin-shell-v6.1.0';", text)
     sw.write_text(text)
-    print('Earlier keys and audio preserved; recoverable chapter key enabled', flush=True)
+    print('All earlier key slots and recordings preserved', flush=True)
 
 
 def export_verified():
