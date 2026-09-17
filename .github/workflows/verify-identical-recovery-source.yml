@@ -1,0 +1,45 @@
+name: Verify identical recording source
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/verify-identical-recovery-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Find and hash only the identical user-supplied edition
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.parse,re,hashlib,json
+          from pathlib import Path
+          wanted='707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5'
+          root='https://ebooks.rahnuma.org/literature/English/'
+          def fetch(url):
+            with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=35) as r:return r.read()
+          html=fetch(root).decode('utf-8','replace')
+          links=[urllib.parse.urljoin(root,p) for p in re.findall(r'href\s*=\s*[\"\']([^\"\']+)',html,re.I) if 'lawhead' in p.lower() or 'taliesin' in p.lower()]
+          for url in list(links):
+            if url.endswith('/'):
+              text=fetch(url).decode('utf-8','replace')
+              links += [urllib.parse.urljoin(url,p) for p in re.findall(r'href\s*=\s*[\"\']([^\"\']+)',text,re.I) if 'taliesin' in p.lower() and '.pdf' in p.lower()]
+          for url in links:
+            if 'taliesin' not in url.lower() or '.pdf' not in url.lower():continue
+            raw=fetch(url)
+            if hashlib.sha256(raw).hexdigest()==wanted:
+              Path('/tmp/source-proof.json').write_text(json.dumps({'matches_uploaded_edition':True,'sha256':wanted,'bytes':len(raw),'url':url},indent=2))
+              print('Exact supplied-edition checksum verified; no source text was logged.')
+              break
+          else:raise SystemExit('Exact source unavailable. Do not substitute another edition.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: exact-source-proof
+          path: /tmp/source-proof.json
+          retention-days: 30
