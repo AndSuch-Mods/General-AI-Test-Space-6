@@ -53,3 +53,16 @@ if "'vault-v5.json'" not in s:
     s = s.replace("'vault.json','catalog.json'", "'vault.json','vault-v5.json','catalog.json'")
 sw.write_text(s)
 print('Player supports both private keys; the original vault and audio remain unchanged')
+
+# Consume a private-link chapter target once. A later unlock should stay on the
+# chapter the listener selected, not jump back to an old URL fragment.
+path = ROOT / 'player/player.js'
+s = path.read_text()
+old = 'state.keys[matched]=key;state.key=key;'
+new = old + "history.replaceState(null,'',location.pathname+location.search);"
+if new not in s:
+    if s.count(old) != 1:
+        raise ValueError('Unexpected key assignment; cannot safely patch navigation')
+    path.write_text(s.replace(old, new))
+sw = ROOT / 'player/sw.js'
+sw.write_text(sw.read_text().replace('taliesin-shell-v5.0.0', 'taliesin-shell-v5.0.1'))
