@@ -1,0 +1,109 @@
+name: Continue and verify one chapter
+on:
+  push:
+    branches: [main]
+    paths: ['.transfer/v6/request.json']
+  workflow_dispatch:
+concurrency:
+  group: taliesin-one-chapter-production
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+jobs:
+  chapter:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      GH_TOKEN: ${{ github.token }}
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Authenticate the single chapter before installing or rendering
+        env:
+          TALIESIN_V6_KEY_B64: ${{ secrets.TALIESIN_V6_KEY_B64 }}
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet cryptography
+          python -m py_compile audio-engine/v6/continue_chapter.py
+          python audio-engine/v6/continue_chapter.py plan
+          python audio-engine/v6/continue_chapter.py key
+      - name: Install and test the same checksum-pinned audio engine
+        run: |
+          set -euo pipefail
+          sudo apt-get -o Acquire::Retries=3 update -qq
+          sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=3 install -y -qq ffmpeg
+          python -m pip install --quiet numpy scipy soundfile onnxruntime
+          mkdir -p /tmp/private-audio/tools/models
+          curl --fail --location --retry 3 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
+          echo 'a50cb45f355b7af1f6d758c1b360717877ba0a398cc8cbe6d2a7a3a26e225992  /tmp/private-audio/piper.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/private-audio/piper.tar.gz -C /tmp/private-audio/tools
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
+          echo '4e9fc85ab9009385319fc6bae7f55577f8a2d7ee77fd9159a5500eb6531f41e6  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx' | sha256sum -c -
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json
+          echo '7f85e6391ed0f7f46e4abd19345929a16be931a0c9945086f96692dce2087fa8  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json' | sha256sum -c -
+          ffmpeg -v error -f lavfi -i anullsrc=r=22050:cl=stereo -t 0.1 -c:a libmp3lame -b:a 96k /tmp/private-audio/encoder-check.mp3
+          ffmpeg -v error -xerror -i /tmp/private-audio/encoder-check.mp3 -f null -
+      - name: Render in small speech batches and verify the complete chapter
+        id: audio
+        run: python audio-engine/v6/continue_chapter.py render
+      - name: Preserve this completed encrypted chapter even if publication fails
+        if: ${{ always() && steps.audio.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-encrypted-chapter
+          path: /tmp/cipher-export/
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 30
+      - name: Enable the recoverable key without replacing earlier keys
+        run: |
+          python audio-engine/v6/continue_chapter.py patch-player
+          node --check player/player.js
+          node --check player/sw.js
+      - name: Publish only this verified chapter
+        env:
+          TRACK: ${{ steps.audio.outputs.track }}
+          AUDIO_DIR: ${{ steps.audio.outputs.audio_dir }}
+          RECORD_FILE: ${{ steps.audio.outputs.record_file }}
+        run: |
+          set -euo pipefail
+          git diff --exit-code -- player/vault.json player/vault-v5.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f "$AUDIO_DIR" "$RECORD_FILE"
+          git add player/catalog.json player/verification.json player/player.js player/sw.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish verified chapter $TRACK; preserve all earlier recordings"
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" = 4 ]; then exit 1; fi
+              sleep 4
+            done
+          fi
+          gh api --method POST repos/${{ github.repository }}/pages/builds
+      - name: Fetch every live audio piece and verify byte-for-byte playback input
+        run: python audio-engine/v6/continue_chapter.py verify-remote
+      - name: Save the checkpoint before allowing another chapter
+        env:
+          TRACK: ${{ steps.audio.outputs.track }}
+        run: |
+          set -euo pipefail
+          git add "player/checkpoints/$TRACK.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "Checkpoint $TRACK after live readback verification"
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" = 4 ]; then exit 1; fi
+              sleep 4
+            done
+          fi
+      - name: Remove private input, keys, and unencrypted working audio
+        if: always()
+        run: rm -rf /tmp/private-audio
