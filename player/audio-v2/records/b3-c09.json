@@ -1,0 +1,49 @@
+{
+  "id": "b3-c09",
+  "order": 39,
+  "book": 3,
+  "chapter": 9,
+  "part": "The Merlin",
+  "title": "Chapter 9",
+  "origin": "layered-1.0.0",
+  "duration": 793.260408,
+  "bytes": 9519511,
+  "sha256": "874698e41a25405b0f2392df7874bdb96fac07040b88e5d8c54b3d5709bc6ade",
+  "mp3_sha256": "4d62d57bfb1d238feb105d9dfa9d73008ea71d66624451fe74a04fb7d089c20c",
+  "chunks": [
+    {
+      "src": "audio-v2/b3-c09-874698e41a25405b/0000.bin",
+      "bytes": 4000000,
+      "sha256": "1374350be3db28ff9dc2b343348b264a60a0fa0c25e9c6a2dc0db944d9ca6883"
+    },
+    {
+      "src": "audio-v2/b3-c09-874698e41a25405b/0001.bin",
+      "bytes": 4000000,
+      "sha256": "6e8a6b683d50cec2079bc97a1ca4a9908c4993b662681c0ee3a689d1ecb66f58"
+    },
+    {
+      "src": "audio-v2/b3-c09-874698e41a25405b/0002.bin",
+      "bytes": 1519511,
+      "sha256": "dcb1336f2b452bd5cb69d00925b332c7c513b2372877c800fc3dcfc39e8e26b9"
+    }
+  ],
+  "segments": 164,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 3,
+  "ambience_intervals": 0,
+  "master_peak": 0.6266688108444214,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c09/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b3-c09-874698e41a25405b/joined.bin"
+}

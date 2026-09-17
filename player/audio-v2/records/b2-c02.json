@@ -1,0 +1,59 @@
+{
+  "id": "b2-c02",
+  "order": 18,
+  "book": 2,
+  "chapter": 2,
+  "part": "The Sun Bull",
+  "title": "Chapter 2",
+  "origin": "layered-1.0.0",
+  "duration": 1626.827755,
+  "bytes": 19522319,
+  "sha256": "a27a0ab9b6bca877ff2427af701b6d08a545cdf063d736797eb75368331a7f9b",
+  "mp3_sha256": "ee7f51521148966e0ca470063cd58d851d6ab259c201013c2c25cc8fc764a3f4",
+  "chunks": [
+    {
+      "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0000.bin",
+      "bytes": 4000000,
+      "sha256": "6adb2a7f4af1e8c216c640fccbe9dcc9dc20f415dbe63dc70f69743816668d27"
+    },
+    {
+      "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0001.bin",
+      "bytes": 4000000,
+      "sha256": "fa4063be9aa73308e69a94df18086213250bb5560cfa4587da088ee889509213"
+    },
+    {
+      "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0002.bin",
+      "bytes": 4000000,
+      "sha256": "6ddef05675115384b4c0b2a240f1a4ddfa49290a5bd1858688da35f61d62958d"
+    },
+    {
+      "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0003.bin",
+      "bytes": 4000000,
+      "sha256": "825c448abe635b67c9a0e202d06ec7226d10f58cea06fb82df1ed99853aace39"
+    },
+    {
+      "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0004.bin",
+      "bytes": 3522319,
+      "sha256": "57a9ea2d1e1a39108643e287bf9d76b38ae4c31f49dcbeb7828fb7f797d376d9"
+    }
+  ],
+  "segments": 397,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 4,
+  "ambience_intervals": 1,
+  "master_peak": 0.6451956033706665,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b2-c02/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b2-c02-a27a0ab9b6bca877/joined.bin"
+}

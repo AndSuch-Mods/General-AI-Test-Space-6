@@ -3,12 +3,12 @@
   "title": "Taliesin",
   "author": "Stephen Lawhead",
   "ready": true,
-  "complete": false,
+  "complete": true,
   "expected_tracks": 49,
-  "published_tracks": 10,
-  "total_duration": 13571.996735,
-  "total_bytes": 162867821,
-  "encoding_note": "96 kbps stereo MP3 encoded from native 22,050 Hz chapter masters. Encrypted transport pieces are reassembled byte-for-byte before playback.",
+  "published_tracks": 49,
+  "total_duration": 62338.455508,
+  "total_bytes": 748080381,
+  "encoding_note": "96 kbps stereo MP3 encoded from native 22,050 Hz chapter mixes. Encrypted transport pieces reassemble byte-for-byte before playback.",
   "tracks": [
     {
       "id": "b0-c00",
@@ -18,7 +18,6 @@
       "part": "Opening",
       "title": "Title and opening verse",
       "duration": 46.680816,
-      "src": "audio-v2/b0-c00-d9191e18ff2771ea/joined.bin",
       "bytes": 560556,
       "sha256": "d9191e18ff2771eaca7854cbd4bdff8e024c8ec4eea8400bcd78fc75001bb893",
       "chunks": [
@@ -37,7 +36,14 @@
       "full_decode_pass": true,
       "reassembly_byte_exact": true,
       "sound_events": 0,
-      "ambience_intervals": 0
+      "ambience_intervals": 0,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b0-c00-d9191e18ff2771ea/joined.bin"
     },
     {
       "id": "b1-c01",
@@ -47,7 +53,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 1",
       "duration": 1806.550204,
-      "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/joined.bin",
       "bytes": 21678988,
       "sha256": "c4aa3ee13ff7842ab022492e89c8928817045cf0aeb300dc58e1154bd9373118",
       "chunks": [
@@ -91,7 +96,14 @@
       "full_decode_pass": true,
       "reassembly_byte_exact": true,
       "sound_events": 4,
-      "ambience_intervals": 1
+      "ambience_intervals": 1,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c01-c4aa3ee13ff7842a/joined.bin"
     },
     {
       "id": "b1-c02",
@@ -101,7 +113,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 2",
       "duration": 1583.882449,
-      "src": "audio-v2/b1-c02-522b50e4f5176bf9/joined.bin",
       "bytes": 19006975,
       "sha256": "522b50e4f5176bf9b67f94411ba7774ced17f11e0b359797b1455ba66da4598c",
       "chunks": [
@@ -144,7 +155,14 @@
       "key_id": "sequential-v5",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "78e7c8b5dcedefe6c7fd366916901d95fba801df7cfbfd400cc278ab6d3de320",
-      "speech_segments_verified": 252
+      "speech_segments_verified": 252,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c02-522b50e4f5176bf9/joined.bin"
     },
     {
       "id": "b1-c03",
@@ -154,7 +172,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 3",
       "duration": 1442.76898,
-      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/joined.bin",
       "bytes": 17313614,
       "sha256": "94feb4fb870e1b2a2e0866282d72cf45a23c3ea6081468b5548dbc854d5ae1ee",
       "chunks": [
@@ -197,7 +214,14 @@
       "key_id": "sequential-v5",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "e7a134377018dda489cfa531c1dc4d9fa4698d5a2052154039dce198911b2561",
-      "speech_segments_verified": 256
+      "speech_segments_verified": 256,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c03-94feb4fb870e1b2a/joined.bin"
     },
     {
       "id": "b1-c04",
@@ -207,7 +231,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 4",
       "duration": 966.4,
-      "src": "audio-v2/b1-c04-f5c4fda6771eaae5/joined.bin",
       "bytes": 11597186,
       "sha256": "f5c4fda6771eaae50a9900a1bf3557c3300bf847213919312ea8e7d8e3e2a95f",
       "chunks": [
@@ -240,7 +263,14 @@
       "key_id": "sequential-v6",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "c54adef77fa7646207d64d4a5e4d77a63c5a9e512423a2579df3e2b5718731e2",
-      "speech_segments_verified": 178
+      "speech_segments_verified": 178,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c04-f5c4fda6771eaae5/joined.bin"
     },
     {
       "id": "b1-c05",
@@ -250,7 +280,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 5",
       "duration": 1181.831837,
-      "src": "audio-v2/b1-c05-1f3e80812833c8b0/joined.bin",
       "bytes": 14182368,
       "sha256": "1f3e80812833c8b0eea6e2003687126e9551d325151a98a94479c593790a62d2",
       "chunks": [
@@ -288,7 +317,14 @@
       "key_id": "sequential-v6",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "36f62d3e645d0ab11106fdb2f7f8a0e095ee9f0d8ef5c49c00730fa855071272",
-      "speech_segments_verified": 128
+      "speech_segments_verified": 128,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c05-1f3e80812833c8b0/joined.bin"
     },
     {
       "id": "b1-c06",
@@ -298,7 +334,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 6",
       "duration": 821.342041,
-      "src": "audio-v2/b1-c06-349a8033ac1c236c/joined.bin",
       "bytes": 9856491,
       "sha256": "349a8033ac1c236c9403b7fda0753aa9275fa4447c4070b9c8ffd9291f23e770",
       "chunks": [
@@ -331,7 +366,14 @@
       "key_id": "sequential-v6",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "147b486955e973965e85b9972b0908314921486e98c643a6db906a57a506c46e",
-      "speech_segments_verified": 144
+      "speech_segments_verified": 144,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "existing published record",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c06-349a8033ac1c236c/joined.bin"
     },
     {
       "id": "b1-c07",
@@ -341,7 +383,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 7",
       "duration": 1829.955918,
-      "src": "audio-v2/b1-c07-2e13ea4f8762b957/joined.bin",
       "bytes": 21959857,
       "sha256": "2e13ea4f8762b957b1bfbc4036daaed9e14c0da5d35529c5a872f3a0c1263300",
       "chunks": [
@@ -389,7 +430,14 @@
       "key_id": "private-archive-v1",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "eff33c94c8610cbb7ae736da90610e262e307709fd1a72c9ad60a9c361c3499e",
-      "speech_segments_verified": 277
+      "speech_segments_verified": 277,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "rechecked in this run",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c07-2e13ea4f8762b957/joined.bin"
     },
     {
       "id": "b1-c08",
@@ -399,7 +447,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 8",
       "duration": 2102.857143,
-      "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/joined.bin",
       "bytes": 25234672,
       "sha256": "ac8c4a7b578b5ad68a9d90355547cfbc73168b17ad765c0f18792e69382139da",
       "chunks": [
@@ -452,7 +499,14 @@
       "key_id": "private-archive-v1",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "d2d3271fec110fcacd4f8cea324d92136fec41671d4bd50e2ccea99c737a7c59",
-      "speech_segments_verified": 265
+      "speech_segments_verified": 265,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "rechecked in this run",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c08-ac8c4a7b578b5ad6/joined.bin"
     },
     {
       "id": "b1-c09",
@@ -462,7 +516,6 @@
       "part": "A Gift of Jade",
       "title": "Chapter 9",
       "duration": 1789.727347,
-      "src": "audio-v2/b1-c09-bec53b914f4f9607/joined.bin",
       "bytes": 21477114,
       "sha256": "bec53b914f4f960745d761f448876f60680dfa99975df83f83e2c38356b383c6",
       "chunks": [
@@ -510,7 +563,2171 @@
       "key_id": "private-archive-v1",
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "536d7f6af8b602b0d7d2f00174d29fc9fe5a69479990c2d3722a2bdae3e8bcac",
-      "speech_segments_verified": 263
+      "speech_segments_verified": 263,
+      "origin": "preserved_player",
+      "preserved_from_commit": "673e7c0a2f012e176f7ac3226b1c0e76bbc3d09f",
+      "cipher_readback_pass": true,
+      "source_segment_count_matches": true,
+      "decode_verification_origin": "rechecked in this run",
+      "native_master_status": "not required to preserve existing MP3",
+      "src": "audio-v2/b1-c09-bec53b914f4f9607/joined.bin"
+    },
+    {
+      "id": "b1-c10",
+      "order": 10,
+      "book": 1,
+      "chapter": 10,
+      "part": "A Gift of Jade",
+      "title": "Chapter 10",
+      "origin": "layered-1.0.0",
+      "duration": 833.985306,
+      "bytes": 10008210,
+      "sha256": "16072098b3d74e857ec2bda0acf53060cc754f65d2f37120143a4974f93ff440",
+      "mp3_sha256": "84cc332f209bd4113ebbb535362e8e4418c4b5542ffb853e0897ad25b395fd7d",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c10-16072098b3d74e85/0000.bin",
+          "bytes": 4000000,
+          "sha256": "0033fcf6c84f074d2c71eb92fa6cf1d2b143d0ab7bb9efe3e78aa37af7ffc842"
+        },
+        {
+          "src": "audio-v2/b1-c10-16072098b3d74e85/0001.bin",
+          "bytes": 4000000,
+          "sha256": "fe5cdea7f6bb0fcb57667aa52c5328b6d4f9d013d0ff1b90649bab0926928154"
+        },
+        {
+          "src": "audio-v2/b1-c10-16072098b3d74e85/0002.bin",
+          "bytes": 2008210,
+          "sha256": "29659202f0dd97f8a53543d55554446a58396f7c9741a19d04360e6bc2f778db"
+        }
+      ],
+      "segments": 166,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 6,
+      "ambience_intervals": 1,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c10/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c10-16072098b3d74e85/joined.bin"
+    },
+    {
+      "id": "b1-c11",
+      "order": 11,
+      "book": 1,
+      "chapter": 11,
+      "part": "A Gift of Jade",
+      "title": "Chapter 11",
+      "origin": "layered-1.0.0",
+      "duration": 1504.261224,
+      "bytes": 18051521,
+      "sha256": "0976b24375d4f55be9af22de4901fb3f7c63a365764fe364f118f173513e63be",
+      "mp3_sha256": "58cb4b2caf7f6a3d82739ded1a76d2a64a5a180cf509ad70123bde32d3f27ca9",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c11-0976b24375d4f55b/0000.bin",
+          "bytes": 4000000,
+          "sha256": "9b1bb03505bf3662114e40298d56c3126a0aa64711b1577d5fb09773526f0453"
+        },
+        {
+          "src": "audio-v2/b1-c11-0976b24375d4f55b/0001.bin",
+          "bytes": 4000000,
+          "sha256": "e0861dd167eb177e378eb2ad11e07448cc3304a3cb833ce6a811b1e7e267f47f"
+        },
+        {
+          "src": "audio-v2/b1-c11-0976b24375d4f55b/0002.bin",
+          "bytes": 4000000,
+          "sha256": "eeb90709d1699b872e990212148e3cb1d5d18cda61551e739f9a1937ec482bd3"
+        },
+        {
+          "src": "audio-v2/b1-c11-0976b24375d4f55b/0003.bin",
+          "bytes": 4000000,
+          "sha256": "8d980fcbe257bf6200de27777f38036378af478a52878e82df2c488a09f73ed8"
+        },
+        {
+          "src": "audio-v2/b1-c11-0976b24375d4f55b/0004.bin",
+          "bytes": 2051521,
+          "sha256": "4db16da7a76e6d5d755358e528d58272f8837ecd8a206b0558ab3864b74700b0"
+        }
+      ],
+      "segments": 341,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 11,
+      "ambience_intervals": 1,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c11/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c11-0976b24375d4f55b/joined.bin"
+    },
+    {
+      "id": "b1-c12",
+      "order": 12,
+      "book": 1,
+      "chapter": 12,
+      "part": "A Gift of Jade",
+      "title": "Chapter 12",
+      "origin": "layered-1.0.0",
+      "duration": 938.527347,
+      "bytes": 11262714,
+      "sha256": "39d7f68fb83cf792860a1f8e8c71a40f974dda3f79ad11e4998b3795c5702f39",
+      "mp3_sha256": "547869e2cdb3403658c746ac7a56b372216902f7b80022e7026804a61861bb30",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c12-39d7f68fb83cf792/0000.bin",
+          "bytes": 4000000,
+          "sha256": "75d669f32e815b1b7fbba0f445485b29507f0da16ef4f6495646db3fcf901604"
+        },
+        {
+          "src": "audio-v2/b1-c12-39d7f68fb83cf792/0001.bin",
+          "bytes": 4000000,
+          "sha256": "78acf658087db6a0773ff1acd47938f303d8a1c8e75bc8702b7a537b379862ea"
+        },
+        {
+          "src": "audio-v2/b1-c12-39d7f68fb83cf792/0002.bin",
+          "bytes": 3262714,
+          "sha256": "3194f7e37d1ba22057916f45889c0b09b6635d4f6ee84c0879cdbebaf1118c06"
+        }
+      ],
+      "segments": 205,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 0,
+      "master_peak": 0.6323285698890686,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c12/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c12-39d7f68fb83cf792/joined.bin"
+    },
+    {
+      "id": "b1-c13",
+      "order": 13,
+      "book": 1,
+      "chapter": 13,
+      "part": "A Gift of Jade",
+      "title": "Chapter 13",
+      "origin": "layered-1.0.0",
+      "duration": 1073.319184,
+      "bytes": 12880216,
+      "sha256": "f3ea411ea507c45a72ec498fc7874ff43d28c8e1a766c74f4a38af4be47a8f4a",
+      "mp3_sha256": "9f791d10ec661d01d81a2d2f2574f6dc4e97cf99741f157c6630b722aa4175f5",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c13-f3ea411ea507c45a/0000.bin",
+          "bytes": 4000000,
+          "sha256": "3a0b30c7956af48cea2d325efbff45bbb68bd5ea04e07be8437f53b73804ce63"
+        },
+        {
+          "src": "audio-v2/b1-c13-f3ea411ea507c45a/0001.bin",
+          "bytes": 4000000,
+          "sha256": "79ec55370d9d95ee354135373db5f3be8086a4c4ab14fffa778f13bfcad5365d"
+        },
+        {
+          "src": "audio-v2/b1-c13-f3ea411ea507c45a/0002.bin",
+          "bytes": 4000000,
+          "sha256": "323965474eee66a42a9eafbccc66834713ff389c698a6a63586f4adb28f46edc"
+        },
+        {
+          "src": "audio-v2/b1-c13-f3ea411ea507c45a/0003.bin",
+          "bytes": 880216,
+          "sha256": "54066f596ea9ba74ba52b83685d5f4fc834bca96c52b01498e0e7ba59c8c13cb"
+        }
+      ],
+      "segments": 245,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 1,
+      "master_peak": 0.6563613414764404,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c13/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c13-f3ea411ea507c45a/joined.bin"
+    },
+    {
+      "id": "b1-c14",
+      "order": 14,
+      "book": 1,
+      "chapter": 14,
+      "part": "A Gift of Jade",
+      "title": "Chapter 14",
+      "origin": "layered-1.0.0",
+      "duration": 1264.875102,
+      "bytes": 15178887,
+      "sha256": "6b275c1a1ad8acfe04e766aca12c820f682de519ad2c8c32189dac53f2667bc8",
+      "mp3_sha256": "6c46ec3b7b24ea421eb87dd5844550f9362a92eaa7cc414c20acd52101ac9e2b",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c14-6b275c1a1ad8acfe/0000.bin",
+          "bytes": 4000000,
+          "sha256": "090a0b2149660ce8e78ddf1de9b238d60c878d7fc158b6a52d0a75c2ecd9441b"
+        },
+        {
+          "src": "audio-v2/b1-c14-6b275c1a1ad8acfe/0001.bin",
+          "bytes": 4000000,
+          "sha256": "4d0a8e85ecb0490b24fc71fd05cef28cdc1a0a83cd3c5ae9a48125f2fdd42cff"
+        },
+        {
+          "src": "audio-v2/b1-c14-6b275c1a1ad8acfe/0002.bin",
+          "bytes": 4000000,
+          "sha256": "3fa93b3236a024a765ec12abad4af6ced6cbd94c32f311322f519a4c5e0ef996"
+        },
+        {
+          "src": "audio-v2/b1-c14-6b275c1a1ad8acfe/0003.bin",
+          "bytes": 3178887,
+          "sha256": "22c0409dfa3340968d3223fa48567bbdc616b43b75746d063d2548868bd9fd59"
+        }
+      ],
+      "segments": 270,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 1,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c14/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c14-6b275c1a1ad8acfe/joined.bin"
+    },
+    {
+      "id": "b1-c15",
+      "order": 15,
+      "book": 1,
+      "chapter": 15,
+      "part": "A Gift of Jade",
+      "title": "Chapter 15",
+      "origin": "layered-1.0.0",
+      "duration": 1224.306939,
+      "bytes": 14692069,
+      "sha256": "9bdb2ac7342d34860c2620557b12df3d00524242be08d127ea1f91e383c8fe3b",
+      "mp3_sha256": "005b6f7c8326f4ba4cacb22b964416bedcf77194dd0e32142142255952b2b18c",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0000.bin",
+          "bytes": 4000000,
+          "sha256": "da025b701508d92912c79d126a6e48739a8f9e5e908225bca3e45421f2658b21"
+        },
+        {
+          "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0001.bin",
+          "bytes": 4000000,
+          "sha256": "45b4c65277c2a7a530e1628a7bf7c415a0e8061095d3064ddc620d641e7ff82c"
+        },
+        {
+          "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0002.bin",
+          "bytes": 4000000,
+          "sha256": "f5b6e8c1b03dd7ee13d8f26a7d85a66d3a83f339fdf962297428ddffdb833130"
+        },
+        {
+          "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0003.bin",
+          "bytes": 2692069,
+          "sha256": "33121b388003469618b6ddd4aa0232a4d9ff2fff82ac574e2788b0205fc0fa84"
+        }
+      ],
+      "segments": 297,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 8,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c15/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c15-9bdb2ac7342d3486/joined.bin"
+    },
+    {
+      "id": "b1-c16",
+      "order": 16,
+      "book": 1,
+      "chapter": 16,
+      "part": "A Gift of Jade",
+      "title": "Chapter 16",
+      "origin": "layered-1.0.0",
+      "duration": 1375.843265,
+      "bytes": 16510505,
+      "sha256": "4a68da650bb3b4e07c710cfcd96bf2f1d4073ea2856d0babb6c7b4af922edf11",
+      "mp3_sha256": "3c9757e04c20cbbe6f186030213904aa9aa9a7bb8a03b6d6db7931d2d5460051",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0000.bin",
+          "bytes": 4000000,
+          "sha256": "487a8388c45025e7434ce26436f91a6049869fb667aaf275974f84d1236cad64"
+        },
+        {
+          "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0001.bin",
+          "bytes": 4000000,
+          "sha256": "85763fef544ec52724cb22dabc9f24f23ac5077f2362438d88bcd1e194513cb3"
+        },
+        {
+          "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0002.bin",
+          "bytes": 4000000,
+          "sha256": "28a0a6a0bd5378742dba4a036f1a39aa66aa069e75e4a043916b42bc574926fd"
+        },
+        {
+          "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0003.bin",
+          "bytes": 4000000,
+          "sha256": "00a94935461d0dc37efe7e690fa8eddca88c8c2cd2ea419a9e00f6ebf1ef72e8"
+        },
+        {
+          "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0004.bin",
+          "bytes": 510505,
+          "sha256": "313045dc5f33395148714e3c498e37122ff0224094f31664ce71d7d8c8a8523d"
+        }
+      ],
+      "segments": 246,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b1-c16/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b1-c16-4a68da650bb3b4e0/joined.bin"
+    },
+    {
+      "id": "b2-c01",
+      "order": 17,
+      "book": 2,
+      "chapter": 1,
+      "part": "The Sun Bull",
+      "title": "Chapter 1",
+      "origin": "layered-1.0.0",
+      "duration": 1008.326531,
+      "bytes": 12100304,
+      "sha256": "552b0e75e9df76799866db12c9e58bd6c31f8abb1f958dc2021feb10ebb93790",
+      "mp3_sha256": "aff2b304da630824f059190845e52d98fc7cb2b87b90acc4268214a7d8a93f82",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c01-552b0e75e9df7679/0000.bin",
+          "bytes": 4000000,
+          "sha256": "801801bb25d9de647ee220944e4a5849570d683d920bb9a0a22cafab13d6c2fd"
+        },
+        {
+          "src": "audio-v2/b2-c01-552b0e75e9df7679/0001.bin",
+          "bytes": 4000000,
+          "sha256": "5af5c04b71f51e3c704532196394024580105e8b598145d89d40431110a32e13"
+        },
+        {
+          "src": "audio-v2/b2-c01-552b0e75e9df7679/0002.bin",
+          "bytes": 4000000,
+          "sha256": "38910a5b1b67174b71771d4493058c39fd869587431f54c4970ea32dd72417a7"
+        },
+        {
+          "src": "audio-v2/b2-c01-552b0e75e9df7679/0003.bin",
+          "bytes": 100304,
+          "sha256": "356e4e3d7bd41e73438d903351a753aff2666a64d2a7a8368e89a0496c572506"
+        }
+      ],
+      "segments": 241,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 0,
+      "master_peak": 0.6379321217536926,
+      "duration_anomaly_count": 1,
+      "native_master_layer": "recordings/layers/b2-c01/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c01-552b0e75e9df7679/joined.bin"
+    },
+    {
+      "id": "b2-c02",
+      "order": 18,
+      "book": 2,
+      "chapter": 2,
+      "part": "The Sun Bull",
+      "title": "Chapter 2",
+      "origin": "layered-1.0.0",
+      "duration": 1626.827755,
+      "bytes": 19522319,
+      "sha256": "a27a0ab9b6bca877ff2427af701b6d08a545cdf063d736797eb75368331a7f9b",
+      "mp3_sha256": "ee7f51521148966e0ca470063cd58d851d6ab259c201013c2c25cc8fc764a3f4",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0000.bin",
+          "bytes": 4000000,
+          "sha256": "6adb2a7f4af1e8c216c640fccbe9dcc9dc20f415dbe63dc70f69743816668d27"
+        },
+        {
+          "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0001.bin",
+          "bytes": 4000000,
+          "sha256": "fa4063be9aa73308e69a94df18086213250bb5560cfa4587da088ee889509213"
+        },
+        {
+          "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0002.bin",
+          "bytes": 4000000,
+          "sha256": "6ddef05675115384b4c0b2a240f1a4ddfa49290a5bd1858688da35f61d62958d"
+        },
+        {
+          "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0003.bin",
+          "bytes": 4000000,
+          "sha256": "825c448abe635b67c9a0e202d06ec7226d10f58cea06fb82df1ed99853aace39"
+        },
+        {
+          "src": "audio-v2/b2-c02-a27a0ab9b6bca877/0004.bin",
+          "bytes": 3522319,
+          "sha256": "57a9ea2d1e1a39108643e287bf9d76b38ae4c31f49dcbeb7828fb7f797d376d9"
+        }
+      ],
+      "segments": 397,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 1,
+      "master_peak": 0.6451956033706665,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c02/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c02-a27a0ab9b6bca877/joined.bin"
+    },
+    {
+      "id": "b2-c03",
+      "order": 19,
+      "book": 2,
+      "chapter": 3,
+      "part": "The Sun Bull",
+      "title": "Chapter 3",
+      "origin": "layered-1.0.0",
+      "duration": 2634.788571,
+      "bytes": 31617849,
+      "sha256": "8e455f51c206c1dd9de75264e2e5eaf747cb4344bf0ff9a9d26f439b27397419",
+      "mp3_sha256": "e473a062c62d5baeac893f682b5c5848d2c23c749b678a2df2dda95881b48211",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0000.bin",
+          "bytes": 4000000,
+          "sha256": "3cd88cba3643aeb79a95b790adf5a7a1fc36861bdf26bbd9cc51637fddb067a5"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0001.bin",
+          "bytes": 4000000,
+          "sha256": "fbd2c00db069fbaa468fc52555f8bc4e4e952b0a3885faac0e4f1000af6242cd"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0002.bin",
+          "bytes": 4000000,
+          "sha256": "01515ea3c4c05f9841b16de2ccec0235d4df5ca7c1360c3767ac751ede0078e1"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0003.bin",
+          "bytes": 4000000,
+          "sha256": "0fafd118ac7d5a99ab0432abab342c9a36fbe4ec42fa88e054d0327666da8aa7"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0004.bin",
+          "bytes": 4000000,
+          "sha256": "45560eafe7cc14afb390e1bd59a0b9b391dcc5a2b9cb2a5678da06e58dbe6535"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0005.bin",
+          "bytes": 4000000,
+          "sha256": "b9692a686e8812830be9e3dbed8249d04d79230e2f12379f641bd7a64c73fe45"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0006.bin",
+          "bytes": 4000000,
+          "sha256": "01b469669930bb78e196861920fa656d2aae77f32f5af176b56ad3be5b56f81b"
+        },
+        {
+          "src": "audio-v2/b2-c03-8e455f51c206c1dd/0007.bin",
+          "bytes": 3617849,
+          "sha256": "e989c16f33e44e3d5564fa224c0ced89b8e59b7d994154722ef0ee048eb193ec"
+        }
+      ],
+      "segments": 346,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 8,
+      "ambience_intervals": 2,
+      "master_peak": 0.6729907989501953,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c03/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/joined.bin"
+    },
+    {
+      "id": "b2-c04",
+      "order": 20,
+      "book": 2,
+      "chapter": 4,
+      "part": "The Sun Bull",
+      "title": "Chapter 4",
+      "origin": "layered-1.0.0",
+      "duration": 878.837551,
+      "bytes": 10546437,
+      "sha256": "1608283875a69e97c608269d535d604e565e78eaf971447c8512c7c5e7dbad13",
+      "mp3_sha256": "cd69e914239c7c0f4ecec8b184d72182e3336317b3a667a45a75a0a5a988946f",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c04-1608283875a69e97/0000.bin",
+          "bytes": 4000000,
+          "sha256": "46d88eae346a383f319461703de0ef4b8022cd2f889b2bcb5b854241e6b1334e"
+        },
+        {
+          "src": "audio-v2/b2-c04-1608283875a69e97/0001.bin",
+          "bytes": 4000000,
+          "sha256": "24d907b4206b4c99cd25a71cecf6960aea6441017340dba7c3239e4bbc68f05e"
+        },
+        {
+          "src": "audio-v2/b2-c04-1608283875a69e97/0002.bin",
+          "bytes": 2546437,
+          "sha256": "9bd3abddb2ee66164f122d23411d7fc9156a605cd4645223e40d1bd5bf4ecdbe"
+        }
+      ],
+      "segments": 167,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 1,
+      "ambience_intervals": 1,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c04/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c04-1608283875a69e97/joined.bin"
+    },
+    {
+      "id": "b2-c05",
+      "order": 21,
+      "book": 2,
+      "chapter": 5,
+      "part": "The Sun Bull",
+      "title": "Chapter 5",
+      "origin": "layered-1.0.0",
+      "duration": 1465.730612,
+      "bytes": 17589153,
+      "sha256": "18103b0072cd00265aefd71d856c20dc039170d06b8a15d0b06cd00aca13a4de",
+      "mp3_sha256": "b36e8fbaaa7e0e1dc90d2c6eab33ce9931952f9473d80a9831b3759eb4b10428",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c05-18103b0072cd0026/0000.bin",
+          "bytes": 4000000,
+          "sha256": "90afe49ccca95c2a37b3e621f69b4e0b37ab16d60cd66af187c260986837902e"
+        },
+        {
+          "src": "audio-v2/b2-c05-18103b0072cd0026/0001.bin",
+          "bytes": 4000000,
+          "sha256": "65c206b755bdd06b9664709ac6ea76767cd1893f9eb2f288b40e59432fe35db0"
+        },
+        {
+          "src": "audio-v2/b2-c05-18103b0072cd0026/0002.bin",
+          "bytes": 4000000,
+          "sha256": "ae5b15c646cd70688530727e104c418d678177646c424dda67ef00d049737a69"
+        },
+        {
+          "src": "audio-v2/b2-c05-18103b0072cd0026/0003.bin",
+          "bytes": 4000000,
+          "sha256": "81f6397c636bbed8933b3389730e1120b3ab6d7b2dab827269d525411cedd700"
+        },
+        {
+          "src": "audio-v2/b2-c05-18103b0072cd0026/0004.bin",
+          "bytes": 1589153,
+          "sha256": "ea0abb45c933c4d1912ea4a83f5eb5dc3809a662d1b2e454069cfae61678b0f5"
+        }
+      ],
+      "segments": 269,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 2,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c05/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c05-18103b0072cd0026/joined.bin"
+    },
+    {
+      "id": "b2-c06",
+      "order": 22,
+      "book": 2,
+      "chapter": 6,
+      "part": "The Sun Bull",
+      "title": "Chapter 6",
+      "origin": "layered-1.0.0",
+      "duration": 1610.318367,
+      "bytes": 19324206,
+      "sha256": "e98617f20321c9eba29b0084161665231c9b5d589d1c5a543a342ff343b8d4d5",
+      "mp3_sha256": "48da15a3603cea003ef41ef6ba1557e47bd42736ef18013080a14152837113b7",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c06-e98617f20321c9eb/0000.bin",
+          "bytes": 4000000,
+          "sha256": "b0cffbcbae897ec958f125597512c163136cce39132ebd553b863ba95eafc882"
+        },
+        {
+          "src": "audio-v2/b2-c06-e98617f20321c9eb/0001.bin",
+          "bytes": 4000000,
+          "sha256": "1b300aeb91a2f1f03b8fecfe08363fc6028c14144f9e712a8276bc37db1d4ce6"
+        },
+        {
+          "src": "audio-v2/b2-c06-e98617f20321c9eb/0002.bin",
+          "bytes": 4000000,
+          "sha256": "c3bf44413176c5aa6dccd172e7d9b788e7703fe94e0ed2dea429f4448deaf58b"
+        },
+        {
+          "src": "audio-v2/b2-c06-e98617f20321c9eb/0003.bin",
+          "bytes": 4000000,
+          "sha256": "362f3e54283ae8ef518c160830d63712f4ce991d8e9a5f4d09634b85ffa2d1c4"
+        },
+        {
+          "src": "audio-v2/b2-c06-e98617f20321c9eb/0004.bin",
+          "bytes": 3324206,
+          "sha256": "f9635b1ed9af6a9b98f6b4bec8cf02dcace70ec5aec5d7fd49b17cbc45ab2d75"
+        }
+      ],
+      "segments": 245,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 8,
+      "ambience_intervals": 1,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c06/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c06-e98617f20321c9eb/joined.bin"
+    },
+    {
+      "id": "b2-c07",
+      "order": 23,
+      "book": 2,
+      "chapter": 7,
+      "part": "The Sun Bull",
+      "title": "Chapter 7",
+      "origin": "layered-1.0.0",
+      "duration": 1339.585306,
+      "bytes": 16075410,
+      "sha256": "24d06a14a5bafdd54b64dfacf5a803ea8a88b5a3a4457b6df0fcabed0a62f80f",
+      "mp3_sha256": "4f10d5fadcc8dbacf77abbf1a25ce31fd4d50d19d5a0a8a57cf84e1a24d6c4dc",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c07-24d06a14a5bafdd5/0000.bin",
+          "bytes": 4000000,
+          "sha256": "b5af27443f958e61b060ead7b05e3e1e793fc4a6c462682ff5bf2f8d4299afab"
+        },
+        {
+          "src": "audio-v2/b2-c07-24d06a14a5bafdd5/0001.bin",
+          "bytes": 4000000,
+          "sha256": "3dd4195755bee8beab47691402ec5a75b015b85e14a96a890688275b30f9bfdc"
+        },
+        {
+          "src": "audio-v2/b2-c07-24d06a14a5bafdd5/0002.bin",
+          "bytes": 4000000,
+          "sha256": "83ec0cd58b2b8d766e71a1254fb9fad253d220787309c48ca46b8521da58089d"
+        },
+        {
+          "src": "audio-v2/b2-c07-24d06a14a5bafdd5/0003.bin",
+          "bytes": 4000000,
+          "sha256": "6f416a1bd76399644455c9907c08e08e72d85e60fff0a867aa67c5dbed87703f"
+        },
+        {
+          "src": "audio-v2/b2-c07-24d06a14a5bafdd5/0004.bin",
+          "bytes": 75410,
+          "sha256": "c87d1eda956e079b63d832c3f83e141b824d516ca1ebcf72d2f3298ef0da7489"
+        }
+      ],
+      "segments": 222,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 6,
+      "ambience_intervals": 1,
+      "master_peak": 0.6379321217536926,
+      "duration_anomaly_count": 1,
+      "native_master_layer": "recordings/layers/b2-c07/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c07-24d06a14a5bafdd5/joined.bin"
+    },
+    {
+      "id": "b2-c08",
+      "order": 24,
+      "book": 2,
+      "chapter": 8,
+      "part": "The Sun Bull",
+      "title": "Chapter 8",
+      "origin": "layered-1.0.0",
+      "duration": 906.736327,
+      "bytes": 10881222,
+      "sha256": "618c677217530959e6cd589c095ae86d47702213016191a235761882848bb873",
+      "mp3_sha256": "a2171f57d1020aba4871fe6005ee4fa74cd12c4e28a0022a0655d0f59be9769e",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c08-618c677217530959/0000.bin",
+          "bytes": 4000000,
+          "sha256": "adcb65a75cd81dcc48713e85899c893d5c1fd51ef8e748d02b6e3beeb4177e13"
+        },
+        {
+          "src": "audio-v2/b2-c08-618c677217530959/0001.bin",
+          "bytes": 4000000,
+          "sha256": "7b0ed3de2ea842298bf3bb86fcab785bc120091ce1baba24f84a24e64462efd5"
+        },
+        {
+          "src": "audio-v2/b2-c08-618c677217530959/0002.bin",
+          "bytes": 2881222,
+          "sha256": "2df48338d73219834e04215131d34db79ce7ec58602bbf0e7e697d0013ea692a"
+        }
+      ],
+      "segments": 124,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 0,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c08/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c08-618c677217530959/joined.bin"
+    },
+    {
+      "id": "b2-c09",
+      "order": 25,
+      "book": 2,
+      "chapter": 9,
+      "part": "The Sun Bull",
+      "title": "Chapter 9",
+      "origin": "layered-1.0.0",
+      "duration": 789.159184,
+      "bytes": 9470296,
+      "sha256": "b3f61169b475d7bddd5631b4857e875c90126dd3379ebd29360c8ff2723172f4",
+      "mp3_sha256": "242ddb6971916b0ee95c977965e60439b72c9a9c5642aa3bf73da41526fc0a70",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c09-b3f61169b475d7bd/0000.bin",
+          "bytes": 4000000,
+          "sha256": "9874145c055bed39abf88efc61437c834b303add41dc65920f8ca9c0e9eb2aae"
+        },
+        {
+          "src": "audio-v2/b2-c09-b3f61169b475d7bd/0001.bin",
+          "bytes": 4000000,
+          "sha256": "0b278e4a69b9bf38d5c4d9b93c17e0c12507741efe0e1dbecb0a7452b68cff01"
+        },
+        {
+          "src": "audio-v2/b2-c09-b3f61169b475d7bd/0002.bin",
+          "bytes": 1470296,
+          "sha256": "c9e28f7f8ab54177f058cb62a3080e133d2fbf1afe2c64e69775aaa9e15cf319"
+        }
+      ],
+      "segments": 164,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 0,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434791088104248,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c09/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c09-b3f61169b475d7bd/joined.bin"
+    },
+    {
+      "id": "b2-c10",
+      "order": 26,
+      "book": 2,
+      "chapter": 10,
+      "part": "The Sun Bull",
+      "title": "Chapter 10",
+      "origin": "layered-1.0.0",
+      "duration": 1111.980408,
+      "bytes": 13344151,
+      "sha256": "01d51bb0b7a48594fd7d1f257315429e8bdb6ecb207de7972583b09dee1abeb2",
+      "mp3_sha256": "dcb3b09a9a547d205a4b641465ae4ccb03d9de1e2af4d7a5255f00d425b49072",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c10-01d51bb0b7a48594/0000.bin",
+          "bytes": 4000000,
+          "sha256": "b9f18e9f3b09cf4c74cc3408328ab0c54b864fd321d17e573eaecaa5d8ef582e"
+        },
+        {
+          "src": "audio-v2/b2-c10-01d51bb0b7a48594/0001.bin",
+          "bytes": 4000000,
+          "sha256": "e99a2fdc1e6d43d872a567b7575dc276e413ee13636310e8ea500a1fc745072e"
+        },
+        {
+          "src": "audio-v2/b2-c10-01d51bb0b7a48594/0002.bin",
+          "bytes": 4000000,
+          "sha256": "d62486d0d9f24241c579aa9adc92e983ece1e2aac9c1de4b1352d3dbdbfd7e47"
+        },
+        {
+          "src": "audio-v2/b2-c10-01d51bb0b7a48594/0003.bin",
+          "bytes": 1344151,
+          "sha256": "f7d4c51c2a091e92db277e72c9e8acfe28491ae624ac742b0ba815edd284c3fe"
+        }
+      ],
+      "segments": 306,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 2,
+      "ambience_intervals": 0,
+      "master_peak": 0.6379321217536926,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c10/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c10-01d51bb0b7a48594/joined.bin"
+    },
+    {
+      "id": "b2-c11",
+      "order": 27,
+      "book": 2,
+      "chapter": 11,
+      "part": "The Sun Bull",
+      "title": "Chapter 11",
+      "origin": "layered-1.0.0",
+      "duration": 1258.004898,
+      "bytes": 15096445,
+      "sha256": "4e8e277d1a9e66a8894a2264a9b54ac41b8d7ed83065ca010430cf3f03f1e4c6",
+      "mp3_sha256": "8fe72c480f039cede17fef162eaab88d0da273d578e3832124bcd64da04fd48c",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c11-4e8e277d1a9e66a8/0000.bin",
+          "bytes": 4000000,
+          "sha256": "66bddf61ff8ebabc5a1e8982c2c2a317c9d151bb55326aa5c7d9df35ea381629"
+        },
+        {
+          "src": "audio-v2/b2-c11-4e8e277d1a9e66a8/0001.bin",
+          "bytes": 4000000,
+          "sha256": "35784d4e6fc14437166708b58ab8ed3062f7436c25b3dbba5cc10765a0a429c1"
+        },
+        {
+          "src": "audio-v2/b2-c11-4e8e277d1a9e66a8/0002.bin",
+          "bytes": 4000000,
+          "sha256": "1bbdef1d8cee2bdaa167f6e37a038cb56428842c417211caf77d78874b9615fe"
+        },
+        {
+          "src": "audio-v2/b2-c11-4e8e277d1a9e66a8/0003.bin",
+          "bytes": 3096445,
+          "sha256": "9648570f5e154bc769a8713263807ee6bcc43dc7470bd28e51d719198c0df59b"
+        }
+      ],
+      "segments": 209,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 1,
+      "master_peak": 0.6441969871520996,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c11/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c11-4e8e277d1a9e66a8/joined.bin"
+    },
+    {
+      "id": "b2-c12",
+      "order": 28,
+      "book": 2,
+      "chapter": 12,
+      "part": "The Sun Bull",
+      "title": "Chapter 12",
+      "origin": "layered-1.0.0",
+      "duration": 1085.962449,
+      "bytes": 13031935,
+      "sha256": "482379c16bd8cc053f64093c4c02bae0239021ba68b1be41a70ad9d27a5384e2",
+      "mp3_sha256": "e04f0b14220c9fd29e65d785bf3eb9a8a355442a19371aa6c6a5f175399afbf3",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c12-482379c16bd8cc05/0000.bin",
+          "bytes": 4000000,
+          "sha256": "17b22d864174fd1aba2d591722bf2b7467f8dda17073ebb2abd3cb6f7a7e73cb"
+        },
+        {
+          "src": "audio-v2/b2-c12-482379c16bd8cc05/0001.bin",
+          "bytes": 4000000,
+          "sha256": "c6e6a5e6e05818484c63a2c41d82d7ba8d90e93685de5ce2b5b0d6347884524f"
+        },
+        {
+          "src": "audio-v2/b2-c12-482379c16bd8cc05/0002.bin",
+          "bytes": 4000000,
+          "sha256": "c22ba4c6e8becaee5d64f09d490a0884c9b4eadc2db22ebf24da7e6469a13981"
+        },
+        {
+          "src": "audio-v2/b2-c12-482379c16bd8cc05/0003.bin",
+          "bytes": 1031935,
+          "sha256": "e6b6f51940c29564dda6a3ba657a30474470d766790ae586fc98c18de26c237b"
+        }
+      ],
+      "segments": 214,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 1,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c12/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c12-482379c16bd8cc05/joined.bin"
+    },
+    {
+      "id": "b2-c13",
+      "order": 29,
+      "book": 2,
+      "chapter": 13,
+      "part": "The Sun Bull",
+      "title": "Chapter 13",
+      "origin": "layered-1.0.0",
+      "duration": 1040.770612,
+      "bytes": 12489633,
+      "sha256": "654ada2cc2b4e745dfab659a7a1a2f3f1ce8d914a1fe429dc70dbf0ad5e9c0ed",
+      "mp3_sha256": "0666d66c112990e2cf673a79801f7ddb43f87f9af9febc49002ac5ad990cc9c9",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c13-654ada2cc2b4e745/0000.bin",
+          "bytes": 4000000,
+          "sha256": "6bb2c3e16042b3d9508c5f6614fa45e3b4d13e907d658e38d4ba5b0da4aa08bd"
+        },
+        {
+          "src": "audio-v2/b2-c13-654ada2cc2b4e745/0001.bin",
+          "bytes": 4000000,
+          "sha256": "0f5478647c1975e478a66438a4046f9e5a4150f2f7f8cf26d8cb9f565d9b2466"
+        },
+        {
+          "src": "audio-v2/b2-c13-654ada2cc2b4e745/0002.bin",
+          "bytes": 4000000,
+          "sha256": "c37f5ec8da2aed307b085cb9f5f9fcf71043708157a3ff2961d97601f2fb785c"
+        },
+        {
+          "src": "audio-v2/b2-c13-654ada2cc2b4e745/0003.bin",
+          "bytes": 489633,
+          "sha256": "08bb1a14c896f8e8b591b4b8c8a903cb0907519974d0ce8a3b4fac028ab6fdf0"
+        }
+      ],
+      "segments": 153,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 5,
+      "ambience_intervals": 0,
+      "master_peak": 0.6224915385246277,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c13/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c13-654ada2cc2b4e745/joined.bin"
+    },
+    {
+      "id": "b2-c14",
+      "order": 30,
+      "book": 2,
+      "chapter": 14,
+      "part": "The Sun Bull",
+      "title": "Chapter 14",
+      "origin": "layered-1.0.0",
+      "duration": 1855.477551,
+      "bytes": 22266117,
+      "sha256": "4bb48a6dee557a172730d1cc79102d118b1438328c7af9197cd0656e296f9162",
+      "mp3_sha256": "8150f0fa3626300bdc17efe8014cc3a015bb607bbd59a2fceceabbfcd0ce9bc6",
+      "chunks": [
+        {
+          "src": "audio-v2/b2-c14-4bb48a6dee557a17/0000.bin",
+          "bytes": 4000000,
+          "sha256": "f39d85e32272a46a543b82a2c16cd32d64dfb10c5cf30288100e65f4a5196b96"
+        },
+        {
+          "src": "audio-v2/b2-c14-4bb48a6dee557a17/0001.bin",
+          "bytes": 4000000,
+          "sha256": "84ae30e1c95f22144c055ddabe75ffed370c08036da09dc17903beb1c0435c90"
+        },
+        {
+          "src": "audio-v2/b2-c14-4bb48a6dee557a17/0002.bin",
+          "bytes": 4000000,
+          "sha256": "78e0b8352d68bf44c0cdab3a23b34016acce57d2c697c2d003ee3396f744a264"
+        },
+        {
+          "src": "audio-v2/b2-c14-4bb48a6dee557a17/0003.bin",
+          "bytes": 4000000,
+          "sha256": "323bd7d3f87ce42fb674cbc9048ccdcf0647dde2b706ed3ed1edc1f0939b70dc"
+        },
+        {
+          "src": "audio-v2/b2-c14-4bb48a6dee557a17/0004.bin",
+          "bytes": 4000000,
+          "sha256": "12fc5f42e3d12b66f12b3b5f52aaa0fb2465fcc9e6e87b4f383045059f982c18"
+        },
+        {
+          "src": "audio-v2/b2-c14-4bb48a6dee557a17/0005.bin",
+          "bytes": 2266117,
+          "sha256": "fa9b085833ae502d13f367db49a6708dca379278b75ab5b198e52c72a7aaa8b5"
+        }
+      ],
+      "segments": 213,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 10,
+      "ambience_intervals": 7,
+      "master_peak": 0.6495258808135986,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b2-c14/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/joined.bin"
+    },
+    {
+      "id": "b3-c01",
+      "order": 31,
+      "book": 3,
+      "chapter": 1,
+      "part": "The Merlin",
+      "title": "Chapter 1",
+      "origin": "layered-1.0.0",
+      "duration": 1453.453061,
+      "bytes": 17441823,
+      "sha256": "0fd53ea512eeffe316f7781f04a2d66881cfea31543aca2add7d8e37c1f441cc",
+      "mp3_sha256": "f93aa9778d4c6794967ee1472246a9bdb1ed44657b9d6e6f2afe6186c8ecf711",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c01-0fd53ea512eeffe3/0000.bin",
+          "bytes": 4000000,
+          "sha256": "7b935556ddf2a5d403e9df22b026eed7df3ae248edca2ed45bbef59bceec33f3"
+        },
+        {
+          "src": "audio-v2/b3-c01-0fd53ea512eeffe3/0001.bin",
+          "bytes": 4000000,
+          "sha256": "e1bf5a4bf06e53fb213b0ed2e67689ddf83b04c3415e6756cc04d7a77fb8384f"
+        },
+        {
+          "src": "audio-v2/b3-c01-0fd53ea512eeffe3/0002.bin",
+          "bytes": 4000000,
+          "sha256": "933c496cf6c5f3ff8536126d56265cdf2eda9c5591c4a1d2c3289e6f040f4654"
+        },
+        {
+          "src": "audio-v2/b3-c01-0fd53ea512eeffe3/0003.bin",
+          "bytes": 4000000,
+          "sha256": "84747b5e44ced77ab0d9b955bcc77660c0d342823fa7b3de6a0ca322071c5e9c"
+        },
+        {
+          "src": "audio-v2/b3-c01-0fd53ea512eeffe3/0004.bin",
+          "bytes": 1441823,
+          "sha256": "16d2523420c2535b97a6f228eca9c47e3dd4a7235e083b272a8b4a86be6cd3ab"
+        }
+      ],
+      "segments": 211,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 2,
+      "ambience_intervals": 1,
+      "master_peak": 0.6266688108444214,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c01/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c01-0fd53ea512eeffe3/joined.bin"
+    },
+    {
+      "id": "b3-c02",
+      "order": 32,
+      "book": 3,
+      "chapter": 2,
+      "part": "The Merlin",
+      "title": "Chapter 2",
+      "origin": "layered-1.0.0",
+      "duration": 1698.638367,
+      "bytes": 20384046,
+      "sha256": "ba0d22bf3da6f998873cf5be48c6924eb6c298289266daefe2a690d7bd2cf51a",
+      "mp3_sha256": "32d15fa71384e7fa5d14f47a54b3636ed1a6aee7ca36caeebd41025dee9f09a2",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0000.bin",
+          "bytes": 4000000,
+          "sha256": "a7f9892a1c0062be351d41219f4816eeb068b8ee0d87fc980573b29ab4ff5224"
+        },
+        {
+          "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0001.bin",
+          "bytes": 4000000,
+          "sha256": "dce191b08abdd21f04ad751516c9066818d409861c5ef30bf968462f3c5f25ba"
+        },
+        {
+          "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0002.bin",
+          "bytes": 4000000,
+          "sha256": "38bf9900a140a8dc7bc7fe967343ac8125e83d7783b8c5a8bc2ca4da3d86cf43"
+        },
+        {
+          "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0003.bin",
+          "bytes": 4000000,
+          "sha256": "60c361f8912e82274abaac37cec53b9dd28fd5282b221316b3aab3e1267fe077"
+        },
+        {
+          "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0004.bin",
+          "bytes": 4000000,
+          "sha256": "eb09858f69f5b00944362e13a23e5b5f74f771626661fa214d2a88add036f15c"
+        },
+        {
+          "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0005.bin",
+          "bytes": 384046,
+          "sha256": "848d3216446436e0cb58704809f7280021e1fb769c214a80637f4649aaee23aa"
+        }
+      ],
+      "segments": 307,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 16,
+      "ambience_intervals": 2,
+      "master_peak": 0.6656118631362915,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c02/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/joined.bin"
+    },
+    {
+      "id": "b3-c03",
+      "order": 33,
+      "book": 3,
+      "chapter": 3,
+      "part": "The Merlin",
+      "title": "Chapter 3",
+      "origin": "layered-1.0.0",
+      "duration": 838.426122,
+      "bytes": 10061499,
+      "sha256": "54b49f70c85c6ad7495ed9c3a2f2419e9fc35ee41b44fee43cb0b8117bf827a9",
+      "mp3_sha256": "d3049be427aed3d9cb898cd7a8a3926d82b008be3c4b34fb2cdef75fa0e0a564",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c03-54b49f70c85c6ad7/0000.bin",
+          "bytes": 4000000,
+          "sha256": "a646c756c61ba4364a1a8f934caaf3c68989d4378bbbc8f5933c8bcb2103b979"
+        },
+        {
+          "src": "audio-v2/b3-c03-54b49f70c85c6ad7/0001.bin",
+          "bytes": 4000000,
+          "sha256": "42dd32ea405526b7ff26238987ffc08dce17aee90bbfd671bb91f2ed283b4248"
+        },
+        {
+          "src": "audio-v2/b3-c03-54b49f70c85c6ad7/0002.bin",
+          "bytes": 2061499,
+          "sha256": "a3754b920bdbcef716ab5252e860dc64cd61ccaefeacc66fa7cf2c0d37b5bdf1"
+        }
+      ],
+      "segments": 109,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 0,
+      "master_peak": 0.6323285698890686,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c03/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c03-54b49f70c85c6ad7/joined.bin"
+    },
+    {
+      "id": "b3-c04",
+      "order": 34,
+      "book": 3,
+      "chapter": 4,
+      "part": "The Merlin",
+      "title": "Chapter 4",
+      "origin": "layered-1.0.0",
+      "duration": 1375.921633,
+      "bytes": 16511446,
+      "sha256": "24195da8988d024cde426f0eead9624dc5b64f194d9ba9cdf75201e81b8bd623",
+      "mp3_sha256": "76472348a08d71d8528040ea5ab700571e18e67fe16bbc421081c309a3df8d98",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c04-24195da8988d024c/0000.bin",
+          "bytes": 4000000,
+          "sha256": "fe5e8b368e8128968e33c69cf4241153dc53c4002c96a83ab2bb735d3f5cd461"
+        },
+        {
+          "src": "audio-v2/b3-c04-24195da8988d024c/0001.bin",
+          "bytes": 4000000,
+          "sha256": "1cf84f8bf85d0a0597dbc7edbf16c313c35505b514ce0946374e85f250cf5038"
+        },
+        {
+          "src": "audio-v2/b3-c04-24195da8988d024c/0002.bin",
+          "bytes": 4000000,
+          "sha256": "c2c70b8be90366fadc2f514567b7ea1c3ae6c4c2a3f735298150c03c2e9b5874"
+        },
+        {
+          "src": "audio-v2/b3-c04-24195da8988d024c/0003.bin",
+          "bytes": 4000000,
+          "sha256": "48df6c992f1bab126c84a4321a9f1f4d1f94ed55e8f0068bd5b806fd785ec606"
+        },
+        {
+          "src": "audio-v2/b3-c04-24195da8988d024c/0004.bin",
+          "bytes": 511446,
+          "sha256": "ff6b7a170f3f4d7ba590b764c0e8af4718a7da4c4860e7b6f278fcfba5dc5e05"
+        }
+      ],
+      "segments": 180,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 1,
+      "master_peak": 0.6437432765960693,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c04/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c04-24195da8988d024c/joined.bin"
+    },
+    {
+      "id": "b3-c05",
+      "order": 35,
+      "book": 3,
+      "chapter": 5,
+      "part": "The Merlin",
+      "title": "Chapter 5",
+      "origin": "layered-1.0.0",
+      "duration": 965.433469,
+      "bytes": 11585588,
+      "sha256": "bd2bcba3c9429286e912bc397663d801274db6c4e52d74c9e50e7f758675648f",
+      "mp3_sha256": "f59f24ee91e4e3fd000b0d3e5a6ca804256904bc33ec1b45d89da51f9fc92bbc",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c05-bd2bcba3c9429286/0000.bin",
+          "bytes": 4000000,
+          "sha256": "29d7294f2105a4ecaee66b15e0c2293147d8507397aaa5c9a88a7dde0caa4525"
+        },
+        {
+          "src": "audio-v2/b3-c05-bd2bcba3c9429286/0001.bin",
+          "bytes": 4000000,
+          "sha256": "31bccbfefecd603ad6592dd9ab4d816a77a3af13abda51e043f9e5f8afd7d899"
+        },
+        {
+          "src": "audio-v2/b3-c05-bd2bcba3c9429286/0002.bin",
+          "bytes": 3585588,
+          "sha256": "5045df0f26a15a78b64cd3709a3ebc054fcba71eb595fb7830ffc3e351123f44"
+        }
+      ],
+      "segments": 148,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 5,
+      "ambience_intervals": 2,
+      "master_peak": 0.6425578594207764,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c05/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c05-bd2bcba3c9429286/joined.bin"
+    },
+    {
+      "id": "b3-c06",
+      "order": 36,
+      "book": 3,
+      "chapter": 6,
+      "part": "The Merlin",
+      "title": "Chapter 6",
+      "origin": "layered-1.0.0",
+      "duration": 1653.368163,
+      "bytes": 19840804,
+      "sha256": "76cbdc6f134d1bff8c66dc7150ffc6f78c826265e2c6a8344b02a9cb26708fe8",
+      "mp3_sha256": "5ca5f42fe212cd99ee8fd6275855e679ab135922ed13fd0f73a0b5cbe319fad8",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0000.bin",
+          "bytes": 4000000,
+          "sha256": "e45382a1af8407f853b2e851af3a53c63c6ca3b74e641fd42c90102f0a9e16fd"
+        },
+        {
+          "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0001.bin",
+          "bytes": 4000000,
+          "sha256": "59b4b23fd1a05f2a4a12c37c9949a9c14e112b33aad6d79fbbd2caa23531077e"
+        },
+        {
+          "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0002.bin",
+          "bytes": 4000000,
+          "sha256": "4fc160e79545ee89b1284307d9466ddc921422d410b43b834e39f340cc174e46"
+        },
+        {
+          "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0003.bin",
+          "bytes": 4000000,
+          "sha256": "9b4b3847d04b6bdee6d68a71a95fbe045be3f88acaff11543f9bcbeffb824f14"
+        },
+        {
+          "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0004.bin",
+          "bytes": 3840804,
+          "sha256": "87c95923831f8b01117d926b72ebc366759c3dc63a67c7f0e4be366830861765"
+        }
+      ],
+      "segments": 373,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c06/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c06-76cbdc6f134d1bff/joined.bin"
+    },
+    {
+      "id": "b3-c07",
+      "order": 37,
+      "book": 3,
+      "chapter": 7,
+      "part": "The Merlin",
+      "title": "Chapter 7",
+      "origin": "layered-1.0.0",
+      "duration": 1262.445714,
+      "bytes": 15149735,
+      "sha256": "038a9624ff39899e71253cd53768d5e12730a567734fe093c43fa17b90da95d6",
+      "mp3_sha256": "41dc58035641e75faf7ba9216a4afb37f1c5760a98404c2fb4d306f0d714ab33",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c07-038a9624ff39899e/0000.bin",
+          "bytes": 4000000,
+          "sha256": "57822ff27fa494b0d251e4bde238ff7b654f856e8643a9d20eb8311c34a6644c"
+        },
+        {
+          "src": "audio-v2/b3-c07-038a9624ff39899e/0001.bin",
+          "bytes": 4000000,
+          "sha256": "c53d81bb6275efb9e10d646cca3e4fa90d18acf46fd991762bb8da8ce27146bb"
+        },
+        {
+          "src": "audio-v2/b3-c07-038a9624ff39899e/0002.bin",
+          "bytes": 4000000,
+          "sha256": "dd128d8d17c9bb758f87bbe0cb01f8caad3bf1202ed51ff690f9cca4fa972454"
+        },
+        {
+          "src": "audio-v2/b3-c07-038a9624ff39899e/0003.bin",
+          "bytes": 3149735,
+          "sha256": "8869995ec80d6e58114afd7226331f3e77c7fb48f2051480beaaef26963f3b96"
+        }
+      ],
+      "segments": 207,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 10,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c07/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c07-038a9624ff39899e/joined.bin"
+    },
+    {
+      "id": "b3-c08",
+      "order": 38,
+      "book": 3,
+      "chapter": 8,
+      "part": "The Merlin",
+      "title": "Chapter 8",
+      "origin": "layered-1.0.0",
+      "duration": 1102.706939,
+      "bytes": 13232869,
+      "sha256": "ab005309ffd31286d3b6a518f6bf20bc5d369da54844997deff2f49cd0954867",
+      "mp3_sha256": "6d15945c525ab9c8f5cba69d267498425468279c94fdf2eae648a6d70d4edf8b",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c08-ab005309ffd31286/0000.bin",
+          "bytes": 4000000,
+          "sha256": "346bc1cfbe37554214b760ee3dee9bc58698e1ac8900c579b3d8b3fde4f8a82f"
+        },
+        {
+          "src": "audio-v2/b3-c08-ab005309ffd31286/0001.bin",
+          "bytes": 4000000,
+          "sha256": "1d51793ea637795081102d7048465f3459fee4585f2567ed9635291cec5314f5"
+        },
+        {
+          "src": "audio-v2/b3-c08-ab005309ffd31286/0002.bin",
+          "bytes": 4000000,
+          "sha256": "cc357b3c930ac719b9b92b43f43f6b0a1a1fbbdb67ac100e13328ee02597b9d5"
+        },
+        {
+          "src": "audio-v2/b3-c08-ab005309ffd31286/0003.bin",
+          "bytes": 1232869,
+          "sha256": "032c687d5ba6b43ecd46155997b0ac51c94c65c22a7b692cc63a9200687ea60c"
+        }
+      ],
+      "segments": 267,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 2,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c08/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c08-ab005309ffd31286/joined.bin"
+    },
+    {
+      "id": "b3-c09",
+      "order": 39,
+      "book": 3,
+      "chapter": 9,
+      "part": "The Merlin",
+      "title": "Chapter 9",
+      "origin": "layered-1.0.0",
+      "duration": 793.260408,
+      "bytes": 9519511,
+      "sha256": "874698e41a25405b0f2392df7874bdb96fac07040b88e5d8c54b3d5709bc6ade",
+      "mp3_sha256": "4d62d57bfb1d238feb105d9dfa9d73008ea71d66624451fe74a04fb7d089c20c",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c09-874698e41a25405b/0000.bin",
+          "bytes": 4000000,
+          "sha256": "1374350be3db28ff9dc2b343348b264a60a0fa0c25e9c6a2dc0db944d9ca6883"
+        },
+        {
+          "src": "audio-v2/b3-c09-874698e41a25405b/0001.bin",
+          "bytes": 4000000,
+          "sha256": "6e8a6b683d50cec2079bc97a1ca4a9908c4993b662681c0ee3a689d1ecb66f58"
+        },
+        {
+          "src": "audio-v2/b3-c09-874698e41a25405b/0002.bin",
+          "bytes": 1519511,
+          "sha256": "dcb1336f2b452bd5cb69d00925b332c7c513b2372877c800fc3dcfc39e8e26b9"
+        }
+      ],
+      "segments": 164,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 0,
+      "master_peak": 0.6266688108444214,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c09/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c09-874698e41a25405b/joined.bin"
+    },
+    {
+      "id": "b3-c10",
+      "order": 40,
+      "book": 3,
+      "chapter": 10,
+      "part": "The Merlin",
+      "title": "Chapter 10",
+      "origin": "layered-1.0.0",
+      "duration": 993.906939,
+      "bytes": 11927269,
+      "sha256": "31198ad4d948aefee8a9d5e7bb588bfa07b9686abbf3f46304f40459607b4521",
+      "mp3_sha256": "05980094f3d11ae78ef43f796f9d3d22e807c5809c51fe4e51dcd199d424ba20",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c10-31198ad4d948aefe/0000.bin",
+          "bytes": 4000000,
+          "sha256": "b16b60bb2efa0f0437ca3735cdfa4d67718bba67bfcbaee8f2cb52adc239c3be"
+        },
+        {
+          "src": "audio-v2/b3-c10-31198ad4d948aefe/0001.bin",
+          "bytes": 4000000,
+          "sha256": "04920d373bcddffb2aaab79c7d3d76dc7f94bf97c25858748a1a1dd3ba038495"
+        },
+        {
+          "src": "audio-v2/b3-c10-31198ad4d948aefe/0002.bin",
+          "bytes": 3927269,
+          "sha256": "b24c4d8ceba09233581a907a47af16ba461f610dbcdab2f0994f0d1967e0ddc3"
+        }
+      ],
+      "segments": 170,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 2,
+      "master_peak": 0.6308601498603821,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c10/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c10-31198ad4d948aefe/joined.bin"
+    },
+    {
+      "id": "b3-c11",
+      "order": 41,
+      "book": 3,
+      "chapter": 11,
+      "part": "The Merlin",
+      "title": "Chapter 11",
+      "origin": "layered-1.0.0",
+      "duration": 906.109388,
+      "bytes": 10873699,
+      "sha256": "1947f0b584ef6eba49c04e4e68f5da6d5bef500f24e4c75db5f89f4fec51b03a",
+      "mp3_sha256": "fae1cfb60d871f29581c48e6f90136e88df3726b10de56e9d2e92904788e39b6",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c11-1947f0b584ef6eba/0000.bin",
+          "bytes": 4000000,
+          "sha256": "b01cb7959aed8592ca8a36ad739c621a48a428bd7a80d510803bfbc7b1892f71"
+        },
+        {
+          "src": "audio-v2/b3-c11-1947f0b584ef6eba/0001.bin",
+          "bytes": 4000000,
+          "sha256": "d3f47db3cef2ae6e014f7b662bd378a7ee259318d2fc02ca2168a77e741474d4"
+        },
+        {
+          "src": "audio-v2/b3-c11-1947f0b584ef6eba/0002.bin",
+          "bytes": 2873699,
+          "sha256": "1ca6a8855c2f3a5da1599adef8567697ff93d5504dd30e5a27f14566adcd87b0"
+        }
+      ],
+      "segments": 166,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 8,
+      "ambience_intervals": 0,
+      "master_peak": 0.6266688108444214,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c11/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c11-1947f0b584ef6eba/joined.bin"
+    },
+    {
+      "id": "b3-c12",
+      "order": 42,
+      "book": 3,
+      "chapter": 12,
+      "part": "The Merlin",
+      "title": "Chapter 12",
+      "origin": "layered-1.0.0",
+      "duration": 815.124898,
+      "bytes": 9781885,
+      "sha256": "6da1a3c1fcafc61fb0b5ccc1a4068a98fded1befea81c07a4dfc0e990626ba27",
+      "mp3_sha256": "405a7b134ef19ceaa95d2a0d1f2b81a68f1f9c044e8932e69f6ac3cd5264fa65",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c12-6da1a3c1fcafc61f/0000.bin",
+          "bytes": 4000000,
+          "sha256": "b401eaf82a0eddaeba551ac2323f3522111f48461a2a582ba048d3b93401c143"
+        },
+        {
+          "src": "audio-v2/b3-c12-6da1a3c1fcafc61f/0001.bin",
+          "bytes": 4000000,
+          "sha256": "1e058f5634c7ee95c9526c1ecc27bd85782dc3938581fa4b847827ea59f473fb"
+        },
+        {
+          "src": "audio-v2/b3-c12-6da1a3c1fcafc61f/0002.bin",
+          "bytes": 1781885,
+          "sha256": "0e69d9299bc1c47db8a28886f3bc94e3a3f03cb36e47729f90ba2380113ad7bd"
+        }
+      ],
+      "segments": 222,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 0,
+      "master_peak": 0.6434789896011353,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c12/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c12-6da1a3c1fcafc61f/joined.bin"
+    },
+    {
+      "id": "b3-c13",
+      "order": 43,
+      "book": 3,
+      "chapter": 13,
+      "part": "The Merlin",
+      "title": "Chapter 13",
+      "origin": "layered-1.0.0",
+      "duration": 800.757551,
+      "bytes": 9609477,
+      "sha256": "921596214ac7125120fe66c38eb8272d9eb585c067f36b0733eca29ec6583b2c",
+      "mp3_sha256": "5972a831dda078bc91af162e7ac01bf251351cb3d5976753010551bd7ab17ec7",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c13-921596214ac71251/0000.bin",
+          "bytes": 4000000,
+          "sha256": "2a4d4eba50626e7a21458d976329ba7727db629d61aac4273754939c6d627a90"
+        },
+        {
+          "src": "audio-v2/b3-c13-921596214ac71251/0001.bin",
+          "bytes": 4000000,
+          "sha256": "1162b112c2c6924965d5283e267108336bc75f6f4f974229d6b5def126245783"
+        },
+        {
+          "src": "audio-v2/b3-c13-921596214ac71251/0002.bin",
+          "bytes": 1609477,
+          "sha256": "96d5873872c63565eebcf770e5673799977acfa14f1ed00bf33c3d1b952b1483"
+        }
+      ],
+      "segments": 165,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 7,
+      "ambience_intervals": 0,
+      "master_peak": 0.6266688108444214,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c13/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c13-921596214ac71251/joined.bin"
+    },
+    {
+      "id": "b3-c14",
+      "order": 44,
+      "book": 3,
+      "chapter": 14,
+      "part": "The Merlin",
+      "title": "Chapter 14",
+      "origin": "layered-1.0.0",
+      "duration": 1198.367347,
+      "bytes": 14380794,
+      "sha256": "eefbecd7c0bb2e51bc8b3fc4616e311de91260eca752b7585f581a36b8962809",
+      "mp3_sha256": "fe23c4e1ad7837e5562c07d38d3a15887d712b04cc1552186ecfe620090c8e8f",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0000.bin",
+          "bytes": 4000000,
+          "sha256": "3e72efe55ade900b77e49657e0f31f77f96b45a46445e967e952a78e8ca621be"
+        },
+        {
+          "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0001.bin",
+          "bytes": 4000000,
+          "sha256": "1405e3b5c50331dd0112d3d936c175722e0922b6fc77056d7e1e45f59ab861eb"
+        },
+        {
+          "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0002.bin",
+          "bytes": 4000000,
+          "sha256": "e9748434d007e7d4bf8ec75cf980125b158cab1dc3ff0cc89374c5b12c072d5c"
+        },
+        {
+          "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0003.bin",
+          "bytes": 2380794,
+          "sha256": "f135be4dac6254b05f3ce720e3f6054f10fd87db22b4fc7c7356552c9510ead6"
+        }
+      ],
+      "segments": 197,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 5,
+      "ambience_intervals": 0,
+      "master_peak": 0.6323285698890686,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c14/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/joined.bin"
+    },
+    {
+      "id": "b3-c15",
+      "order": 45,
+      "book": 3,
+      "chapter": 15,
+      "part": "The Merlin",
+      "title": "Chapter 15",
+      "origin": "layered-1.0.0",
+      "duration": 1020.943673,
+      "bytes": 12251710,
+      "sha256": "a12dd15b40a929c731f02b74bb022bd3856f7653fc9c5854ed2547bcdc53f8db",
+      "mp3_sha256": "facbafdb78d242b4dfcde597fb050bee46bba09323123f0a3acfd98beb25af2b",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c15-a12dd15b40a929c7/0000.bin",
+          "bytes": 4000000,
+          "sha256": "fb14db5c8b0fcb668c2da08df4c69a0db201f7af995448ff428023c5a645a890"
+        },
+        {
+          "src": "audio-v2/b3-c15-a12dd15b40a929c7/0001.bin",
+          "bytes": 4000000,
+          "sha256": "b0e0d2ebd2cdb25b0b6f72c5de6ec389280d82049df56d6fd7976c6c30cd67d7"
+        },
+        {
+          "src": "audio-v2/b3-c15-a12dd15b40a929c7/0002.bin",
+          "bytes": 4000000,
+          "sha256": "88ee44b5c3fdd3252cfc54b1b24e1e5e3d379c0b90de34b2589138103e627f00"
+        },
+        {
+          "src": "audio-v2/b3-c15-a12dd15b40a929c7/0003.bin",
+          "bytes": 251710,
+          "sha256": "314a28285db333ad493d03304f90dfaf71fb144e4e66d75c24be0a39b38b77cd"
+        }
+      ],
+      "segments": 186,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 4,
+      "ambience_intervals": 0,
+      "master_peak": 0.6564518809318542,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c15/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c15-a12dd15b40a929c7/joined.bin"
+    },
+    {
+      "id": "b3-c16",
+      "order": 46,
+      "book": 3,
+      "chapter": 16,
+      "part": "The Merlin",
+      "title": "Chapter 16",
+      "origin": "layered-1.0.0",
+      "duration": 1951.582041,
+      "bytes": 23419371,
+      "sha256": "e2300066191bcd6aad42b73bea20c564b922fa5b239e5ea2d616c7f6e8381361",
+      "mp3_sha256": "7f75db8b37d588814fd0708e55aea51a943504036bf4079b42fcbf66f33169ba",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c16-e2300066191bcd6a/0000.bin",
+          "bytes": 4000000,
+          "sha256": "0b760af1f7ff5c1e1c4062b5bd973a46c3fe8afd8c2d9e7152e175c0488d4174"
+        },
+        {
+          "src": "audio-v2/b3-c16-e2300066191bcd6a/0001.bin",
+          "bytes": 4000000,
+          "sha256": "cbd45c2cf0c8278a923543e3638e8f5c0ace11684f74b6129eabdf056f67206f"
+        },
+        {
+          "src": "audio-v2/b3-c16-e2300066191bcd6a/0002.bin",
+          "bytes": 4000000,
+          "sha256": "6468b892f88837402a51f049301448eb0779b239fe003c0ed990370f67697481"
+        },
+        {
+          "src": "audio-v2/b3-c16-e2300066191bcd6a/0003.bin",
+          "bytes": 4000000,
+          "sha256": "82bb199e21f742877fd87236a1376cc5cec5b5b8bbde23a95a4f09407ee185ad"
+        },
+        {
+          "src": "audio-v2/b3-c16-e2300066191bcd6a/0004.bin",
+          "bytes": 4000000,
+          "sha256": "00b29a82bb41df8599b29ca2ac8afc8e8affa20bb1688f21cf02caf05257e76b"
+        },
+        {
+          "src": "audio-v2/b3-c16-e2300066191bcd6a/0005.bin",
+          "bytes": 3419371,
+          "sha256": "e2d26392416d406af41e5841ebdaa3eb796899aba590994b177f33ad7d38d132"
+        }
+      ],
+      "segments": 367,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 5,
+      "ambience_intervals": 1,
+      "master_peak": 0.6379321217536926,
+      "duration_anomaly_count": 0,
+      "native_master_layer": "recordings/layers/b3-c16/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c16-e2300066191bcd6a/joined.bin"
+    },
+    {
+      "id": "b3-c17",
+      "order": 47,
+      "book": 3,
+      "chapter": 17,
+      "part": "The Merlin",
+      "title": "Chapter 17",
+      "origin": "layered-1.0.0",
+      "duration": 1355.31102,
+      "bytes": 16264118,
+      "sha256": "389f4016e6a75fc857617f669c7b9e8554eed298b81fe41f118436ec58af44ff",
+      "mp3_sha256": "c4253a9920bc8f5ddd01ec253438f02b08cccff751f72e956cf4999c307bf79a",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c17-389f4016e6a75fc8/0000.bin",
+          "bytes": 4000000,
+          "sha256": "c9c88dcd78a29c7f6654da0d13d571b80e3f979f5b74f7d46ab5733fc0222c7b"
+        },
+        {
+          "src": "audio-v2/b3-c17-389f4016e6a75fc8/0001.bin",
+          "bytes": 4000000,
+          "sha256": "c29a99d0bdbd7076ebd9e40abdb96fb126770ff6ce1688d838d67a2d3b698225"
+        },
+        {
+          "src": "audio-v2/b3-c17-389f4016e6a75fc8/0002.bin",
+          "bytes": 4000000,
+          "sha256": "e7865c6886dfd4cb019fac93b14f4fed9deb1818de03a9993216ecad82e5d4ca"
+        },
+        {
+          "src": "audio-v2/b3-c17-389f4016e6a75fc8/0003.bin",
+          "bytes": 4000000,
+          "sha256": "177cc58e47370f81d22a4770a4a391463bb27e44621b410b753dab1a9293ccb6"
+        },
+        {
+          "src": "audio-v2/b3-c17-389f4016e6a75fc8/0004.bin",
+          "bytes": 264118,
+          "sha256": "9584e6f68e82f7cf40d8898baa9d84ac67611cfa2b13ec799d8e346104c29655"
+        }
+      ],
+      "segments": 247,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 3,
+      "ambience_intervals": 2,
+      "master_peak": 0.6415030360221863,
+      "duration_anomaly_count": 1,
+      "native_master_layer": "recordings/layers/b3-c17/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c17-389f4016e6a75fc8/joined.bin"
+    },
+    {
+      "id": "b3-c18",
+      "order": 48,
+      "book": 3,
+      "chapter": 18,
+      "part": "The Merlin",
+      "title": "Chapter 18",
+      "origin": "layered-1.0.0",
+      "duration": 1753.077551,
+      "bytes": 21037317,
+      "sha256": "bb5b2c944fd473bd143c38a1a17e27644b8d13d8b5711a6d5c46f9497351b924",
+      "mp3_sha256": "b7565325c9bb4e86164a05a58b27bff2344cabb97b8b2e7b8b8798b5d8d8d071",
+      "chunks": [
+        {
+          "src": "audio-v2/b3-c18-bb5b2c944fd473bd/0000.bin",
+          "bytes": 4000000,
+          "sha256": "a284628e83a6cec8f222b6e75bb0267a8bd6a88c0589c5fdb13de46fd7a4dd9a"
+        },
+        {
+          "src": "audio-v2/b3-c18-bb5b2c944fd473bd/0001.bin",
+          "bytes": 4000000,
+          "sha256": "4c6cf3d51780601877bae87a9137c6dd03500af35fd2a5851c9b9511447519b3"
+        },
+        {
+          "src": "audio-v2/b3-c18-bb5b2c944fd473bd/0002.bin",
+          "bytes": 4000000,
+          "sha256": "14822f161d9012be33bf8406c08f1155e23feb7b4a6f60ca0c15e0ed2a7fd40b"
+        },
+        {
+          "src": "audio-v2/b3-c18-bb5b2c944fd473bd/0003.bin",
+          "bytes": 4000000,
+          "sha256": "2a1697303da61c8168ce1ec01cc9840e017bf81cc2680194b7daf5c9b3413b9e"
+        },
+        {
+          "src": "audio-v2/b3-c18-bb5b2c944fd473bd/0004.bin",
+          "bytes": 4000000,
+          "sha256": "2e2489c4e50cbbf3a67a0938a0c61cb31a0a043b40d50e83f3050aaaeb2b40f1"
+        },
+        {
+          "src": "audio-v2/b3-c18-bb5b2c944fd473bd/0005.bin",
+          "bytes": 1037317,
+          "sha256": "43da7c13ddd0a7640e99003b45548efdfd04a5f0fbbcdea7dbb4af0cdbdbc978"
+        }
+      ],
+      "segments": 271,
+      "sample_rate": 22050,
+      "channels": 2,
+      "bit_rate": 96000,
+      "key_id": "private-archive-v1",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+      "verified": true,
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "ordered_segment_coverage": true,
+      "sound_events": 11,
+      "ambience_intervals": 1,
+      "master_peak": 0.7181398868560791,
+      "duration_anomaly_count": 1,
+      "native_master_layer": "recordings/layers/b3-c18/mix.json",
+      "render_run_id": "35190743139",
+      "remote_readback_pass": true,
+      "src": "audio-v2/b3-c18-bb5b2c944fd473bd/joined.bin"
     }
-  ]
+  ],
+  "production_version": "layered-1.0.0"
 }

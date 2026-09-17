@@ -1,0 +1,64 @@
+{
+  "id": "b3-c02",
+  "order": 32,
+  "book": 3,
+  "chapter": 2,
+  "part": "The Merlin",
+  "title": "Chapter 2",
+  "origin": "layered-1.0.0",
+  "duration": 1698.638367,
+  "bytes": 20384046,
+  "sha256": "ba0d22bf3da6f998873cf5be48c6924eb6c298289266daefe2a690d7bd2cf51a",
+  "mp3_sha256": "32d15fa71384e7fa5d14f47a54b3636ed1a6aee7ca36caeebd41025dee9f09a2",
+  "chunks": [
+    {
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0000.bin",
+      "bytes": 4000000,
+      "sha256": "a7f9892a1c0062be351d41219f4816eeb068b8ee0d87fc980573b29ab4ff5224"
+    },
+    {
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0001.bin",
+      "bytes": 4000000,
+      "sha256": "dce191b08abdd21f04ad751516c9066818d409861c5ef30bf968462f3c5f25ba"
+    },
+    {
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0002.bin",
+      "bytes": 4000000,
+      "sha256": "38bf9900a140a8dc7bc7fe967343ac8125e83d7783b8c5a8bc2ca4da3d86cf43"
+    },
+    {
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0003.bin",
+      "bytes": 4000000,
+      "sha256": "60c361f8912e82274abaac37cec53b9dd28fd5282b221316b3aab3e1267fe077"
+    },
+    {
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0004.bin",
+      "bytes": 4000000,
+      "sha256": "eb09858f69f5b00944362e13a23e5b5f74f771626661fa214d2a88add036f15c"
+    },
+    {
+      "src": "audio-v2/b3-c02-ba0d22bf3da6f998/0005.bin",
+      "bytes": 384046,
+      "sha256": "848d3216446436e0cb58704809f7280021e1fb769c214a80637f4649aaee23aa"
+    }
+  ],
+  "segments": 307,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 16,
+  "ambience_intervals": 2,
+  "master_peak": 0.6656118631362915,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c02/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b3-c02-ba0d22bf3da6f998/joined.bin"
+}

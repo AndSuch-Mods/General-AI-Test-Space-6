@@ -1,5 +1,5 @@
 'use strict';
-const SHELL='taliesin-shell-v6.1.0';
+const SHELL='taliesin-shell-complete-layered-v1';
 const ROOT=new URL('./',self.location.href).href;
 const ASSETS=['./','index.html','styles.css','player.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','vault.json','vault-v5.json','vault-v6.json','vault-archive.json','catalog.json'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(SHELL).then(c=>c.addAll(ASSETS.map(p=>new URL(p,ROOT).href))).then(()=>self.skipWaiting())));

@@ -1,0 +1,59 @@
+{
+  "id": "b3-c06",
+  "order": 36,
+  "book": 3,
+  "chapter": 6,
+  "part": "The Merlin",
+  "title": "Chapter 6",
+  "origin": "layered-1.0.0",
+  "duration": 1653.368163,
+  "bytes": 19840804,
+  "sha256": "76cbdc6f134d1bff8c66dc7150ffc6f78c826265e2c6a8344b02a9cb26708fe8",
+  "mp3_sha256": "5ca5f42fe212cd99ee8fd6275855e679ab135922ed13fd0f73a0b5cbe319fad8",
+  "chunks": [
+    {
+      "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0000.bin",
+      "bytes": 4000000,
+      "sha256": "e45382a1af8407f853b2e851af3a53c63c6ca3b74e641fd42c90102f0a9e16fd"
+    },
+    {
+      "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0001.bin",
+      "bytes": 4000000,
+      "sha256": "59b4b23fd1a05f2a4a12c37c9949a9c14e112b33aad6d79fbbd2caa23531077e"
+    },
+    {
+      "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0002.bin",
+      "bytes": 4000000,
+      "sha256": "4fc160e79545ee89b1284307d9466ddc921422d410b43b834e39f340cc174e46"
+    },
+    {
+      "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0003.bin",
+      "bytes": 4000000,
+      "sha256": "9b4b3847d04b6bdee6d68a71a95fbe045be3f88acaff11543f9bcbeffb824f14"
+    },
+    {
+      "src": "audio-v2/b3-c06-76cbdc6f134d1bff/0004.bin",
+      "bytes": 3840804,
+      "sha256": "87c95923831f8b01117d926b72ebc366759c3dc63a67c7f0e4be366830861765"
+    }
+  ],
+  "segments": 373,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 3,
+  "ambience_intervals": 0,
+  "master_peak": 0.6434789896011353,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c06/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b3-c06-76cbdc6f134d1bff/joined.bin"
+}

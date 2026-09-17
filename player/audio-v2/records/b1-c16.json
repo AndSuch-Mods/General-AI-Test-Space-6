@@ -1,0 +1,59 @@
+{
+  "id": "b1-c16",
+  "order": 16,
+  "book": 1,
+  "chapter": 16,
+  "part": "A Gift of Jade",
+  "title": "Chapter 16",
+  "origin": "layered-1.0.0",
+  "duration": 1375.843265,
+  "bytes": 16510505,
+  "sha256": "4a68da650bb3b4e07c710cfcd96bf2f1d4073ea2856d0babb6c7b4af922edf11",
+  "mp3_sha256": "3c9757e04c20cbbe6f186030213904aa9aa9a7bb8a03b6d6db7931d2d5460051",
+  "chunks": [
+    {
+      "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0000.bin",
+      "bytes": 4000000,
+      "sha256": "487a8388c45025e7434ce26436f91a6049869fb667aaf275974f84d1236cad64"
+    },
+    {
+      "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0001.bin",
+      "bytes": 4000000,
+      "sha256": "85763fef544ec52724cb22dabc9f24f23ac5077f2362438d88bcd1e194513cb3"
+    },
+    {
+      "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0002.bin",
+      "bytes": 4000000,
+      "sha256": "28a0a6a0bd5378742dba4a036f1a39aa66aa069e75e4a043916b42bc574926fd"
+    },
+    {
+      "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0003.bin",
+      "bytes": 4000000,
+      "sha256": "00a94935461d0dc37efe7e690fa8eddca88c8c2cd2ea419a9e00f6ebf1ef72e8"
+    },
+    {
+      "src": "audio-v2/b1-c16-4a68da650bb3b4e0/0004.bin",
+      "bytes": 510505,
+      "sha256": "313045dc5f33395148714e3c498e37122ff0224094f31664ce71d7d8c8a8523d"
+    }
+  ],
+  "segments": 246,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 4,
+  "ambience_intervals": 0,
+  "master_peak": 0.6434789896011353,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b1-c16/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b1-c16-4a68da650bb3b4e0/joined.bin"
+}

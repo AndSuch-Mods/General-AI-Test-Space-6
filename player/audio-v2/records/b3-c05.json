@@ -1,0 +1,49 @@
+{
+  "id": "b3-c05",
+  "order": 35,
+  "book": 3,
+  "chapter": 5,
+  "part": "The Merlin",
+  "title": "Chapter 5",
+  "origin": "layered-1.0.0",
+  "duration": 965.433469,
+  "bytes": 11585588,
+  "sha256": "bd2bcba3c9429286e912bc397663d801274db6c4e52d74c9e50e7f758675648f",
+  "mp3_sha256": "f59f24ee91e4e3fd000b0d3e5a6ca804256904bc33ec1b45d89da51f9fc92bbc",
+  "chunks": [
+    {
+      "src": "audio-v2/b3-c05-bd2bcba3c9429286/0000.bin",
+      "bytes": 4000000,
+      "sha256": "29d7294f2105a4ecaee66b15e0c2293147d8507397aaa5c9a88a7dde0caa4525"
+    },
+    {
+      "src": "audio-v2/b3-c05-bd2bcba3c9429286/0001.bin",
+      "bytes": 4000000,
+      "sha256": "31bccbfefecd603ad6592dd9ab4d816a77a3af13abda51e043f9e5f8afd7d899"
+    },
+    {
+      "src": "audio-v2/b3-c05-bd2bcba3c9429286/0002.bin",
+      "bytes": 3585588,
+      "sha256": "5045df0f26a15a78b64cd3709a3ebc054fcba71eb595fb7830ffc3e351123f44"
+    }
+  ],
+  "segments": 148,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 5,
+  "ambience_intervals": 2,
+  "master_peak": 0.6425578594207764,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c05/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b3-c05-bd2bcba3c9429286/joined.bin"
+}

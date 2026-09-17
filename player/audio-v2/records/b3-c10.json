@@ -1,0 +1,49 @@
+{
+  "id": "b3-c10",
+  "order": 40,
+  "book": 3,
+  "chapter": 10,
+  "part": "The Merlin",
+  "title": "Chapter 10",
+  "origin": "layered-1.0.0",
+  "duration": 993.906939,
+  "bytes": 11927269,
+  "sha256": "31198ad4d948aefee8a9d5e7bb588bfa07b9686abbf3f46304f40459607b4521",
+  "mp3_sha256": "05980094f3d11ae78ef43f796f9d3d22e807c5809c51fe4e51dcd199d424ba20",
+  "chunks": [
+    {
+      "src": "audio-v2/b3-c10-31198ad4d948aefe/0000.bin",
+      "bytes": 4000000,
+      "sha256": "b16b60bb2efa0f0437ca3735cdfa4d67718bba67bfcbaee8f2cb52adc239c3be"
+    },
+    {
+      "src": "audio-v2/b3-c10-31198ad4d948aefe/0001.bin",
+      "bytes": 4000000,
+      "sha256": "04920d373bcddffb2aaab79c7d3d76dc7f94bf97c25858748a1a1dd3ba038495"
+    },
+    {
+      "src": "audio-v2/b3-c10-31198ad4d948aefe/0002.bin",
+      "bytes": 3927269,
+      "sha256": "b24c4d8ceba09233581a907a47af16ba461f610dbcdab2f0994f0d1967e0ddc3"
+    }
+  ],
+  "segments": 170,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 3,
+  "ambience_intervals": 2,
+  "master_peak": 0.6308601498603821,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c10/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b3-c10-31198ad4d948aefe/joined.bin"
+}

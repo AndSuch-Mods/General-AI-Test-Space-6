@@ -1,0 +1,54 @@
+{
+  "id": "b3-c14",
+  "order": 44,
+  "book": 3,
+  "chapter": 14,
+  "part": "The Merlin",
+  "title": "Chapter 14",
+  "origin": "layered-1.0.0",
+  "duration": 1198.367347,
+  "bytes": 14380794,
+  "sha256": "eefbecd7c0bb2e51bc8b3fc4616e311de91260eca752b7585f581a36b8962809",
+  "mp3_sha256": "fe23c4e1ad7837e5562c07d38d3a15887d712b04cc1552186ecfe620090c8e8f",
+  "chunks": [
+    {
+      "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0000.bin",
+      "bytes": 4000000,
+      "sha256": "3e72efe55ade900b77e49657e0f31f77f96b45a46445e967e952a78e8ca621be"
+    },
+    {
+      "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0001.bin",
+      "bytes": 4000000,
+      "sha256": "1405e3b5c50331dd0112d3d936c175722e0922b6fc77056d7e1e45f59ab861eb"
+    },
+    {
+      "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0002.bin",
+      "bytes": 4000000,
+      "sha256": "e9748434d007e7d4bf8ec75cf980125b158cab1dc3ff0cc89374c5b12c072d5c"
+    },
+    {
+      "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/0003.bin",
+      "bytes": 2380794,
+      "sha256": "f135be4dac6254b05f3ce720e3f6054f10fd87db22b4fc7c7356552c9510ead6"
+    }
+  ],
+  "segments": 197,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 5,
+  "ambience_intervals": 0,
+  "master_peak": 0.6323285698890686,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b3-c14/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b3-c14-eefbecd7c0bb2e51/joined.bin"
+}

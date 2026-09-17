@@ -1,0 +1,54 @@
+{
+  "id": "b1-c15",
+  "order": 15,
+  "book": 1,
+  "chapter": 15,
+  "part": "A Gift of Jade",
+  "title": "Chapter 15",
+  "origin": "layered-1.0.0",
+  "duration": 1224.306939,
+  "bytes": 14692069,
+  "sha256": "9bdb2ac7342d34860c2620557b12df3d00524242be08d127ea1f91e383c8fe3b",
+  "mp3_sha256": "005b6f7c8326f4ba4cacb22b964416bedcf77194dd0e32142142255952b2b18c",
+  "chunks": [
+    {
+      "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0000.bin",
+      "bytes": 4000000,
+      "sha256": "da025b701508d92912c79d126a6e48739a8f9e5e908225bca3e45421f2658b21"
+    },
+    {
+      "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0001.bin",
+      "bytes": 4000000,
+      "sha256": "45b4c65277c2a7a530e1628a7bf7c415a0e8061095d3064ddc620d641e7ff82c"
+    },
+    {
+      "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0002.bin",
+      "bytes": 4000000,
+      "sha256": "f5b6e8c1b03dd7ee13d8f26a7d85a66d3a83f339fdf962297428ddffdb833130"
+    },
+    {
+      "src": "audio-v2/b1-c15-9bdb2ac7342d3486/0003.bin",
+      "bytes": 2692069,
+      "sha256": "33121b388003469618b6ddd4aa0232a4d9ff2fff82ac574e2788b0205fc0fa84"
+    }
+  ],
+  "segments": 297,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 8,
+  "ambience_intervals": 0,
+  "master_peak": 0.6434789896011353,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b1-c15/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b1-c15-9bdb2ac7342d3486/joined.bin"
+}

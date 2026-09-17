@@ -1,0 +1,64 @@
+{
+  "id": "b2-c14",
+  "order": 30,
+  "book": 2,
+  "chapter": 14,
+  "part": "The Sun Bull",
+  "title": "Chapter 14",
+  "origin": "layered-1.0.0",
+  "duration": 1855.477551,
+  "bytes": 22266117,
+  "sha256": "4bb48a6dee557a172730d1cc79102d118b1438328c7af9197cd0656e296f9162",
+  "mp3_sha256": "8150f0fa3626300bdc17efe8014cc3a015bb607bbd59a2fceceabbfcd0ce9bc6",
+  "chunks": [
+    {
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/0000.bin",
+      "bytes": 4000000,
+      "sha256": "f39d85e32272a46a543b82a2c16cd32d64dfb10c5cf30288100e65f4a5196b96"
+    },
+    {
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/0001.bin",
+      "bytes": 4000000,
+      "sha256": "84ae30e1c95f22144c055ddabe75ffed370c08036da09dc17903beb1c0435c90"
+    },
+    {
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/0002.bin",
+      "bytes": 4000000,
+      "sha256": "78e0b8352d68bf44c0cdab3a23b34016acce57d2c697c2d003ee3396f744a264"
+    },
+    {
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/0003.bin",
+      "bytes": 4000000,
+      "sha256": "323bd7d3f87ce42fb674cbc9048ccdcf0647dde2b706ed3ed1edc1f0939b70dc"
+    },
+    {
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/0004.bin",
+      "bytes": 4000000,
+      "sha256": "12fc5f42e3d12b66f12b3b5f52aaa0fb2465fcc9e6e87b4f383045059f982c18"
+    },
+    {
+      "src": "audio-v2/b2-c14-4bb48a6dee557a17/0005.bin",
+      "bytes": 2266117,
+      "sha256": "fa9b085833ae502d13f367db49a6708dca379278b75ab5b198e52c72a7aaa8b5"
+    }
+  ],
+  "segments": 213,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 10,
+  "ambience_intervals": 7,
+  "master_peak": 0.6495258808135986,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b2-c14/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b2-c14-4bb48a6dee557a17/joined.bin"
+}

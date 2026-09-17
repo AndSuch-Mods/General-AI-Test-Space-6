@@ -1,0 +1,74 @@
+{
+  "id": "b2-c03",
+  "order": 19,
+  "book": 2,
+  "chapter": 3,
+  "part": "The Sun Bull",
+  "title": "Chapter 3",
+  "origin": "layered-1.0.0",
+  "duration": 2634.788571,
+  "bytes": 31617849,
+  "sha256": "8e455f51c206c1dd9de75264e2e5eaf747cb4344bf0ff9a9d26f439b27397419",
+  "mp3_sha256": "e473a062c62d5baeac893f682b5c5848d2c23c749b678a2df2dda95881b48211",
+  "chunks": [
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0000.bin",
+      "bytes": 4000000,
+      "sha256": "3cd88cba3643aeb79a95b790adf5a7a1fc36861bdf26bbd9cc51637fddb067a5"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0001.bin",
+      "bytes": 4000000,
+      "sha256": "fbd2c00db069fbaa468fc52555f8bc4e4e952b0a3885faac0e4f1000af6242cd"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0002.bin",
+      "bytes": 4000000,
+      "sha256": "01515ea3c4c05f9841b16de2ccec0235d4df5ca7c1360c3767ac751ede0078e1"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0003.bin",
+      "bytes": 4000000,
+      "sha256": "0fafd118ac7d5a99ab0432abab342c9a36fbe4ec42fa88e054d0327666da8aa7"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0004.bin",
+      "bytes": 4000000,
+      "sha256": "45560eafe7cc14afb390e1bd59a0b9b391dcc5a2b9cb2a5678da06e58dbe6535"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0005.bin",
+      "bytes": 4000000,
+      "sha256": "b9692a686e8812830be9e3dbed8249d04d79230e2f12379f641bd7a64c73fe45"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0006.bin",
+      "bytes": 4000000,
+      "sha256": "01b469669930bb78e196861920fa656d2aae77f32f5af176b56ad3be5b56f81b"
+    },
+    {
+      "src": "audio-v2/b2-c03-8e455f51c206c1dd/0007.bin",
+      "bytes": 3617849,
+      "sha256": "e989c16f33e44e3d5564fa224c0ced89b8e59b7d994154722ef0ee048eb193ec"
+    }
+  ],
+  "segments": 346,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 8,
+  "ambience_intervals": 2,
+  "master_peak": 0.6729907989501953,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b2-c03/mix.json",
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true,
+  "src": "audio-v2/b2-c03-8e455f51c206c1dd/joined.bin"
+}
