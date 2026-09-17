@@ -58,5 +58,6 @@
   "master_peak": 0.6495258808135986,
   "duration_anomaly_count": 0,
   "native_master_layer": "recordings/layers/b2-c14/mix.json",
-  "render_run_id": "35190743139"
+  "render_run_id": "35190743139",
+  "remote_readback_pass": true
 }
