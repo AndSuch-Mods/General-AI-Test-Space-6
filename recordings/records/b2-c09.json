@@ -1,0 +1,47 @@
+{
+  "id": "b2-c09",
+  "order": 25,
+  "book": 2,
+  "chapter": 9,
+  "part": "The Sun Bull",
+  "title": "Chapter 9",
+  "origin": "layered-1.0.0",
+  "duration": 789.159184,
+  "bytes": 9470296,
+  "sha256": "b3f61169b475d7bddd5631b4857e875c90126dd3379ebd29360c8ff2723172f4",
+  "mp3_sha256": "242ddb6971916b0ee95c977965e60439b72c9a9c5642aa3bf73da41526fc0a70",
+  "chunks": [
+    {
+      "src": "recordings/audio/b2-c09-b3f61169b475d7bd/0000.bin",
+      "bytes": 4000000,
+      "sha256": "9874145c055bed39abf88efc61437c834b303add41dc65920f8ca9c0e9eb2aae"
+    },
+    {
+      "src": "recordings/audio/b2-c09-b3f61169b475d7bd/0001.bin",
+      "bytes": 4000000,
+      "sha256": "0b278e4a69b9bf38d5c4d9b93c17e0c12507741efe0e1dbecb0a7452b68cff01"
+    },
+    {
+      "src": "recordings/audio/b2-c09-b3f61169b475d7bd/0002.bin",
+      "bytes": 1470296,
+      "sha256": "c9e28f7f8ab54177f058cb62a3080e133d2fbf1afe2c64e69775aaa9e15cf319"
+    }
+  ],
+  "segments": 164,
+  "sample_rate": 22050,
+  "channels": 2,
+  "bit_rate": 96000,
+  "key_id": "private-archive-v1",
+  "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+  "source_script_sha256": "957afde8dbea70ab16657f571c8c15d1bfac47f87deab472953052422aad8f31",
+  "verified": true,
+  "full_decode_pass": true,
+  "reassembly_byte_exact": true,
+  "ordered_segment_coverage": true,
+  "sound_events": 0,
+  "ambience_intervals": 0,
+  "master_peak": 0.6434791088104248,
+  "duration_anomaly_count": 0,
+  "native_master_layer": "recordings/layers/b2-c09/mix.json",
+  "render_run_id": "35190743139"
+}
