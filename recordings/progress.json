@@ -1,7 +1,7 @@
 {
   "version": "layered-1.0.0",
-  "stage": "chapter_saved",
-  "current_track": "b1-c15",
+  "stage": "voice_batch",
+  "current_track": "b1-c16",
   "completed_tracks": 16,
   "expected_tracks": 49,
   "preserved_tracks": 10,
@@ -28,5 +28,7 @@
   "voice_batch_size": 48,
   "attempt_limit": 3,
   "player_deployed": false,
-  "run_id": "35190743139"
+  "run_id": "35190743139",
+  "batch": 1,
+  "batches": 6
 }
