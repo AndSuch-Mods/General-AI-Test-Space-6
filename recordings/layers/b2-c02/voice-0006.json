@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "label": "b2-c02/voice-0006",
+  "fingerprint": "857d63c1e92d65b13cef53ea70973846a97289b2c613a6ff62f889ff0708fa46",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 9544538,
+  "sha256": "7c877049e936c974640d48fc756985d46d314088ab1624fe047f9cee1595180e",
+  "plain_sha256": "438eec2c0669f4b80da9a018352fad88418831f7749e691cc6d74c61cede9bd7",
+  "aad": "Taliesin:layer:v1:b2-c02/voice-0006",
+  "files": [
+    {
+      "name": "8c581ea0f55454cc7c039849.wav",
+      "bytes": 99188,
+      "sha256": "e82b40056dddf9a17f1945ea4aadc6f139348bedc260d51fb4e5a3dbc31c7d87"
+    },
+    {
+      "name": "4d3f52858c5cee731648b9be.wav",
+      "bytes": 132980,
+      "sha256": "d7d7b6a5f8661bfb6de4e5864675cba97dfaccc93c00181aaf3ef6618ddfdd40"
+    },
+    {
+      "name": "3f3a01a6570daa28dfd1e374.wav",
+      "bytes": 109428,
+      "sha256": "45ae64c4ebe578ff99017f783f08a7c026541724ada511d6622894a6e811068b"
+    },
+    {
+      "name": "31ac03b9b313aaf6360620d7.wav",
+      "bytes": 60788,
+      "sha256": "d6db7afecd8c8af8156464a7edd98cacc7b1fd14480cf07e004db4876b738e5d"
+    },
+    {
+      "name": "7ab15279527580b43cc6838f.wav",
+      "bytes": 75636,
+      "sha256": "8a55d7d56c7707a93bff0bdb044e660f601d5365b9a6172a0251c5e08470faba"
+    },
+    {
+      "name": "cea055aa4cbed136578128b9.wav",
+      "bytes": 60276,
+      "sha256": "e4c4ef3b6043e8c8395fc834d332cd2431f885e7b51eed302b85ed6dce66b4d2"
+    },
+    {
+      "name": "8f14780a188eadf63682bb35.wav",
+      "bytes": 108916,
+      "sha256": "4d4209a59a2a66c88a66b4557ceb1f528d8d566471d3c4df5dd9049a7f9600b6"
+    },
+    {
+      "name": "eb9595368d9c1210281b8d16.wav",
+      "bytes": 706748,
+      "sha256": "5e73e9e1d169919e3f34fb39ab33dbec12b810403c5e9978364881e170fc01f9"
+    },
+    {
+      "name": "a4f484ed4f81101882795353.wav",
+      "bytes": 215044,
+      "sha256": "414ea15d1949b80e5481ac45fc747801bbeec9608b19c5caae6de4cbe1ce9d32"
+    },
+    {
+      "name": "35c50f212ec7310ff2befd6e.wav",
+      "bytes": 230076,
+      "sha256": "3630b21d21e670e31debd789c7183caa7e6900d2ab2a2f6f90885ad613214908"
+    },
+    {
+      "name": "b45c15c3ca44b670a2bd894a.wav",
+      "bytes": 131260,
+      "sha256": "74d774637e124784a7f614e8ac0d5fb642d6eb4b4c6e6bc15fe41ba5f8eeb0e1"
+    },
+    {
+      "name": "2b0f96f6b15471abbef78d1b.wav",
+      "bytes": 581308,
+      "sha256": "53e7e6c40dacff310fca9b1aeaf28be9704c7e87aa8ddd09e4b5c0d40354b640"
+    },
+    {
+      "name": "f2113e18b590c0282c290e5c.wav",
+      "bytes": 295100,
+      "sha256": "efd51f4fb14f128c7e1e9a5839a89285b646e0aced2b1f0df519d24982328ab3"
+    },
+    {
+      "name": "61821105e02517a1550553fa.wav",
+      "bytes": 622268,
+      "sha256": "2fcdf0353c3101f82dfa43d2fb6f3047933e8c99a34388a1024a2f239b41f022"
+    },
+    {
+      "name": "02454e5ddf2f3bfda312335b.wav",
+      "bytes": 688644,
+      "sha256": "2e459dca33b405f05976958d3da5a0a82107cb86f8094c36cc277750ceb47a31"
+    },
+    {
+      "name": "861c7de8669fbc1c945e93c5.wav",
+      "bytes": 235852,
+      "sha256": "a418f0dc670896f4c06f300a51007e8dc0b54a0ce75f84246e090efa7a8437aa"
+    },
+    {
+      "name": "36e08a939cb272534ffec312.wav",
+      "bytes": 63860,
+      "sha256": "41ecb140105ce21e7e500c05777a893eb8b8cbbd843dde95b3a43d342c04ffa2"
+    },
+    {
+      "name": "f5cbd82a46a4212ef19bd2d9.wav",
+      "bytes": 77684,
+      "sha256": "7d827a46793462bb708aa28984a5152d923edc2dd0ccff901a375826de6b9312"
+    },
+    {
+      "name": "11e74fece74682d07b74d4be.wav",
+      "bytes": 181948,
+      "sha256": "86b9756fa9181bff8fb4f69000fa79d878b1fbeeb2d655598f5684ee1cff91f8"
+    },
+    {
+      "name": "397494115350700c82da01fe.wav",
+      "bytes": 181620,
+      "sha256": "6130357ebef5916e553ee84f0d57128b61c682e5aff895391445d54e1772a35b"
+    },
+    {
+      "name": "17bc55e029d0edfdc8c359d2.wav",
+      "bytes": 56692,
+      "sha256": "a2b1c22c68ac2f59464a49ce730c5a60fa30ad2a5e1e95fdb75123b9c20397d7"
+    },
+    {
+      "name": "89be7b8881f44d7d43cef517.wav",
+      "bytes": 65908,
+      "sha256": "d345cce8ef5e419a1cc1d9ffbca22bda10b6f51c03ce5f2bf3de5ec20b7b1429"
+    },
+    {
+      "name": "e7bafddcdbe500c88962a946.wav",
+      "bytes": 832516,
+      "sha256": "7b24fbe9926bbb92e21685a7941312fbf13b681e6016aff4ab3bec4a8bde4b79"
+    },
+    {
+      "name": "c5230289b38278255d2f7e4e.wav",
+      "bytes": 345276,
+      "sha256": "8517cc9a4f8af6bd7af93147c9ae23be3b6a6bc6fb29bee1f9df4862b737cb88"
+    },
+    {
+      "name": "1d07eff4882d889504e4851c.wav",
+      "bytes": 96628,
+      "sha256": "d607b7134688b9033c7395b157fc6ddcb15be55666f1111d1c15f5535ea2ce60"
+    },
+    {
+      "name": "11cfd8658d721310d263ac77.wav",
+      "bytes": 59764,
+      "sha256": "4efc5f42c5859834a6b026f412d50b513593d17681390908ae8a8bc9d35cff5e"
+    },
+    {
+      "name": "911bb5d16f77475f334c1d7d.wav",
+      "bytes": 207548,
+      "sha256": "8250511b67e0410f5b344a69c5b942ae5e006153ead5cd866eea942df0e715af"
+    },
+    {
+      "name": "fa906755fe5aa7bcb6065655.wav",
+      "bytes": 43380,
+      "sha256": "15e4e3b999e883a0675a351e11469d7e954b5d7c9262d3e5667d96b0bb7508f1"
+    },
+    {
+      "name": "59ecff58def240d7dcb837c2.wav",
+      "bytes": 95604,
+      "sha256": "8a9b40d63d97572d17fa25baffcf5426c1b674fd9bfdb3521bbf40941cca3af2"
+    },
+    {
+      "name": "f8cc9cb850bddc86c671c862.wav",
+      "bytes": 121716,
+      "sha256": "d582bee852f2428d8652532cdd5531f7cd364f2756889ebcaeb902e78e829e0f"
+    },
+    {
+      "name": "92b52cc3f5a4ad9651b64dab.wav",
+      "bytes": 833868,
+      "sha256": "ddf8221c5d4ffed517dc8ecaf5b58bb1b3ed858f17786572e76d003aa8063237"
+    },
+    {
+      "name": "16f8a4f467055bb920038ff1.wav",
+      "bytes": 47476,
+      "sha256": "dbe8ac3f2b116d218a06a4f47126f3862b09bbd0e51d22fc0edb45745d16397c"
+    },
+    {
+      "name": "b64026e74b5d6720d3dcadf2.wav",
+      "bytes": 59252,
+      "sha256": "5774ab10d3cfb5ceb58574232fa7168986da63ac9a031c312cca04bb8eb3a813"
+    },
+    {
+      "name": "1bacbd8234cc37af57bdb704.wav",
+      "bytes": 281276,
+      "sha256": "846bb09427c222093950fd21c8ab02317a5da855f4915985d2dfb091fcfc3709"
+    },
+    {
+      "name": "6be84457652bd379eeeff78b.wav",
+      "bytes": 159092,
+      "sha256": "05908dd7f0c07505456ff714dbd5e2544269c3ff52053c6184e85c025c9d97a4"
+    },
+    {
+      "name": "a9036914bc584f98e587ada6.wav",
+      "bytes": 63860,
+      "sha256": "53b3d61ed66dcb38d6c2e5bb30bf91f14a49eac0ca6f8833194456a5637a5718"
+    },
+    {
+      "name": "b33e3a5ab21fe5c72d7b157f.wav",
+      "bytes": 342204,
+      "sha256": "9911fa03f3e54d4ccbd16061275b9d056024a30d806dde4a23f656499bd879c0"
+    },
+    {
+      "name": "b15283f62268ea363a5a2e15.wav",
+      "bytes": 58740,
+      "sha256": "bc9de9fb33d2fed2c27f4e986132b63d4d0aca9883c08ac729ceba4ad8f3b7cd"
+    },
+    {
+      "name": "c8785162fcc349bac2a14f8f.wav",
+      "bytes": 69492,
+      "sha256": "11ea363578cf4de65b0027de97d3150b948a169bc52bf7bdbd517b1a4be81771"
+    },
+    {
+      "name": "99e71492257e52596de0cba1.wav",
+      "bytes": 56692,
+      "sha256": "00725cbfa32f2563bfe6db70b8429f6ba3d00e17a5f5e15be31584a97ad59a16"
+    },
+    {
+      "name": "d4c032e8d2dfe059a78468fb.wav",
+      "bytes": 65908,
+      "sha256": "5a918dff8780d1db4364db3d3e363f5e1fb1709020d462b8f37b5942b8bdfc99"
+    },
+    {
+      "name": "831f2cae65bff16487d4e15f.wav",
+      "bytes": 1671788,
+      "sha256": "eaa5b06bd1cf7f58d72108d40bc8699b84eb2135e952cd12e221a580a43b7348"
+    },
+    {
+      "name": "95a75904cd032fe460446562.wav",
+      "bytes": 59764,
+      "sha256": "ac25e48d160f1f22e17cb583237ffc6cb40d5495bc417b3704f184eca3108738"
+    },
+    {
+      "name": "c640045bdec4a0279c3a9c34.wav",
+      "bytes": 65396,
+      "sha256": "c7541a0bd36d91452850c1c50800de884374b7a9fd687ff61baf8f8d35d645cb"
+    },
+    {
+      "name": "32b867c2f851a75e277b83e9.wav",
+      "bytes": 49524,
+      "sha256": "306838cee0d0f30440d4e364473165bd6ba0504094351bba0e12219c2f051e72"
+    },
+    {
+      "name": "fa0815f6bca6dc8600676d75.wav",
+      "bytes": 109940,
+      "sha256": "e1bc33afcab1ad0d52030c4c9cb48fe1f7521464c3ea81cb5cba97d06c276830"
+    },
+    {
+      "name": "cd11dd494436ab82b709e4e2.wav",
+      "bytes": 38772,
+      "sha256": "60343cc2f27712714cdca86bab903c01c23c6b57a318d27cc5cf3cf762ecdd74"
+    },
+    {
+      "name": "84a59bf36c235eb1eb759221.wav",
+      "bytes": 450420,
+      "sha256": "f6c7c7642424b549f4ce24f7a93a9892c9e5862ac106790e1e94ce9c9980461b"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b2-c02-voice-0006-7c877049e936c974640d-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c02-voice-0006-7c877049e936c974640d-0000.bin",
+      "bytes": 8000000,
+      "sha256": "76312b657c9a1c6f7477954ea2733e78330ca32964a92b50f0bd80287fd93495"
+    },
+    {
+      "name": "b2-c02-voice-0006-7c877049e936c974640d-0001.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c02-voice-0006-7c877049e936c974640d-0001.bin",
+      "bytes": 1544538,
+      "sha256": "5184fdf0c9fc307758e157f31fe6f5686622b0b0cbc6cbfb55bb778e57d92afc"
+    }
+  ],
+  "remote_readback_pass": true
+}
