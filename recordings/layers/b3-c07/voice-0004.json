@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "label": "b3-c07/voice-0004",
+  "fingerprint": "b03d4f4ec03f243b85c64588f4127b7a61b5cf78e05f559d45bf11894bbfe8f5",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 1732406,
+  "sha256": "b3c8e07f46fa61f320875c15e64467d9bdd7ab8c2e69da25590242e25cd49a90",
+  "plain_sha256": "90b737496d5a878895eb49ea85454663c97ac0a1ad0e62b4d06873c9b95879b9",
+  "aad": "Taliesin:layer:v1:b3-c07/voice-0004",
+  "files": [
+    {
+      "name": "3e571156266f99e5b8dc02e2.wav",
+      "bytes": 73076,
+      "sha256": "87aa0e5e0f664b1ee616323e5c7cd10dc38170191cee097a245b41d44ff22bc4"
+    },
+    {
+      "name": "086ac89f32ddc6b5999e4a11.wav",
+      "bytes": 196468,
+      "sha256": "7162ca38622264e15e64a84bc81017dfc8d71fca0db99ca874ca7069f1586302"
+    },
+    {
+      "name": "52e09b9568902c53d16902cb.wav",
+      "bytes": 35700,
+      "sha256": "8b98e736aeddc2ac809902abd6f1e49b77c2b121840b451affbe068d4bf53d10"
+    },
+    {
+      "name": "c90e46586a69df47effd1f98.wav",
+      "bytes": 78708,
+      "sha256": "d651a65102c4c2c5bcd50ab58b949073bdb0347c1fe666c9be9d3d979a4e837c"
+    },
+    {
+      "name": "c73efebc2df47ee71d4fc6f1.wav",
+      "bytes": 458940,
+      "sha256": "c747abe84b4488f1ed96ebc21bce3ae095033d0ac9be00a2fb7b4686abfc9c90"
+    },
+    {
+      "name": "d64f59252da42f206f3e7ac0.wav",
+      "bytes": 181108,
+      "sha256": "1e4b451b9bb7c7f03b0063bba699c497eab3988db4eae02baa444c655cc87620"
+    },
+    {
+      "name": "acd170c04b9bd7b02def2bf0.wav",
+      "bytes": 70004,
+      "sha256": "2e89cf50a4257eda800434b491e0a62aad41ffadce798955384ef8ab9816fe1a"
+    },
+    {
+      "name": "64daf0ce3d3988ddd0a36e98.wav",
+      "bytes": 54644,
+      "sha256": "9d6fb09e480c182f0d21ab929e471f7ab904b8197a7234123e211fd5534db2c2"
+    },
+    {
+      "name": "e6de51ee43ef0d89c14bb5ce.wav",
+      "bytes": 180596,
+      "sha256": "487bfd5f192d1ce209c4b905db78d7d9a51eb613bf6f1514d3567be6e1faf59e"
+    },
+    {
+      "name": "8f249072e7694a7dfa261c28.wav",
+      "bytes": 188092,
+      "sha256": "e67db5d6f2299a0867abdddabda4cbdbc160ee4dece5c44b1b22abf8c426bb4b"
+    },
+    {
+      "name": "637b72952487c0cb853cedae.wav",
+      "bytes": 110452,
+      "sha256": "f5b05d3bf338ab01e42314c08707cf48e1a7ac781ada247b02c51ce2276870b6"
+    },
+    {
+      "name": "40bf817d1f36f07e1beffbd7.wav",
+      "bytes": 67444,
+      "sha256": "27d4138ee90949eedd64503082dd3f8c3a97961a3d08d139665d043177054779"
+    },
+    {
+      "name": "16642791d1d5b27a357ea2a4.wav",
+      "bytes": 79732,
+      "sha256": "fc5c4b76a3e6f4a5eb2486d0440f06fc0e8aad3d961f368101ef368f761eb5b2"
+    },
+    {
+      "name": "f2e18af35a12ccfda58ad728.wav",
+      "bytes": 102260,
+      "sha256": "476e661088300ad892e6c233a9e7222ecc41074d26ecfb00685f3b2007def703"
+    },
+    {
+      "name": "71b6227a02edc717f7736e62.wav",
+      "bytes": 176500,
+      "sha256": "2f40fd126745aab012eeec42b8afe604de166d3ddd562b1c4ecc5be8246aff92"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b3-c07-voice-0004-b3c8e07f46fa61f32087-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b3-c07-voice-0004-b3c8e07f46fa61f32087-0000.bin",
+      "bytes": 1732406,
+      "sha256": "b3c8e07f46fa61f320875c15e64467d9bdd7ab8c2e69da25590242e25cd49a90"
+    }
+  ],
+  "remote_readback_pass": true
+}
