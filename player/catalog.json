@@ -5,9 +5,9 @@
   "ready": true,
   "complete": false,
   "expected_tracks": 49,
-  "published_tracks": 6,
-  "total_duration": 7028.114286,
-  "total_bytes": 84339687,
+  "published_tracks": 7,
+  "total_duration": 7849.456327,
+  "total_bytes": 94196178,
   "encoding_note": "96 kbps stereo MP3 encoded from native 22,050 Hz chapter masters. Encrypted transport pieces are reassembled byte-for-byte before playback.",
   "tracks": [
     {
@@ -289,6 +289,49 @@
       "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
       "recipe_sha256": "36f62d3e645d0ab11106fdb2f7f8a0e095ee9f0d8ef5c49c00730fa855071272",
       "speech_segments_verified": 128
+    },
+    {
+      "id": "b1-c06",
+      "order": 6,
+      "book": 1,
+      "chapter": 6,
+      "part": "A Gift of Jade",
+      "title": "Chapter 6",
+      "duration": 821.342041,
+      "src": "audio-v2/b1-c06-349a8033ac1c236c/joined.bin",
+      "bytes": 9856491,
+      "sha256": "349a8033ac1c236c9403b7fda0753aa9275fa4447c4070b9c8ffd9291f23e770",
+      "chunks": [
+        {
+          "src": "audio-v2/b1-c06-349a8033ac1c236c/0000.bin",
+          "bytes": 4000000,
+          "sha256": "a1d6ab2aeb4ec34c6daf8478d7c193d558cf05ca1c06b083a4e122b85974639f"
+        },
+        {
+          "src": "audio-v2/b1-c06-349a8033ac1c236c/0001.bin",
+          "bytes": 4000000,
+          "sha256": "095f41c1b53c6156750fc9915e5924bffc4fbfbab30269989082ccdfec972d07"
+        },
+        {
+          "src": "audio-v2/b1-c06-349a8033ac1c236c/0002.bin",
+          "bytes": 1856491,
+          "sha256": "28c4d643997794aef9a7683fa162c0a9e7fdfb22337b3ca101fedfe09a8819ab"
+        }
+      ],
+      "segments": 144,
+      "sample_rate": 22050,
+      "bit_rate": 96000,
+      "channels": 2,
+      "verified": true,
+      "mp3_sha256": "90f6e6a3ba513f1dc9b8fbd55a8f07fbb8fd47c11e02e1f8088493babcc9da09",
+      "full_decode_pass": true,
+      "reassembly_byte_exact": true,
+      "sound_events": 4,
+      "ambience_intervals": 0,
+      "key_id": "sequential-v6",
+      "source_sha256": "707254842a0c590201adb29f0f07cc39501f001c031a58f3d850728a4265bcc5",
+      "recipe_sha256": "147b486955e973965e85b9972b0908314921486e98c643a6db906a57a506c46e",
+      "speech_segments_verified": 144
     }
   ]
 }
