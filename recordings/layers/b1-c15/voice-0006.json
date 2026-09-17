@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "label": "b1-c15/voice-0006",
+  "fingerprint": "8478f5590a5eeaec33e7c1aaad7fc9bf5b908fcfd165f4c3f1472c894b40a3d8",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 1648552,
+  "sha256": "cd89adeb334858d23188ad3c605e196d005f338a7cf1dcaa175bc5fbb8f03c0d",
+  "plain_sha256": "0899edd64526c87088e9752e39a095bc08d57460d03a8b6c88c60ad9c32cace5",
+  "aad": "Taliesin:layer:v1:b1-c15/voice-0006",
+  "files": [
+    {
+      "name": "119da7ebe5600c0fccefc7fe.wav",
+      "bytes": 220348,
+      "sha256": "4270ab98e0d8dae17f82a55cc825b3e47505172dffabacdbcc2a5d1b9831a005"
+    },
+    {
+      "name": "1b47518607f9f929d657f1fd.wav",
+      "bytes": 73076,
+      "sha256": "07f4cae9dc67493e055df251544a6e2913179fb1a17a9543c8dc03ebdb41a7a0"
+    },
+    {
+      "name": "cdb565875513911865338cd9.wav",
+      "bytes": 67444,
+      "sha256": "90382d2396f22566c44235713f34c254d4ae170da7e27ded1b551da080aabe42"
+    },
+    {
+      "name": "17bcea48b37a67d6d66edae7.wav",
+      "bytes": 67956,
+      "sha256": "9831d21f7e4efe5aa49cd74236438531a72f794f4ce71c3109df579de9c2ba02"
+    },
+    {
+      "name": "0c803f25c7e8ba3e521763b0.wav",
+      "bytes": 44404,
+      "sha256": "c72bb814b0b3900550d400f3b94dc01c38c11d27c45ab88fe8978ef4a09b91ee"
+    },
+    {
+      "name": "fc8c15fcd46d7900787bfb46.wav",
+      "bytes": 122740,
+      "sha256": "782d8032626ff37c2e242da826357231be686a7d502ddc5e81caddb5f429cc75"
+    },
+    {
+      "name": "27b1f68e01d1b1f627f3a030.wav",
+      "bytes": 665604,
+      "sha256": "718fdb7fa738fd18f72dbd629edd9b0195fd5a47778e94c2180ac0c5cd00ee85"
+    },
+    {
+      "name": "79f0a89fe3e4352737f77f69.wav",
+      "bytes": 656900,
+      "sha256": "bed3d9151347f32cb504f2a05d8128bd528c0e28e93075cdd912254f496d9c77"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b1-c15-voice-0006-cd89adeb334858d23188-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b1-c15-voice-0006-cd89adeb334858d23188-0000.bin",
+      "bytes": 1648552,
+      "sha256": "cd89adeb334858d23188ad3c605e196d005f338a7cf1dcaa175bc5fbb8f03c0d"
+    }
+  ],
+  "remote_readback_pass": true
+}
