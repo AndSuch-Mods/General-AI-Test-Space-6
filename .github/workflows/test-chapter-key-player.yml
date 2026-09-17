@@ -2,7 +2,10 @@ name: Test chapter key player
 on:
   push:
     branches: [main]
-    paths: ['.github/workflows/test-chapter-key-player.yml']
+    paths:
+      - '.github/workflows/test-chapter-key-player.yml'
+      - 'audio-engine/v5/test_player_keys.py'
+      - 'audio-engine/v5/patch_player.py'
   workflow_dispatch:
 permissions:
   contents: read
