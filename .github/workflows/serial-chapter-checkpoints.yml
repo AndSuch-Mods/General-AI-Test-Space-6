@@ -1,0 +1,62 @@
+name: Sequential chapter checkpoints
+on:
+  push:
+    branches: [main]
+    paths: ['.transfer/serial/launch.json']
+  workflow_dispatch:
+concurrency:
+  group: taliesin-one-chapter-production
+  cancel-in-progress: false
+permissions:
+  contents: write
+  pages: write
+jobs:
+  sequential:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    env:
+      GH_TOKEN: ${{ github.token }}
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate the next chapter and receive its sealed private key
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet cryptography
+          python -m py_compile audio-engine/serial/serial_checkpoint.py
+          python audio-engine/serial/serial_checkpoint.py plan
+          python audio-engine/serial/serial_checkpoint.py key
+      - name: Install and verify the existing offline speech engine
+        run: |
+          set -euo pipefail
+          sudo apt-get -o Acquire::Retries=3 update -qq
+          sudo env DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::Retries=3 install -y -qq ffmpeg
+          python -m pip install --quiet numpy scipy soundfile onnxruntime
+          mkdir -p /tmp/private-audio/tools/models
+          curl --fail --location --retry 3 'https://github.com/rhasspy/piper/releases/download/2023.11.14-2/piper_linux_x86_64.tar.gz' -o /tmp/private-audio/piper.tar.gz
+          echo 'a50cb45f355b7af1f6d758c1b360717877ba0a398cc8cbe6d2a7a3a26e225992  /tmp/private-audio/piper.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/private-audio/piper.tar.gz -C /tmp/private-audio/tools
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx
+          echo '4e9fc85ab9009385319fc6bae7f55577f8a2d7ee77fd9159a5500eb6531f41e6  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx' | sha256sum -c -
+          curl --fail --location --retry 3 'https://huggingface.co/rhasspy/piper-voices/resolve/main/en/en_GB/vctk/medium/en_GB-vctk-medium.onnx.json?download=true' -o /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json
+          echo '7f85e6391ed0f7f46e4abd19345929a16be931a0c9945086f96692dce2087fa8  /tmp/private-audio/tools/models/en_GB-vctk-medium.onnx.json' | sha256sum -c -
+          ffmpeg -v error -f lavfi -i anullsrc=r=22050:cl=stereo -t 0.1 -c:a libmp3lame -b:a 96k /tmp/private-audio/encoder-check.mp3
+          ffmpeg -v error -xerror -i /tmp/private-audio/encoder-check.mp3 -f null -
+      - name: Render one chapter, publish it, verify it, then open the next chapter
+        run: python audio-engine/serial/serial_checkpoint.py run
+      - name: Preserve verified encrypted chapters and checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-sequential-chapters
+          path: /tmp/cipher-export/
+          if-no-files-found: ignore
+          compression-level: 0
+          retention-days: 30
+      - name: Remove all private input, keys, and unencrypted working audio
+        if: always()
+        run: rm -rf /tmp/private-audio
