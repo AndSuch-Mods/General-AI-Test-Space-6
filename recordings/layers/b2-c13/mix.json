@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "label": "b2-c13/mix",
+  "fingerprint": "f81e87c670636b8df46895b867a40ac520eaabd83353e6f86871453a88112474",
+  "key_id": "private-archive-v1",
+  "release": "taliesin-layer-checkpoints-v1",
+  "bytes": 21500409,
+  "sha256": "26e75c71a2c5417f74f5d37394b89b5290deffa0423ee68d96f494173984a668",
+  "plain_sha256": "596b606a11fefebf3e1eb897cb7111bf738cae285378d7059d9065fb585b60b4",
+  "aad": "Taliesin:layer:v1:b2-c13/mix",
+  "files": [
+    {
+      "name": "part-02-chapter-13.flac",
+      "bytes": 21637367,
+      "sha256": "61dff90415e3d3559321e36ab4efd7f9c54e7001a715d9b39d4f5e5d38d35376"
+    },
+    {
+      "name": "part-02-chapter-13.json",
+      "bytes": 60342,
+      "sha256": "19e682d247f61a7a34979eb619c53919efa6ec55ce6688eeb0470b6c22009504"
+    }
+  ],
+  "chunks": [
+    {
+      "name": "b2-c13-mix-26e75c71a2c5417f74f5-0000.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c13-mix-26e75c71a2c5417f74f5-0000.bin",
+      "bytes": 8000000,
+      "sha256": "f70e6a51e3dc7ca5b7350e861a2f2a756be063b522158fe777b6d5a3d0000fe5"
+    },
+    {
+      "name": "b2-c13-mix-26e75c71a2c5417f74f5-0001.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c13-mix-26e75c71a2c5417f74f5-0001.bin",
+      "bytes": 8000000,
+      "sha256": "073ff9c3ef5e9458e560e122897b2dc355d1c3f55fece1a071679bcefeeaaa7e"
+    },
+    {
+      "name": "b2-c13-mix-26e75c71a2c5417f74f5-0002.bin",
+      "url": "https://github.com/AndSuch-Mods/General-AI-Test-Space-6/releases/download/taliesin-layer-checkpoints-v1/b2-c13-mix-26e75c71a2c5417f74f5-0002.bin",
+      "bytes": 5500409,
+      "sha256": "8c44090241c08af95f2ee5dc8315529746b2b10266af03e8b7ae8a6f9f001acc"
+    }
+  ],
+  "remote_readback_pass": true
+}
